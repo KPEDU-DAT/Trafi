@@ -1,12 +1,12 @@
+<?php
 //KOODI= JOONA, JUHO, HANNU, MIRO
 //PROJEKTIJOHTAJA= EQ (ERIKA)
+?>
+
 
 <!DOCTYPE HTML>
 <?php
-$X= $_POST['merkki'];
-$Z= $_POST['malli'];
-$Y= $_POST['vuosi'];
-$btn=$_POST['nappi']
+
 ?>
 <html>
   <head>
@@ -14,7 +14,7 @@ $btn=$_POST['nappi']
     <title> PHP + SQL </title>
   </head>
   <body>
-    <form method="POST" action="tietokanta.php">
+    <form method="POST" action="hakukonebeta.php">
       <p>Kirjoittakaa haluttu merkki: </p>
       <input type="text" name="merkki" value="">
       <p>Kirjoittakaa haluttu malli: </p>
@@ -24,7 +24,13 @@ $btn=$_POST['nappi']
       <button name="nappi" value="True">Aloita haku</button>
     </form>
 
+
 <?php
+
+$X= $_POST['merkki'];
+$Z= $_POST['malli'];
+$Y= $_POST['vuosi'];
+$btn=$_POST['nappi'];
 
 if($btn=="True")
 {
@@ -39,9 +45,9 @@ die("MySQL, virhe yhteyden luonnissa: ". mysqli_connect_error());
 $yhteys->set_charset('utf8');
 
 $tulos= mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot      
-                            WHERE 'ensirekisterointipvm' LIKE  '".$Y."%'
-                            AND 'merkkiSelvakielinen' ='".$X."'
-                            AND 'mallimerkinta' = '%".$Z."%';" );
+                             WHERE ensirekisterointipv LIKE  '".$Y."%'
+                             AND merkkiSelvakielinen ='".$X."'
+                             AND mallimerkinta LIKE%".$Z."%'" );
 
 while($rivi=mysqli_fetch_array($tulos))
 {
@@ -70,6 +76,6 @@ else
 echo "";
 }
 ?>
-    </p>
+   
   </body>
 </html>
