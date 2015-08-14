@@ -29,7 +29,7 @@ $btn=$_POST['nappi']
 
 <?php
 
-if($btn=="True");
+if($btn=="True")
 {
   
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
