@@ -9,7 +9,7 @@
 $X= $_POST['merkki'];
 $Z= $_POST['malli'];
 $Y= $_POST['vuosi'];
-$btn=$_POST['nappi']
+$btn=$_POST['nappi'];
 ?>
 <html>
   <head>
@@ -27,6 +27,7 @@ $btn=$_POST['nappi']
       <button name="nappi" value="True">Aloita haku</button>
     </form>
 
+
 <?php
 
 if($btn=="True")
@@ -42,9 +43,9 @@ die("MySQL, virhe yhteyden luonnissa: ". mysqli_connect_error());
 $yhteys->set_charset('utf8');
 
 $tulos= mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot      
-                            WHERE 'ensirekisterointipvm' LIKE  '".$Y."%'
-                            AND 'merkkiSelvakielinen' ='".$X."'
-                            AND 'mallimerkinta' = '%".$Z."%';" );
+                             WHERE ensirekisterointipv LIKE  '".$Y."%'
+                             AND merkkiSelvakielinen ='".$X."'
+                             AND mallimerkinta LIKE%".$Z."%'" );
 
 while($rivi=mysqli_fetch_array($tulos))
 {
