@@ -38,7 +38,7 @@ die("MySQL, virhe yhteyden luonnissa: ". mysqli_connect_error());
 
 $yhteys->set_charset('utf8');
 
-$tulos= mysql_query($yhteys,"SELECT * FROM trafi_ajoneuvot      
+$tulos= mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot      
                             WHERE 'ensirekisterointipvm' LIKE  '".$Y."%'
                             AND 'merkkiSelvakielinen' ='".$X."'
                             AND 'mallimerkinta' = '%".$Z."%';" );
