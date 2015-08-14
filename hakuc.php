@@ -14,11 +14,11 @@
     <h1>Ajoneuvotiedot</h1>
         <p>
             <form action="hakuc.php" method="POST">
-                <p>Anna VIN-koodi:
-                <input type="text" name="valmistenumero2">
-                <p><button class="btn btn-info btn-lg" type="submit" name="laheta" value="true">Hae</button>
+                <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
+                <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
+		<table class="table table-hover table-bordered">
         <p>
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -31,17 +31,26 @@
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
                 $tulos = mysqli_query($yhteys, "SELECT *
                                                 FROM trafi_ajoneuvot
-                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'");
+                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+                                                ORDER BY kayttoonottopvm DESC");
 
-                while ($rivi = mysqli_fetch_array($tulos)) {
-            echo $rivi["ajoneuvoluokka"] . " " . $rivi["ensirekisterointipvm"] . ", " . $rivi["ajoneuvoryhma"] . " " . $rivi["ajoneuvonkaytto"] . " " . $rivi["variantti"]. " " . $rivi["versio"]. " " . $rivi["kayttoonottopvm"]. " " . $rivi["vari"]. " " . $rivi["ovienlukumaara"]. " " . $rivi["korityyppi"]. " " . $rivi["ohjaamotyyppi"]. " " . $rivi["istumapaikkojenlkm"]. " " . $rivi["omamassa"]. " " . $rivi["teknSuurSallKokmassa"]. " " . $rivi["tieliikSuurSallKokmassa"]. " " . $rivi["ajonKokPituus"]. " " . $rivi["ajonLeveys"]. " " . $rivi["ajonKorkeus"]. " " . $rivi["Kayttovoima"]. " " . $rivi["iskutilavuus"]. " " . $rivi["suurinNettoteho"]. " " . $rivi["sylintereidenLkm"]. " " . $rivi["ahdin"]. " " . $rivi["sahkohybridi"]. " " . $rivi["merkkiSelvakielinen"]. " " . $rivi["mallimerkinta"]. " " . $rivi["vaihteisto"]. " " . $rivi["vaihteidenlkm"]. " " . $rivi["kaupallinenNimi"]. " " . $rivi["voimanValJaTehostamistapa"]. " " . $rivi["tyyppihyvaksynta"]. " " . $rivi["yksittaisKayttovoima"]. " " . $rivi["kunta"]. " " . $rivi["Co2"]. " " . $rivi["mittarilukema"]. " " . $rivi["alue"];
-
-                }
+                       
+           echo  "<tr><th>Luokka</th><th>Ryhmä</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";     
+        while($rivi = mysqli_fetch_array($tulos)) {
+         echo "<tr>
+                  <td>".$rivi['ajoneuvoluokka']."</td> 
+                  <td>".$rivi['ajoneuvoryhmä']."</td>
+                  <td>".$rivi['kunta']."</td>
+                  <td>".$rivi['vaihteisto']."</td>
+                  <td>".$rivi['vari']."</td>
+			<tr>";
+                }	
             }
 
             mysqli_close($yhteys);
 
         ?>
+		</table>
         </p>
         <script>
   document.write('<script src=js/vendor/' +
@@ -63,6 +72,4 @@
 
 
 </body>
-</html>
-  </body>
 </html>

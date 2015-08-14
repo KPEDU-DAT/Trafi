@@ -1,3 +1,8 @@
+
+*** These modified files were found in JOE when it aborted on Fri Aug 14 10:33:32 2015
+*** JOE was aborted because the terminal closed
+
+*** File 'hakuc.php'
 <!DOCTYPE HTML>
 <html lang="fi">
   <head>
@@ -35,20 +40,18 @@
 
                 while ($rivi = mysqli_fetch_array($tulos)) {
             echo $rivi["ajoneuvoluokka"] . " " . $rivi["ensirekisterointipvm"] . ", " . $rivi["ajoneuvoryhma"] . " " . $rivi["ajoneuvonkaytto"] . " " . $rivi["variantti"]. " " . $rivi["versio"]. " " . $rivi["kayttoonottopvm"]. " " . $rivi["vari"]. " " . $rivi["ovienlukumaara"]. " " . $rivi["korityyppi"]. " " . $rivi["ohjaamotyyppi"]. " " . $rivi["istumapaikkojenlkm"]. " " . $rivi["omamassa"]. " " . $rivi["teknSuurSallKokmassa"]. " " . $rivi["tieliikSuurSallKokmassa"]. " " . $rivi["ajonKokPituus"]. " " . $rivi["ajonLeveys"]. " " . $rivi["ajonKorkeus"]. " " . $rivi["Kayttovoima"]. " " . $rivi["iskutilavuus"]. " " . $rivi["suurinNettoteho"]. " " . $rivi["sylintereidenLkm"]. " " . $rivi["ahdin"]. " " . $rivi["sahkohybridi"]. " " . $rivi["merkkiSelvakielinen"]. " " . $rivi["mallimerkinta"]. " " . $rivi["vaihteisto"]. " " . $rivi["vaihteidenlkm"]. " " . $rivi["kaupallinenNimi"]. " " . $rivi["voimanValJaTehostamistapa"]. " " . $rivi["tyyppihyvaksynta"]. " " . $rivi["yksittaisKayttovoima"]. " " . $rivi["kunta"]. " " . $rivi["Co2"]. " " . $rivi["mittarilukema"]. " " . $rivi["alue"]."<br><hr>";
-            	<table>
-  					<thead>
-    				<tr>
-      				<th width="200">Table Header</th>
-      				<th>Table Header</th>
-      				<th width="150">Table Header</th>
-      				<th width="150">Table Header</th>
-    				</tr>
-				  </thead>
-				  <tbody>
-    				<tr>
-						<td>asia<td>
-						<td>asia<td>
-                }	
+                <table>
+                  <thead>
+                      <tr>
+                      <th width="200">Table Header</th>
+                            <th>Table Header</th>
+                            <th width="150">Table Header</th>
+                            <th width="150">Table Header</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                }
             }
 
             mysqli_close($yhteys);
@@ -78,3 +81,52 @@
 </html>
   </body>
 </html>
+
+*** File '(Unnamed)'
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+
+*** These modified files were found in JOE when it aborted on Fri Aug 14 10:40:14 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+autoindent
+
+*** File '(Unnamed)'
+root
+
+*** File '(Unnamed)'
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
