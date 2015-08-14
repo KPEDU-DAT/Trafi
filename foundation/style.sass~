@@ -1,0 +1,17 @@
+$font-stack:	Helvetica, sans-serif;
+$primary-color: #333;
+$hakucolor: black;
+$hakukorkeus: 500px;
+$hakuleveys: 500px;
+
+body	{
+	font: 100 $font-stack;
+	color: $primary-color;
+	}
+
+
+.hakukone	{
+	background-color: $hakucolor;
+	height: $hakukorkeus;
+	width: $hakuleveys;
+}
