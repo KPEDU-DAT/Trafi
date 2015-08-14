@@ -6,10 +6,7 @@
 
 <!DOCTYPE HTML>
 <?php
-$X= $_POST['merkki'];
-$Z= $_POST['malli'];
-$Y= $_POST['vuosi'];
-$btn=$_POST['nappi'];
+
 ?>
 <html>
   <head>
@@ -29,6 +26,11 @@ $btn=$_POST['nappi'];
 
 
 <?php
+
+$X= $_POST['merkki'];
+$Z= $_POST['malli'];
+$Y= $_POST['vuosi'];
+$btn=$_POST['nappi'];
 
 if($btn=="True")
 {
@@ -74,6 +76,6 @@ else
 echo "";
 }
 ?>
-    </p>
+   
   </body>
 </html>
