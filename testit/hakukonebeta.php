@@ -1,5 +1,8 @@
+<?php
 //KOODI= JOONA, JUHO, HANNU, MIRO
 //PROJEKTIJOHTAJA= EQ (ERIKA)
+?>
+
 
 <!DOCTYPE HTML>
 <?php
@@ -14,7 +17,7 @@ $btn=$_POST['nappi']
     <title> PHP + SQL </title>
   </head>
   <body>
-    <form method="POST" action="tietokanta.php">
+    <form method="POST" action="hakukonebeta.php">
       <p>Kirjoittakaa haluttu merkki: </p>
       <input type="text" name="merkki" value="">
       <p>Kirjoittakaa haluttu malli: </p>
