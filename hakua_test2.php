@@ -16,7 +16,7 @@ src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
     <h1>Ajoneuvotiedot</h1>
         <p>
             <form action="hakua_test.php" method="POST">
-                <p>Anna Rekisterinumero:
+                <p>Anna Rekisterinumero:)
                 <input type="text" name="rek">
                 <p><button class="btn btn-info btn-lg" type="submit"
                 name="laheta" value="true">Hae</button>
@@ -32,11 +32,11 @@ $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             $yhteys->set_charset('utf8');
 
             if ($_POST['rek']) {
-                $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
+                $jnro = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
                                                 FROM trafi_ajoneuvot, trafi_rekisterinumerot
                                                 WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
-                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
+                                                WHERE trafi_ajoneuvot.jarnro = '" . $jnro . "'");
 
                 while ($rivi = mysqli_fetch_array($tulos)) {
             echo$rivi["rekisterinumero"] . " " . $rivi["ajoneuvoluokka"] . " " .$rivi["ensirekisterointipvm"] . " " . $rivi["ajoneuvoryhma"] . " " .$rivi["ajoneuvonkaytto"] . " " . $rivi["variantti"]. " " . $rivi["versio"]." " . $rivi["kayttoonottopvm"]. " " . $rivi["vari"]. " " .$rivi["ovienlukumaara"]. " " . $rivi["korityyppi"]. " " .$rivi["ohjaamotyyppi"]. " " . $rivi["istumapaikkojenlkm"]. " " .$rivi["omamassa"]. " " . $rivi["teknSuurSallKokmassa"]. " " .$rivi["tieliikSuurSallKokmassa"]. " " . $rivi["ajonKokPituus"]. " " .$rivi["ajonLeveys"]. " " . $rivi["ajonKorkeus"]. " " . $rivi["Kayttovoima"]." " . $rivi["iskutilavuus"]. " " . $rivi["suurinNettoteho"]. " " .$rivi["sylintereidenLkm"]. " " . $rivi["ahdin"]. " " .$rivi["sahkohybridi"]. " " . $rivi["merkkiSelvakielinen"]. " " .$rivi["mallimerkinta"]. " " . $rivi["vaihteisto"]. " " .$rivi["vaihteidenlkm"]. " " . $rivi["kaupallinenNimi"]. " " .$rivi["voimanValJaTehostamistapa"]. " " . $rivi["tyyppihyvaksynta"]. " " .$rivi["yksittaisKayttovoima"]. " " . $rivi["kunta"]. " " . $rivi["Co2"]. " ". $rivi["mittarilukema"]. " " . $rivi["alue"];
