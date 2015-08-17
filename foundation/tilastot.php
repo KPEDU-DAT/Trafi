@@ -23,22 +23,16 @@
         <table>
         <thead>
             <tr>
-                <th>Yleisimmät automallit</th>
+                <th>Yleisimmät automallit</th><th>Määrä</th>
             </tr>
         </thead>
         <tbody>
-                <tr>
-                    <td>Malli 1</td><td>2030</td>
-                </tr>
-                <tr>
-                    <td>Malli 2</td><td>245030</td>
-                </tr>
-                <tr>
-                    <td>Malli 3</td><td>241030</td>
-                </tr>
-                <tr>
-                    <td>Malli 1</td><td>2030</td>
-                </tr>
+                <?php
+                    $res = mysqli_query("SELECT merkkiSelvakielinen, COUNT(merkkiSelvakielinen) from trafi_ajoneuvot GROUP BY COUNT(merkkiSelvakielinen) ORDER BY COUNT(merkkiSelvakielinen) DESC LIMIT 10;");
+                    while ($row = $res->fetch_array(MYSQLI_ASSOC)) {
+                        echo "<tr><td>a</td></tr>";
+                    }
+                ?>
         </tbody>
         </table>
       </div>
