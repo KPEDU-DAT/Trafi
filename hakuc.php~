@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tavoite 3</title>
+    <title>Haku C</title>
 
     <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
@@ -18,6 +18,7 @@
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
+		<table>
         <p>
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -31,29 +32,27 @@
                 $tulos = mysqli_query($yhteys, "SELECT *
                                                 FROM trafi_ajoneuvot
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-                                                ORDER BY kayttoonottopvm");
+                                                ORDER BY kayttoonottopvm DESC");
 
-                while ($rivi = mysqli_fetch_array($tulos)) {
-            echo $rivi["ajoneuvoluokka"] . " " . $rivi["ensirekisterointipvm"] . ", " . $rivi["ajoneuvoryhma"] . " " . $rivi["ajoneuvonkaytto"] . " " . $rivi["variantti"]. " " . $rivi["versio"]. " " . $rivi["kayttoonottopvm"]. " " . $rivi["vari"]. " " . $rivi["ovienlukumaara"]. " " . $rivi["korityyppi"]. " " . $rivi["ohjaamotyyppi"]. " " . $rivi["istumapaikkojenlkm"]. " " . $rivi["omamassa"]. " " . $rivi["teknSuurSallKokmassa"]. " " . $rivi["tieliikSuurSallKokmassa"]. " " . $rivi["ajonKokPituus"]. " " . $rivi["ajonLeveys"]. " " . $rivi["ajonKorkeus"]. " " . $rivi["Kayttovoima"]. " " . $rivi["iskutilavuus"]. " " . $rivi["suurinNettoteho"]. " " . $rivi["sylintereidenLkm"]. " " . $rivi["ahdin"]. " " . $rivi["sahkohybridi"]. " " . $rivi["merkkiSelvakielinen"]. " " . $rivi["mallimerkinta"]. " " . $rivi["vaihteisto"]. " " . $rivi["vaihteidenlkm"]. " " . $rivi["kaupallinenNimi"]. " " . $rivi["voimanValJaTehostamistapa"]. " " . $rivi["tyyppihyvaksynta"]. " " . $rivi["yksittaisKayttovoima"]. " " . $rivi["kunta"]. " " . $rivi["Co2"]. " " . $rivi["mittarilukema"]. " " . $rivi["alue"]."<br><hr>";
-            	<table>
-  					<thead>
-    				<tr>
-      				<th width="200">Table Header</th>
-      				<th>Table Header</th>
-      				<th width="150">Table Header</th>
-      				<th width="150">Table Header</th>
-    				</tr>
-				  </thead>
-				  <tbody>
-    				<tr>
-						<td>asia<td>
-						<td>asia<td>
+                       
+           echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";     
+        while($rivi = mysqli_fetch_array($tulos)) {
+         echo "<tr>
+                  <td>".$rivi['merkkiSelvakielinen']."</td> 
+                  <td>".$rivi['mallimerkinta']."</td>
+                  <td>".$rivi['kunta']."</td>
+                  <td>".$rivi['vaihteisto']."</td>
+                  <td>".$rivi['vari']."</td>
+			</tr>";
                 }	
             }
-
+            if ($_POST['laheta'] != $VIN){ echo "VIN-koodia ei löydy.";}
+            else echo "";
+echo "ERK O OHM";
             mysqli_close($yhteys);
 
         ?>
+		</table>
         </p>
         <script>
   document.write('<script src=js/vendor/' +
@@ -75,6 +74,4 @@
 
 
 </body>
-</html>
-  </body>
 </html>

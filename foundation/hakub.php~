@@ -28,26 +28,27 @@ if(mysqli_connect_errno())
 die("MySQL, virhe yhteyden luonnissa: ".mysqli_connect_error());
 }
 $yhteys->set_charset('utf8');
-$tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot      
-                            WHERE trafi_ajoneuvot.ensirekisterointipvm =  '".$Y."%'
-                            ");// OR WHERE 'merkkiSelvakielinen' ='".$X."'
-                            //OR WHERE 'mallimerkinta' = '%".$Z."%';" );
-while($rivi=mysqli_fetch_array($tulos))
- {
-    echo $rivi['ajoneuvoluokka']." ".$rivi['ensirekisterointipvm']." ".$rivi['ajoneuvoryhma']." ";
-         //.$rivi['ajoneuvokaytto']." ".$rivi['variantti']." ".$rivi['versio']." ".
-         //$rivi['kayttoonottopvm']." ".$rivi['vari']." ".$rivi['ovienlukumaara']." ".
-         //$rivi['korityyppi']." ".$rivi['ohjaamotyyppi']." ".$rivi['istumapaikkojenlkm']." ".
-         //$rivi['omamassa']." ".$rivi['teknSuurSallKokmassa']." ".$rivi['tieliikSuurSallKokmassa']." ".
-         //$rivi['ajonKokPituus']." ".$rivi['ajoLeveys']." ".$rivi['ajonKorkeus']." ".
-         //$rivi['Kayttovoima']." ".$rivi['iskutilavuus']." ".$rivi['suurinNettoteho']." ".
-         //$rivi['sylintereidenLkm']." ".$rivi['ahdin']." ".$rivi['sahkohybridi']." ".
-         //$rivi['merkkiSelvakielinen']." ".$rivi['mallimerkinta']." ".$rivi['vaihteisto']." ".
-         //$rivi['vaihteidenlkm']." ".$rivi['kaupallinenNimi']." ".$rivi['voimanValJaTehostamistapa']." ".
-         //$rivi['tyyppihyvaksynta']." ".$rivi['yksittaisKayttovoima']." ".$rivi['kunta']." ".
-         //$rivi['Co2']." ".$rivi['mittarilukema']." ".$rivi['alue']." ".
-         //$rivi['valmistenumero2']." ".$rivi['jarnro'];
-}
+$tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot
+                            WHERE trafi_ajoneuvot.ensirekisterointipvm LIKE '".$Y."%'
+                            AND trafi_ajoneuvot.merkkiSelvakielinen LIKE '".$X."'
+                            AND trafi_ajoneuvot.mallimerkinta LIKE '%".$Z."%';" );
+    echo "<table>";
+while($rivi=mysqli_fetch_array($tulos))	{
+    echo "<tr><td>".$rivi['ajoneuvoluokka']." ".$rivi['ensirekisterointipvm']." ".$rivi['ajoneuvoryhma']." ".
+         $rivi['ajoneuvokaytto']." ".$rivi['variantti']." ".$rivi['versio']." ".
+         $rivi['kayttoonottopvm']." ".$rivi['vari']." ".$rivi['ovienlukumaara']." ".
+         $rivi['korityyppi']." ".$rivi['ohjaamotyyppi']." ".$rivi['istumapaikkojenlkm']." ".
+         $rivi['omamassa']." ".$rivi['teknSuurSallKokmassa']." ".$rivi['tieliikSuurSallKokmassa']." ".
+         $rivi['ajonKokPituus']." ".$rivi['ajoLeveys']." ".$rivi['ajonKorkeus']." ".
+         $rivi['Kayttovoima']." ".$rivi['iskutilavuus']." ".$rivi['suurinNettoteho']." ".
+         $rivi['sylintereidenLkm']." ".$rivi['ahdin']." ".$rivi['sahkohybridi']." ".
+         $rivi['merkkiSelvakielinen']." ".$rivi['mallimerkinta']." ".$rivi['vaihteisto']." ".
+         $rivi['vaihteidenlkm']." ".$rivi['kaupallinenNimi']." ".$rivi['voimanValJaTehostamistapa']." ".
+         $rivi['tyyppihyvaksynta']." ".$rivi['yksittaisKayttovoima']." ".$rivi['kunta']." ".
+         $rivi['Co2']." ".$rivi['mittarilukema']." ".$rivi['alue']." ".
+         $rivi['valmistenumero2']." ".$rivi['jarnro']."</td></tr>";
+  }
+  echo "</table>";
 mysqli_close($yhteys);
 }
 else
