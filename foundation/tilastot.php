@@ -3,7 +3,7 @@
   <head>
     <?php
 
-        $yht = mysqli_connect("85.157.249.252", "data14", "mv2Mqbm888DvqbjT", "data14");
+        $yht = mysqli_connect("localhost", "data14", "mv2Mqbm888DvqbjT", "data14");
         echo mysqli_error($yht);
 
     ?>
