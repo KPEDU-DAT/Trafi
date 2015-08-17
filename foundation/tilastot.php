@@ -18,19 +18,36 @@
     <? include("ypalkki.php") ?>                           
     <div class="row" style="height: 100px;"></div>      
     <div class="row">
-      <div class="small-6 medium-6 large-6 columns">
+    
+    <div class="small-6 medium-6 large-6 columns">
         <table>
-        <th>a</th>
-        <td>a</td>
+        <thead>
+            <tr>
+                <th>Yleisimmät automallit</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Malli 1</td><td>2030</td>
+                </tr>
+                <tr>
+                    <td>Malli 2</td><td>245030</td>
+                </tr>
+                <tr>
+                    <td>Malli 3</td><td>241030</td>
+                </tr>
+                <tr>
+                    <td>Malli 1</td><td>2030</td>
+                </tr>
+        </tbody>
         </table>
       </div>
-      <div class="small-6 medium-6 large-6 columns">
-        <table>
-        <th>a</th>
-        <td>a</td>
-        </table>
+    
+    <div class="small-6 medium-6 large-6 columns">
+      
       </div>
-	</div>
+	
+    </div>
   </body>
   <? include("footer.php"); ?>
 
