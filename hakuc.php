@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tavoite 3</title>
+    <title>Haku C</title>
 
     <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
@@ -18,7 +18,7 @@
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table class="table table-hover table-bordered">
+		<table>
         <p>
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -33,21 +33,21 @@
                                                 FROM trafi_ajoneuvot
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC");
-
-                       
-           echo  "<tr><th>Luokka</th><th>Ryhmä</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";     
+        echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";                                        
         while($rivi = mysqli_fetch_array($tulos)) {
          echo "<tr>
-                  <td>".$rivi['ajoneuvoluokka']."</td> 
-                  <td>".$rivi['ajoneuvoryhmä']."</td>
+                  <td>".$rivi['merkkiSelvakielinen']."</td> 
+                  <td>".$rivi['mallimerkinta']."</td>
                   <td>".$rivi['kunta']."</td>
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['vari']."</td>
-			<tr>";
-                }	
+			</tr>";
+                }
+             	
             }
-
+        
             mysqli_close($yhteys);
+            
 
         ?>
 		</table>
