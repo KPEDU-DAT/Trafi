@@ -1,6 +1,6 @@
 $font-stack:	Helvetica, sans-serif;
 $primary-color: #333;
-$hakucolor: black;
+$hakuborder: 1em solid black;
 $hakukorkeus: 500px;
 $hakuleveys: 500px;
 
@@ -11,7 +11,30 @@ body	{
 
 
 .hakukone	{
-	background-color: $hakucolor;
+	border: $hakuborder;
 	height: $hakukorkeus;
 	width: $hakuleveys;
+}
+
+.top-bar {
+  background: white;
+}
+
+
+.panel {
+  border-style: solid;
+  border-width: 0px;
+  border-color: white;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: white;
+  color: #333333;
+}
+
+.yvalikko {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  position: fixed;
+  right: 0px;
 }
