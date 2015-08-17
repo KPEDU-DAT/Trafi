@@ -30,7 +30,7 @@
                 <?php
                     $res = mysqli_query($yht, "SELECT merkkiSelvakielinen, COUNT(merkkiSelvakielinen) from trafi_ajoneuvot GROUP BY merkkiSelvakielinen ORDER BY COUNT(merkkiSelvakielinen) DESC LIMIT 10;");
                     while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-                        echo "<tr><td>" . $row['merkkiSelvakielinen']. "</td></tr>";
+                        echo "<tr><td>" . $row['merkkiSelvakielinen']. "</td><td>" . $row['count(merkkiselvakielinen)'] . "</td></tr>";
                     }
                 ?>
         </tbody>
