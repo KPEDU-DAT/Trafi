@@ -2,7 +2,7 @@
 $X= $_POST['merkki'];
 $Z= $_POST['malli'];
 $Y= $_POST['vuosi'];
-$btn=$_POST['nappi']
+$btn=$_POST['nappi'];
 ?>
 
 
@@ -25,16 +25,16 @@ $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
                                                
 if(mysqli_connect_errno())
 {
-die("MySQL, virhe yhteyden luonnissa: ". mysqli_connect_error());
+die("MySQL, virhe yhteyden luonnissa: ".mysqli_connect_error());
 }
 $yhteys->set_charset('utf8');
-$tulos= mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot      
-                            WHERE 'ensirekisterointipvm' LIKE  '".$Y."%'
-                            AND 'merkkiSelvakielinen' ='".$X."'
-                            AND 'mallimerkinta' = '%".$Z."%';" );
-while($rivi=mysqli_fetch_array($tulos))
-{
-    echo $rivi['ajoneuvoluokka']." ".$rivi['ensirekisterointipvm']." ".$rivi['ajoneuvoryhma']." ".
+$tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot
+                            WHERE trafi_ajoneuvot.ensirekisterointipvm LIKE '".$Y."%'
+                            AND trafi_ajoneuvot.merkkiSelvakielinen LIKE '".$X."'
+                            AND trafi_ajoneuvot.mallimerkinta LIKE '%".$Z."%';" );
+    echo "<table>";
+while($rivi=mysqli_fetch_array($tulos))	{
+    echo "<tr><td>".$rivi['ajoneuvoluokka']." ".$rivi['ensirekisterointipvm']." ".$rivi['ajoneuvoryhma']." ".
          $rivi['ajoneuvokaytto']." ".$rivi['variantti']." ".$rivi['versio']." ".
          $rivi['kayttoonottopvm']." ".$rivi['vari']." ".$rivi['ovienlukumaara']." ".
          $rivi['korityyppi']." ".$rivi['ohjaamotyyppi']." ".$rivi['istumapaikkojenlkm']." ".
@@ -46,14 +46,14 @@ while($rivi=mysqli_fetch_array($tulos))
          $rivi['vaihteidenlkm']." ".$rivi['kaupallinenNimi']." ".$rivi['voimanValJaTehostamistapa']." ".
          $rivi['tyyppihyvaksynta']." ".$rivi['yksittaisKayttovoima']." ".$rivi['kunta']." ".
          $rivi['Co2']." ".$rivi['mittarilukema']." ".$rivi['alue']." ".
-         $rivi['valmistenumero2']." ".$rivi['jarnro'];
-    echo "<br>";
-}
+         $rivi['valmistenumero2']." ".$rivi['jarnro']."</td></tr>";
+  }
+  echo "</table>";
 mysqli_close($yhteys);
 }
 else
 {
-echo "";
+echo "Ei yhteyttä";
 }
 ?>
     </p>
