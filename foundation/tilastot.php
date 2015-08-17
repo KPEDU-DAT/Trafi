@@ -28,7 +28,7 @@
         </thead>
         <tbody>
                 <?php
-                    $res = mysqli_query("SELECT merkkiSelvakielinen, COUNT(merkkiSelvakielinen) from trafi_ajoneuvot GROUP BY COUNT(merkkiSelvakielinen) ORDER BY COUNT(merkkiSelvakielinen) DESC LIMIT 10;");
+                    $res = mysqli_query($yht, "SELECT merkkiSelvakielinen, COUNT(merkkiSelvakielinen) from trafi_ajoneuvot GROUP BY COUNT(merkkiSelvakielinen) ORDER BY COUNT(merkkiSelvakielinen) DESC LIMIT 10;");
                     while ($row = $res->fetch_array(MYSQLI_ASSOC)) {
                         echo "<tr><td>a</td></tr>";
                     }
