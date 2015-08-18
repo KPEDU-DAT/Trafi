@@ -32,26 +32,47 @@
                 $tulos = mysqli_query($yhteys, "SELECT *
                                                 FROM trafi_ajoneuvot
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+                                               
                                                 ORDER BY kayttoonottopvm DESC");
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";                                        
+        echo  "<tr><th>Merkki</th><th>Malli</th><th>Käyttönottopvm</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Versio</th><th>Ovienlkm</th><th>Korityyppi</th><th>Ohjaamotyyppi</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th>";                                        
         while($rivi = mysqli_fetch_array($tulos)) {
          echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
-                  <td>".$rivi['kunta']."</td>
-                  <td>".$rivi['vaihteisto']."</td>
+                  <td>".$rivi['kayttoonottopvm']."</td>
+                  <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['vari']."</td>
+                  <td>".$rivi['ajoneuvoluokka']."</td>
+                  <td>".$rivi['versio']."</td> 
+                  <td>".$rivi['ovienlukumaara']."</td> 
+                  <td>".$rivi['korityyppi']."</td> 
+                  <td>".$rivi['ohjaamotyyppi']."</td> 
+                  <td>".$rivi['istumapaikkojenlkm']."</td> 
+                  <td>".$rivi['omamassa']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td>
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td> 
+                  <td>".$rivi['']."</td>  
 			</tr>";
                 }
              	
             }
-        
             mysqli_close($yhteys);
             
-
         ?>
 		</table>
         </p>
+        <?php
+        
+        ?>
         <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
