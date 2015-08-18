@@ -51,10 +51,10 @@
  </form>
 <form action="hakua.php" method="POST"> 
                                                                                              
-  <input type="text" placeholder="Haku" name="valmistenumero2">                          
+  <input type="text" placeholder="Haku" name="rek">                          
   <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
 </form>
-<table>
+<table class="table table-hover table.bordered">
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -62,21 +62,26 @@
             }                           
             $yhteys->set_charset('utf8');                                        
 
-            if ($_POST['valmistenumero2']) {
-                $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
-                $tulos = mysqli_query($yhteys, "SELECT *                             
-                                                FROM trafi_ajoneuvot
-                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-                                                ORDER BY kayttoonottopvm DESC");                      
+      if ($_POST['rek']) {
+                $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
+                $tulos = mysqli_query($yhteys, "SELECT *
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot
+                                                WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
+                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
+               }
+                
+                                                                                                                                                                                                            echo "<table>";
+                                                                                                                                                                                                                            while ($rivi = mysqli_fetch_array($tulos)) {
         echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";
-        while($rivi = mysqli_fetch_array($tulos)) {                                             
+                                                   
          echo "<tr>                                
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>       
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['vari']."</td>      
-            </tr>";                         
+            </tr>";
+while ($rivi = mysqli_fetch_array($tulos)) {                         
                 }  
 
             }    
