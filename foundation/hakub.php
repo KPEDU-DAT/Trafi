@@ -34,7 +34,9 @@ $tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot
                             AND trafi_ajoneuvot.mallimerkinta LIKE '%".$Z."%';" );
     echo "<table>";
     echo  "<tr><th>Luokka</th><th>1. rek. pvä</th><th>Ryhmä</th><th>dfjshkk</th><th>Väri</th>";
-while($rivi=mysqli_fetch_array($tulos))	{
+    include "taulukko.php";
+
+   while($rivi=mysqli_fetch_array($tulos))	{
     echo "<tr>
              <td>".$rivi['ajoneuvoluokka']."</td> <td>".$rivi['ensirekisterointipvm']."</td> <td>".$rivi['ajoneuvoryhma']."</td> <td>".
          $rivi['ajoneuvokaytto']."</td> <td>".$rivi['variantti']."</td> <td>".$rivi['versio']."</td> <td>".
