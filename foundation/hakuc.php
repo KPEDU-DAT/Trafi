@@ -5,8 +5,11 @@
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
+		
+
 		<table class="table">
         <p>
+        
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -21,6 +24,7 @@
                                                 ORDER BY kayttoonottopvm DESC");
                        
            echo  "<thead><tr><th>Luokka</th><th>Ryhmä</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th></tr></thead>";     
+           include("taulukko.php");
         while($rivi = mysqli_fetch_array($tulos)) {
           echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td> 
