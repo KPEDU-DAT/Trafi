@@ -1,12 +1,15 @@
 <h1>Ajoneuvotiedot</h1>
         <p>
-            <form action="hakuc.php" method="POST">
+            <form action="hcbody.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
+		
+
 		<table class="table">
         <p>
+        
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
