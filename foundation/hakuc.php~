@@ -6,33 +6,7 @@
             </form>
         </p>
 		
-		
-<form>
-<div class="row">
-    <div class="large-12 columns">
-      <label>Valitse suodatus
-        <select>
-          <option value="husker">Ajoneuvoluokka</option>
-          <option value="starbuck">Ajoneuvoryhmä</option>
-          <option value="hotdog">Kunta</option>
-          <option value="apollo">Vaihteisto</option>
-		<option value="apollo">Väri</option>
-        </select>
-      </label>
-    </div>
-  </div>
-  <div class="large-12 columns">
-      <label>Järjestysehto
-        <select>
-          <option value="husker">A-Z</option>
-          <option value="starbuck">Suurimmasta pienimpään</option>
-          <option value="hotdog">Pienimmästä suurimpaan</option>  
-        </select>
-      </label>
-    </div>
-  </div>
-    <a href="#" class="button">Hae</a>
-</form>		
+
 		<table class="table">
         <p>
         
