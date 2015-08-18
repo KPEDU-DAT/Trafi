@@ -14,7 +14,7 @@
     <title> Hakukone B </title>
   </head>
   <body>
-    <form method="POST" action="testing_things.php">
+    <form method="POST" action="hakubuusi.php">
      <p>Valitse haluamasi merkki: </p>
       <select name="merkki">
       <option value="Volvo">Volvo</option>
