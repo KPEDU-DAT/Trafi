@@ -8,7 +8,7 @@
   </head>
 	
 	<body>                                                                      
-	  <? include("ypalkki.php") ?> 
+	  <? include("navbar.php") ?> 
 	  <div class="row" style="height: 100px;"></div>
 	  <div class="row">
 	    <div class="small-3 medium-3 large-3 small-centered medium-centered large-centered columns">

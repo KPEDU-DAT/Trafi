@@ -1,5 +1,5 @@
 <body>
-  <? include("ypalkki.php") ?>
+  <? include("navbar.php") ?>
   <div class="row"></div>
     <div class=" small-3 medium-3 large-3 small-centered medium-centered large-centered columns">
       <? include("auto.php"); ?>

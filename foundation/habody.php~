@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="fi">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ajoneuvotiedot</title>
     <script src="js/vendor/modernizr.js"></script>
   </head>
