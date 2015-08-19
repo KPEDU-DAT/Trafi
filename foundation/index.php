@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
+    <title>Säätiö</title>
     <? include("head.php"); ?>
   </head>
     <? include("body.php"); ?>
