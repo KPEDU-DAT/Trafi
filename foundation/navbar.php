@@ -11,7 +11,7 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li class="active"><a href="tibody.php">Tilastot</a></li>
+      <li class="active"><a href="tilastot.php">Tilastot</a></li>
       <li class="has-dropdown">
         <a href="#">Haku</a>
         <ul class="dropdown">
