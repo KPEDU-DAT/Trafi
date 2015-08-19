@@ -11,10 +11,17 @@
    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
    
-  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="http://foundation.zurb.com/assets/css/templates/foundation.css"/>
+  <script src="http://foundation.zurb.com/assets/js/modernizr.js"></script>
    <head/>
-
+<p>
+            <form action="hakuc.php" method="POST">
+                <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
+                <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+            </form>                                                                     
+        </p>                                                                                             
+        <table>    
+        <p> 
   
   
 <style>
@@ -39,22 +46,16 @@
   <div class="large-12 columns">
    <div class="row collapse postfix-round">
     <div class="small-9 columns">
-   
+     <input type="text" placeholder="Haku">
     </div>
      <div class="small-3 columns">
-     
+      <a href="#" class="button postfix">Hae</a>
      </div>
     </div>
    </div>
   </div>
  </div>
  </form>
-<form action="hakua.php" method="POST"> 
-                                                                                             
-  <input type="text" placeholder="Haku" name="valmistenumero2">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
-</form>
-<table>
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
