@@ -1,10 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
-    <script src="js/vendor/modernizr.js"></script>
+    
+    
+    
+    
+    <title>Ajoneuvohaku</title>
+    <? include("head.php"); ?>
+    <link rel="stylesheet" type="text/css" href="foundation.css">
   </head>
     <? include("body.php"); ?>
     <script src="js/vendor/jquery.js"></script>

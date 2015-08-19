@@ -29,12 +29,20 @@
 
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
+<<<<<<< HEAD
                 $tulos = mysqli_query($yhteys, "SELECT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
                                             
+=======
+                $tulos = mysqli_query($yhteys, "SELECT *
+                                                FROM trafi_ajoneuvot, trafi_vari
+                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+                                                AND trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                ORDER BY kayttoonottopvm DESC");
+>>>>>>> b31db975938a1aa5048c602d62d83567b7be7c3d
         echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th>";                                        
         while($rivi = mysqli_fetch_array($tulos)) {
          echo "<tr>
@@ -43,11 +51,19 @@
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
                   <td>".$rivi['ajoneuvoluokka']."</td>
+<<<<<<< HEAD
                   <td>".$rivi['ovienlukumaara']."</td> 
                   <td>".$rivi['istumapaikkojenlkm']."</td> 
                   <td>".$rivi['omamassa']."</td> 
                   <td>".$rivi['iskutilavuus']."</td> 
 			</tr>";
+=======
+                  <td>".$rivi['ovienlukumaara']."</td>
+                  <td>".$rivi['istumapaikkojenlkm']."</td> 
+                  <td>".$rivi['omamassa']."</td> 
+                  <td>".$rivi['iskutilavuus']."</td> 
+               </tr>";
+>>>>>>> b31db975938a1aa5048c602d62d83567b7be7c3d
                 }
              	
             }

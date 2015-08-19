@@ -4,7 +4,7 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li><a href="index.php">Index</a></li>
-      <li><a href="tilastot.php">Tilastot</a></li>
+      <li><a href="tibody.php">Tilastot</a></li>
       <li><a href="habody.php">Hakukone A</a></li>
       <li><a href="hbbody.php">Hakukone B</a></li>
       <li><a href="hcbody.php">Hakukone C</a></li>

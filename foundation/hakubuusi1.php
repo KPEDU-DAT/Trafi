@@ -6,7 +6,6 @@
 
 <!DOCTYPE HTML>
 <?php
-
 ?>
 <html>
   <head>
@@ -14,22 +13,22 @@
     <title> Hakukone B </title>
   </head>
   <body>
-    <form method="POST" action="hakubuusi.php">
+    <form method="POST" action="hbbody.php">
      <p>Valitse haluamasi merkki: </p>
       <select name="merkki">
-      	<option value="Audi">Audi</option>
-		<option value="BMW">BMW</option>
-		<option value="Citroen">Citroen</option>
-		<option value="Ford">Ford</option>
-		<option value="Mazda">Mazda</option>
-		<option value="Mercedes-Benz">Mercedes-Benz</option>
-		<option value="Mitsubishi">Mitsubishi</option>
-		<option value="Renault">Renault</option>
-		<option value="Saab">Saab</option>
-		<option value="Skoda">Skoda</option>
-		<option value="Toyota">Toyota</option>
-		<option value="Volkswagen">Volkswagen</option>
-		<option value="Volvo">Volvo</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Volkswagen">Volkswagen</option>
+      <option value="Mercedes-Benz">Mercedes-Benz</option>
+      <option value="Audi">Audi</option>
+      <option value="Saab">Saab</option>
+      <option value="Ford">Ford</option>
+      <option value="Renault">Renault</option>
+      <option value="Mazda">Mazda</option>
+      <option value="Citroen">Citroen</option>
+      <option value="Skoda">Skoda</option>
+      <option value="Mitsubishi">Mitsubishi</option>
+      <option value="BMW">BMW</option>
       </select>
       <p>Valitse haluamasi malli: </p>
       <select name="malli">
@@ -42,7 +41,8 @@
       <option disabled value="desc2">Volkswagen</option>
       <option value="GOLF">Golf</option>
       <option value="PASSAT">Passat</option>
-      <option value="TRANSPORTER_1.9TD-70X0A-K">Transporter 1.9TD-70X0A-K</option>
+      <option value="TRANSPORTER_1.9TD-70X0A-K">Transporter
+      1.9TD-70X0A-K</option>
 
       <option disabled value="desc3"><u>Mercedes-Benz</u></option>
       <option value="C_200_CDI">C 200 CDI</option>
@@ -65,8 +65,8 @@
       <option value="MONDEA">Mondea</option>
       <option value="TRANSIT_100">Transit 100</option>
 
-      <option disabled value="desc7">Skoda</option>
-      <option value="OCTAVIA">Octavia</option>
+      <option disabled value="desc7">Scoda</option>
+      <option value="OCTAVIA">Ocativia</option>
 
       <option disabled value="desc8">Mazda</option>
       <option value="6">6</option>
@@ -117,43 +117,57 @@
     <table class="table">
 
 <?php
-
 $X = $_POST['merkki'];
 $Z = $_POST['malli'];
 $Y = $_POST['vuosi'];
 $btn = $_POST['nappi'];
-
 if($btn=="True")
 {
-
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
-
 if(mysqli_connect_errno())
 {
 die("MySQL, virhe yhteyden luonnissa: ".mysqli_connect_error());
 }
 $yhteys->set_charset('utf8');
 $tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot
-                            WHERE trafi_ajoneuvot.ensirekisterointipvm LIKE '".$Y."%'
-                            AND trafi_ajoneuvot.merkkiSelvakielinen LIKE '".$X."'
-                            AND trafi_ajoneuvot.mallimerkinta LIKE '%".$Z."%';" );
+                            WHERE trafi_ajoneuvot.ensirekisterointipvm LIKE
+'".$Y."%'
+                            AND trafi_ajoneuvot.merkkiSelvakielinen LIKE
+'".$X."'
+                            AND trafi_ajoneuvot.mallimerkinta LIKE
+'%".$Z."%';" );
     echo "<table>";
-    echo  "<tr><th>Luokka</th><th>1. rek. pvä</th><th>Ryhmä</th><th>dfjshkk</th><th>Väri</th>";
+    echo  "<tr><th>Luokka</th><th>1. rek.
+pvä</th><th>Ryhmä</th><th>dfjshkk</th><th>Väri</th>";
 while($rivi=mysqli_fetch_array($tulos)) {
     echo "<tr>
-
-    <td>".$rivi['ajoneuvoluokka']."</td> <td>".$rivi['ensirekisterointipvm']."</td> <td>".$rivi['ajoneuvoryhma']."</td> <td>".
-         $rivi['ajoneuvokaytto']."</td> <td>".$rivi['variantti']."</td> <td>".$rivi['versio']."</td> <td>".
-         $rivi['kayttoonottopvm']."</td> <td>".$rivi['vari']."</td> <td>".$rivi['ovienlukumaara']."</td> <td>".
-         $rivi['korityyppi']."</td> <td>".$rivi['ohjaamotyyppi']."</td> <td>".$rivi['istumapaikkojenlkm']."</td> <td>".
-         $rivi['omamassa']."</td> <td>".$rivi['teknSuurSallKokmassa']."</td> <td>".$rivi['tieliikSuurSallKokmassa']."</td> <td>".
-         $rivi['ajonKokPituus']."</td> <td>".$rivi['ajoLeveys']."</td> <td>".$rivi['ajonKorkeus']."</td> <td>".
-         $rivi['Kayttovoima']."</td> <td>".$rivi['iskutilavuus']."</td> <td>".$rivi['suurinNettoteho']."</td> <td>".
-         $rivi['sylintereidenLkm']."</td> <td>".$rivi['ahdin']."</td> <td>".$rivi['sahkohybridi']."</td> <td>".
-         $rivi['merkkiSelvakielinen']."</td> <td>".$rivi['mallimerkinta']."</td> <td>".$rivi['vaihteisto']."</td> <td>".
-         $rivi['vaihteidenlkm']."</td> <td>".$rivi['kaupallinenNimi']."</td> <td>".$rivi['voimanValJaTehostamistapa']."</td> <td>".
-         $rivi['tyyppihyvaksynta']."</td> <td>".$rivi['yksittaisKayttovoima']."</td> <td>".$rivi['kunta']."</td> <td>".
-         $rivi['Co2']."</td> <td>".$rivi['mittarilukema']."</td> <td>".$rivi['alue']."</td> <td>".
+   	    
+    <td>".$rivi['ajoneuvoluokka']."</td>
+<td>".$rivi['ensirekisterointipvm']."</td>
+<td>".$rivi['ajoneuvoryhma']."</td> <td>".
+         $rivi['ajoneuvokaytto']."</td> <td>".$rivi['variantti']."</td>
+<td>".$rivi['versio']."</td> <td>".
+         $rivi['kayttoonottopvm']."</td> <td>".$rivi['vari']."</td>
+<td>".$rivi['ovienlukumaara']."</td> <td>".
+         $rivi['korityyppi']."</td> <td>".$rivi['ohjaamotyyppi']."</td>
+<td>".$rivi['istumapaikkojenlkm']."</td> <td>".
+         $rivi['omamassa']."</td> <td>".$rivi['teknSuurSallKokmassa']."</td>
+<td>".$rivi['tieliikSuurSallKokmassa']."</td> <td>".
+         $rivi['ajonKokPituus']."</td> <td>".$rivi['ajoLeveys']."</td>
+<td>".$rivi['ajonKorkeus']."</td> <td>".
+         $rivi['Kayttovoima']."</td> <td>".$rivi['iskutilavuus']."</td>
+<td>".$rivi['suurinNettoteho']."</td> <td>".
+         $rivi['sylintereidenLkm']."</td> <td>".$rivi['ahdin']."</td>
+<td>".$rivi['sahkohybridi']."</td> <td>".
+         $rivi['merkkiSelvakielinen']."</td>
+<td>".$rivi['mallimerkinta']."</td> <td>".$rivi['vaihteisto']."</td> <td>".
+         $rivi['vaihteidenlkm']."</td> <td>".$rivi['kaupallinenNimi']."</td>
+<td>".$rivi['voimanValJaTehostamistapa']."</td> <td>".
+         $rivi['tyyppihyvaksynta']."</td>
+<td>".$rivi['yksittaisKayttovoima']."</td> <td>".$rivi['kunta']."</td>
+<td>".
+         $rivi['Co2']."</td> <td>".$rivi['mittarilukema']."</td>
+<td>".$rivi['alue']."</td> <td>".
          $rivi['valmistenumero2']."</td> <td>".$rivi['jarnro']."</td></tr>";
   }
   echo "</table>";
@@ -165,4 +179,3 @@ echo "Ei yhteyttä";
 }
 ?>
     </p>
-
