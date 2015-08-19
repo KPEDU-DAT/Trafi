@@ -8,8 +8,7 @@
 
     <link rel="stylesheet"
 href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-	<script
-src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
 
   </head>
   <body>

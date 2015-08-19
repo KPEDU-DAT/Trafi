@@ -8,82 +8,47 @@
             </form>
         </p>
         <p>
-        <?php
-$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+        <table class="table table-hover table.bordered">
+        <?php  
+            $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
-                die("MySQL, virhe yhteyden luonnissa:" .mysqli_connect_error());
-            }
-            $yhteys->set_charset('utf8');
-            if ($_POST['rek']) {
+                die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());    
+            }                           
+            $yhteys->set_charset('utf8');                                        
+      if ($_POST['rek']) {
                 $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot
-                                                WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
-                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
+                                                
+                                                WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
+                                              
+                                                AND trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                 
+                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
+                                                
+               }								
                 
-                    include("taulukko.php");
-                   echo "<tr>";
-                while ($rivi = mysqli_fetch_array($tulos)) {
-            echo  
-                "<td>".$rivi["rekisterinumero"]."</td>".
-                  "<td>".$rivi["ajoneuvoluokka"]."</td>".
-                  "<td>".$rivi["ensirekisterointipvm"]."</td>".
-                  "<td>".$rivi["ajoneuvoryhma"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["ajoneuvonkaytto"]."</td>".
-                  "<td>".$rivi["variantti"]."</td>".
-                  "<td>".$rivi["versio"]."</td>".
-                  "<td>".$rivi["kayttoonottopvm"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["vari"]."</td>".
-                  "<td>".$rivi["ovienlukumaara"]."</td>".
-                  "<td>".$rivi["korityyppi"]."</td>".
-                  "<td>".$rivi["ohjaamotyyppi"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["istumapaikkojenlkm"]."</td>".
-                  "<td>".$rivi["omamassa"]."</td>". 
-                  "<td>".$rivi["teknSuurSallKokmassa"]."</td>".
-                  "<td>".$rivi["tieliikSuurSallKokmassa"]."</td>".
-                  //"</tr>".
-                  //"<tr>". 
-                  "<td>".$rivi["ajonKokPituus"]."</td>".
-                  "<td>".$rivi["ajonLeveys"]."</td>".
-                  "<td>".$rivi["ajonKorkeus"]."</td>".
-                  "<td>".$rivi["Kayttovoima"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["iskutilavuus"]."</td>".
-                  "<td>".$rivi["suurinNettoteho"]."</td>".
-                  "<td>".$rivi["sylintereidenLkm"]."</td>".
-                  "<td>".$rivi["ahdin"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["sahkohybridi"]."</td>".
-                  "<td>".$rivi["merkkiSelvakielinen"]."</td>".
-                  "<td>".$rivi["mallimerkinta"]."</td>".
-                  "<td>".$rivi["vaihteisto"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["vaihteidenlkm"]."</td>".
-                  "<td>".$rivi["kaupallinenNimi"]."</td>".
-                  "<td>".$rivi["voimanValJaTehostamistapa"]."</td>".
-                  "<td>".$rivi["tyyppihyvaksynta"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["yksittaisKayttovoima"]."</td>".
-                  "<td>".$rivi["kunta"]."</td>".
-                  "<td>".$rivi["Co2"]."</td>".
-                  "<td>".$rivi["mittarilukema"]."</td>".
-                  "<td>".$rivi["alue"]."</td></tr>";
-                }
-                echo "</table>";
-            }
+      
+              while ($rivi = mysqli_fetch_array($tulos)) {
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";
+                                                   
+         echo "<tr>
+                  <td>".$rivi['ajoneuvoluokka']."</td>                       
+                  <td>".$rivi['merkkiSelvakielinen']."</td> 
+                  <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['ensirekisterointipvm']."</td>
+                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['vaihteisto']."</td>
+                  <td>".$rivi['iskutilavuus']."</td>
+                  <td>".$rivi['pitkaselite_fi']."</td>      
+            </tr>";
+                         
+                }  
+                
             mysqli_close($yhteys);
-        ?>
+        ?>   
         </p>
+        </table>
         <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
