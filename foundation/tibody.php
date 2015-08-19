@@ -34,7 +34,7 @@
                 //merkit) listojen ensimmäisten alkioiden mukaan.
                 
                 // Jos tiettyä kategoriaa ei ole valittu, täytyy käyttää jotakin oletusarvoa
-                if (isset($_GET["table"])
+                if (!(isset($_GET["table"])))
                     $num = $_GET["table"];
                 else
                     $num = 0;
