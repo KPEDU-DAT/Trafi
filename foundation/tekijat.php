@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Tekijät</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 <body>
-  <? include("body.php") ?>   
+  <? include("body.php") ?>
 <div class="row">
   <div class="large-12 columns">
       <div class="large-6 columns" id="rtext">
-        <p><b>Hakukone A </b>&middot  Erkka and Alex.</p>
-        <p><b>Hakukone B </b>&middot Joona, Juho, Hannu, Miro and Erika.</p>
-        <p><b>Hakukone C </b>&middot Patric, Jori, Leevi, Antti and joku</p>
-        <p><b>Integrointi </b>&middot Santeri, Janne and Thylin.</p>
+        <p>Hakukone a by Janne, Mathias, Erkka, Björk and Alex.</p>
+        <p>Hakukone b by Joona, Juho, Hannu, Miro and Erika.</p>
+        <p>Hakukone c by Patric, Jori, Leevi, Antti and joku</p>
+        <p>Integrointi by Santeri and Janne and Thylin.</p>
       </div>
     </div>
   </div>
 </body>
 </html>
-
-
-
-
-
-

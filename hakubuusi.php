@@ -17,19 +17,19 @@
     <form method="POST" action="hakubuusi.php">
      <p>Valitse haluamasi merkki: </p>
       <select name="merkki">
-      <option value="Volvo">Volvo</option>
-      <option value="Toyota">Toyota</option>
-      <option value="Volkswagen">Volkswagen</option>
-      <option value="Mercedes-Benz">Mercedes-Benz</option>
-      <option value="Audi">Audi</option>
-      <option value="Saab">Saab</option>
-      <option value="Ford">Ford</option>
-      <option value="Renault">Renault</option>
-      <option value="Mazda">Mazda</option>
-      <option value="Citroen">Citroen</option>
-      <option value="Skoda">Skoda</option>
-      <option value="Mitsubishi">Mitsubishi</option>
-      <option value="BMW">BMW</option>
+      	<option value="Audi">Audi</option>
+		<option value="BMW">BMW</option>
+		<option value="Citroen">Citroen</option>
+		<option value="Ford">Ford</option>
+		<option value="Mazda">Mazda</option>
+		<option value="Mercedes-Benz">Mercedes-Benz</option>
+		<option value="Mitsubishi">Mitsubishi</option>
+		<option value="Renault">Renault</option>
+		<option value="Saab">Saab</option>
+		<option value="Skoda">Skoda</option>
+		<option value="Toyota">Toyota</option>
+		<option value="Volkswagen">Volkswagen</option>
+		<option value="Volvo">Volvo</option>
       </select>
       <p>Valitse haluamasi malli: </p>
       <select name="malli">
@@ -65,8 +65,8 @@
       <option value="MONDEA">Mondea</option>
       <option value="TRANSIT_100">Transit 100</option>
 
-      <option disabled value="desc7">Scoda</option>
-      <option value="OCTAVIA">Ocativia</option>
+      <option disabled value="desc7">Skoda</option>
+      <option value="OCTAVIA">Octavia</option>
 
       <option disabled value="desc8">Mazda</option>
       <option value="6">6</option>
@@ -141,7 +141,7 @@ $tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot
     echo  "<tr><th>Luokka</th><th>1. rek. pvä</th><th>Ryhmä</th><th>dfjshkk</th><th>Väri</th>";
 while($rivi=mysqli_fetch_array($tulos)) {
     echo "<tr>
-   	    
+
     <td>".$rivi['ajoneuvoluokka']."</td> <td>".$rivi['ensirekisterointipvm']."</td> <td>".$rivi['ajoneuvoryhma']."</td> <td>".
          $rivi['ajoneuvokaytto']."</td> <td>".$rivi['variantti']."</td> <td>".$rivi['versio']."</td> <td>".
          $rivi['kayttoonottopvm']."</td> <td>".$rivi['vari']."</td> <td>".$rivi['ovienlukumaara']."</td> <td>".
@@ -165,3 +165,4 @@ echo "Ei yhteyttä";
 }
 ?>
     </p>
+
