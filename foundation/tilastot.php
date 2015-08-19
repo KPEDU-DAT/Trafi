@@ -29,8 +29,13 @@
                 //Muuttuja $sql sisältää yleispätevän lauseen tilastollisten määrien laskemiseen.
                 //Alla olevat listat sisältävät kyselylauseen muuttuvat tiedot joihin viitataan $_GET["table"]-muuttujalla.
                 //Esim sql-lause määräytyy tablen ollessa 0 (Ajoneuven merkit) listojen ensimmäisten alkioiden mukaan.
-                $num = $_GET["table"];
                 
+                // $num tarvitsee oletusarvon jos kategoriaa ei ole valittu
+                if (isset($_GET["table"]))
+                    $num = $_GET["table"];
+                else
+                    $num = 0;
+
                 $hselite = array("Yleisimmät merkit","Yleisimmät värit");
                 $harvo = array("Määrä","Määrä");
                 $selite = array("merkkiSelvakielinen","pitkaselite_fi");
