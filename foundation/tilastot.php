@@ -16,7 +16,12 @@
 
   <body>                                                             
     <? include("navbar.php") ?>                           
-    <div class="row" style="height: 100px;"></div>      
+    <div class="row"></div>
+      <div class=" small-3 medium-3 large-3 small-centered medium-centered large-centered columns">
+            <? include("auto.php"); ?>
+      </div>
+    </div>
+                <div class="row" style="height: 100px;"></div>      
     <div class="row">
     <div class="small-6 medium-6 large-6 columns">
         <h3>TOP-10</h3>
