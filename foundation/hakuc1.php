@@ -2,7 +2,7 @@
         <p>
             <form action="hcbody.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
-                <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+                <p><button class="btn btn-info btn-lg" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
 		<table>
