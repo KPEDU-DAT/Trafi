@@ -9,6 +9,7 @@
         </p>
         <p>
         <?php
+        
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" .mysqli_connect_error());
@@ -21,66 +22,20 @@ $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
                                                 WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
                                                 AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
                 
-                    include("taulukko.php");
-                   echo "<tr>";
-                while ($rivi = mysqli_fetch_array($tulos)) {
-            echo  
-                "<td>".$rivi["rekisterinumero"]."</td>".
-                  "<td>".$rivi["ajoneuvoluokka"]."</td>".
-                  "<td>".$rivi["ensirekisterointipvm"]."</td>".
-                  "<td>".$rivi["ajoneuvoryhma"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["ajoneuvonkaytto"]."</td>".
-                  "<td>".$rivi["variantti"]."</td>".
-                  "<td>".$rivi["versio"]."</td>".
-                  "<td>".$rivi["kayttoonottopvm"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["vari"]."</td>".
-                  "<td>".$rivi["ovienlukumaara"]."</td>".
-                  "<td>".$rivi["korityyppi"]."</td>".
-                  "<td>".$rivi["ohjaamotyyppi"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["istumapaikkojenlkm"]."</td>".
-                  "<td>".$rivi["omamassa"]."</td>". 
-                  "<td>".$rivi["teknSuurSallKokmassa"]."</td>".
-                  "<td>".$rivi["tieliikSuurSallKokmassa"]."</td>".
-                  //"</tr>".
-                  //"<tr>". 
-                  "<td>".$rivi["ajonKokPituus"]."</td>".
-                  "<td>".$rivi["ajonLeveys"]."</td>".
-                  "<td>".$rivi["ajonKorkeus"]."</td>".
-                  "<td>".$rivi["Kayttovoima"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["iskutilavuus"]."</td>".
-                  "<td>".$rivi["suurinNettoteho"]."</td>".
-                  "<td>".$rivi["sylintereidenLkm"]."</td>".
-                  "<td>".$rivi["ahdin"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["sahkohybridi"]."</td>".
-                  "<td>".$rivi["merkkiSelvakielinen"]."</td>".
-                  "<td>".$rivi["mallimerkinta"]."</td>".
-                  "<td>".$rivi["vaihteisto"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["vaihteidenlkm"]."</td>".
-                  "<td>".$rivi["kaupallinenNimi"]."</td>".
-                  "<td>".$rivi["voimanValJaTehostamistapa"]."</td>".
-                  "<td>".$rivi["tyyppihyvaksynta"]."</td>".
-                  //"</tr>".
-                  //"<tr>".
-                  "<td>".$rivi["yksittaisKayttovoima"]."</td>".
-                  "<td>".$rivi["kunta"]."</td>".
-                  "<td>".$rivi["Co2"]."</td>".
-                  "<td>".$rivi["mittarilukema"]."</td>".
-                  "<td>".$rivi["alue"]."</td></tr>";
-                }
-                echo "</table>";
+                                
+                
+              while ($rivi = mysqli_fetch_array($tulos)) {      
+                 
+                                  
+                  include ("taulukko5.php");
+                
+             
+                
+                  }
+                
+            
             }
+            
             mysqli_close($yhteys);
         ?>
         </p>
@@ -99,7 +54,10 @@ src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
   	src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
 	<script
   	src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
-	<script>
+	<link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
+	<link rel="stylesheet" href="responsive-tables.css">
+	
+  <script>
     	  $(document).foundation();
     	  var doc = document.documentElement;
     	  doc.setAttribute('data-useragent', navigator.userAgent);
