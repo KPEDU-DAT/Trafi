@@ -117,6 +117,7 @@ taulukko.php
 taulukko.php
 taulukko.php
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Tue Aug 18 11:41:41 2015
 *** JOE was aborted because the terminal closed
 
@@ -252,22 +253,124 @@ hakuc.php
 hakua.php
 habody.php
 hakua.php
+=======
+*** These modified files were found in JOE when it aborted on Tue Aug 18 10:30:48 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+tekijat.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot1.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 18 10:30:50 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+footer.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+index.php
+body.php
+
+*** File '(Unnamed)'
+footer.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+index.php
+body.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 10:40:02 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+index.php
+hakua.php
+habody.php
+habody.php
+habody.php
+habody.php
+habody.php
+habody.php
+habody.php
+hakua.php
+hbbody.php
+hbbody.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 10:40:02 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
 hakua.php
 hakua.php
 hakua.php
 hakua.php
 hakua.php
+<<<<<<< HEAD
+hakua.php
+=======
+hcbody.php
+hcbody.php
+hakuc1.php
+hcbody.php
+hakuc1.php
+hcbody.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:52:32 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+index.php
+index.php
+habody.php
+hakua.php
+habody.php
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
 hakua.php
 hakua.php
 hakua.php
 hakua.php
+<<<<<<< HEAD
+hakua.php
+hakua.php
+=======
+habody.php
+hakua.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:54:13 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+index.php
+habody.php
+hakua.php
+habody.php
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
 hakua.php
 hakua.php
 hakua.php
 hakua.php
-hakua.php
-hakua.php
-hakua.php
+<<<<<<< HEAD
 hakua.php
 hakua.php
 hakua.php
@@ -319,3 +422,8 @@ taulukko6.php
 taulukko3.php
 taulukko6.php
 hakuc.php
+=======
+hcbody.php
+hcbody.php
+styleinc.php
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169

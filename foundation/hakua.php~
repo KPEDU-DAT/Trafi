@@ -8,20 +8,49 @@
             </form>
         </p>
         <p>
+<<<<<<< HEAD
         <?php
         
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+=======
+        <?php  
+            $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
             if(mysqli_connect_errno()) {
-                die("MySQL, virhe yhteyden luonnissa:" .mysqli_connect_error());
-            }
-            $yhteys->set_charset('utf8');
-            if ($_POST['rek']) {
+                die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());    
+            }                           
+            $yhteys->set_charset('utf8');                                        
+      if ($_POST['rek']) {
                 $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot
-                                                WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
-                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
+                                                
+                                                WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
+                                              
+                                                AND trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                 
+                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
+                                                
+               }								
                 
+      
+              while ($rivi = mysqli_fetch_array($tulos)) {
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";
+                                                   
+         echo "<tr>
+                  <td>".$rivi['ajoneuvoluokka']."</td>                       
+                  <td>".$rivi['merkkiSelvakielinen']."</td> 
+                  <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['ensirekisterointipvm']."</td>
+                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['vaihteisto']."</td>
+                  <td>".$rivi['iskutilavuus']."</td>
+                  <td>".$rivi['pitkaselite_fi']."</td>      
+            </tr>";
+                         
+                }  
+                
+<<<<<<< HEAD
                                 
                 
               while ($rivi = mysqli_fetch_array($tulos)) {      
@@ -35,8 +64,10 @@ $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             
             }
             
+=======
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
             mysqli_close($yhteys);
-        ?>
+        ?>   
         </p>
         <script>
   document.write('<script src=js/vendor/' +

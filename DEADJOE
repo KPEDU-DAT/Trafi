@@ -422,3 +422,191 @@ hakuc.php
 erkka_haku.php
 erkka_haku.php
 erkka_haku.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 18 10:55:52 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+autoindent
+
+*** File '(Unnamed)'
+root
+
+*** File 'hakua.php'
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html>
+
+  <head>
+  
+  <title>YOLO</title>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
+   <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
+   <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
+   
+  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
+  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+   <head/>
+
+  
+  
+<style>
+
+ img{padding-top: 150px;}
+ 
+</style>
+    
+
+
+
+  
+  </head>  
+ <body>
+ <center>
+ <div class="large-12 medium-12 small-12 columns">
+ <img src="http://www.comparateur-assurance-auto.biz/images/auto.png">
+ </div>
+ 
+ <form>
+ <div class="row">
+  <div class="large-12 columns">
+   <div class="row collapse postfix-round">
+    <div class="small-9 columns">
+   
+    </div>
+     <div class="small-3 columns">
+     
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ </form>
+<form action="hakua.php" method="POST"> 
+                                                                                             
+  <input type="text" placeholder="Haku" name="rek">                          
+  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+</form>
+<table class="table table-hover table.bordered">
+<?php  
+            $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+            if(mysqli_connect_errno()) {
+                die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());    
+            }                           
+            $yhteys->set_charset('utf8');                                        
+
+      if ($_POST['rek']) {
+                $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
+                $tulos = mysqli_query($yhteys, "SELECT *
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot
+                                                WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
+                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
+               }
+                
+                                                                                                                                                                                                            echo "<table>";
+                                                                                                                                                                                                                            while ($rivi = mysqli_fetch_array($tulos)) {
+        echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";
+                                                     
+         echo "<tr>                                
+                  <td>".$rivi['merkkiSelvakielinen']."</td> 
+                  <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['vaihteisto']."</td>
+                  <td>".$rivi['vari']."</td>      
+            </tr>";
+while ($rivi = mysqli_fetch_array($tulos)) {                         
+                }  
+
+            }    
+
+            mysqli_close($yhteys);
+
+
+        ?>   
+        </table>
+        </p>                      
+        <script>                                     
+                                     
+          
+ 
+ </center>
+ <script>
+      document.write('<script src=js/vendor/' +
+      ('__proto__' in {} ? 'zepto' : 'jquery') +
+      '.js><\/script>')
+      </script>
+      
+        <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
+        <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
+        <script>
+        $(document).foundation();
+        </script>
+        <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
+        <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
+        <script>
+         $(document).foundation();
+          var doc = document.documentElement;
+           doc.setAttribute('data-useragent', navigator.userAgent);
+            </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
+    </body>
+</html>
+*** File '(Unnamed)'
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+erkka_haku.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 18 11:18:14 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+erkka_haku.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
