@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 <body>
-  <? include("body.php") ?>   
+  <? include("body.php") ?>
 <div class="row">
   <div class="large-12 columns">
       <div class="large-6 columns" id="rtext">
@@ -19,9 +19,3 @@
   </div>
 </body>
 </html>
-
-
-
-
-
-

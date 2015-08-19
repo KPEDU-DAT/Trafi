@@ -24,6 +24,7 @@
                                                 ORDER BY kayttoonottopvm DESC");
                        
            echo  "<thead><tr><th>Luokka</th><th>Ryhmä</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th></tr></thead>";     
+           include("taulukko.php");
         while($rivi = mysqli_fetch_array($tulos)) {
           echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td> 
