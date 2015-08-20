@@ -21,7 +21,7 @@
 		<h3>TOP-10</h3>
         <a href="tilastot.php?table=0">Merkit</a><br>
         <a href="tilastot.php?table=1">Väri</a><br>
-      </div>
+       </div>
     </div>
     <div class="small-6 medium-6 large-6 columns">
         <table>
