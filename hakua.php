@@ -65,26 +65,34 @@
       if ($_POST['rek']) {
                 $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot
-                                                WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
-                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'");
-               }
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
+                                                
+                                                WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
+                                              
+                                                AND trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                 
+                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
+                                                
+               }								
                 
-                                                                                                                                                                                                            echo "<table>";
-                                                                                                                                                                                                                            while ($rivi = mysqli_fetch_array($tulos)) {
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";
+      
+              while ($rivi = mysqli_fetch_array($tulos)) {
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";
                                                    
-         echo "<tr>                                
+         echo "<tr>
+                  <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
-                  <td>".$rivi['vari']."</td>      
+                  <td>".$rivi['iskutilavuus']."</td>
+                  <td>".$rivi['pitkaselite_fi']."</td>      
             </tr>";
-while ($rivi = mysqli_fetch_array($tulos)) {                         
+                         
                 }  
 
-            }    
+                
 
             mysqli_close($yhteys);
 

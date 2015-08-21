@@ -72,11 +72,13 @@
                 
                                                                                                                                                                                                             echo "<table>";
                                                                                                                                                                                                                             while ($rivi = mysqli_fetch_array($tulos)) {
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";
-               while ($rivi = mysqli_fetch_array($tulos)) {                                      
-         echo "<tr>                                
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";
+                                                   
+         echo "<tr>
+                  <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['vari']."</td>      

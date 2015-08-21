@@ -117,6 +117,143 @@ taulukko.php
 taulukko.php
 taulukko.php
 
+<<<<<<< HEAD
+*** These modified files were found in JOE when it aborted on Tue Aug 18 11:41:41 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakub.php
+hakub.php
+hakuc.php
+hakuc.php
+hakua.php
+habody.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:28:31 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakub.php
+hakuc.php
+hakuc.php
+hakua.php
+habody.php
+hakua.php
+hakua.php
+hakua.php
+taulukko.php
+taulukko.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:28:44 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+echo  
+                  "<tr>".
+                  "<td>".$rivi["rekisterinumero"]."</td>".
+                  "<td>".$rivi["ajoneuvoluokka"]."</td>".
+                  "<td>".$rivi["ensirekisterointipvm"]."</td>".
+                  "<td>".$rivi["ajoneuvoryhma"]."</td>".
+                  "<td>".$rivi["ajoneuvonkaytto"]."</td>".
+                  "<td>".$rivi["variantti"]."</td>".
+                  "<td>".$rivi["versio"]."</td>".
+                  "<td>".$rivi["kayttoonottopvm"]."</td>".
+                  "<td>".$rivi["vari"]."</td>".
+                  "<td>".$rivi["ovienlukumaara"]."</td>".
+                  "<td>".$rivi["korityyppi"]."</td>".
+                  "<td>".$rivi["ohjaamotyyppi"]."</td>".
+                  "</tr>";
+                  
+                echo "</tbody></thead></table>";
+                  include("taulukko3.php");
+                  
+                echo
+                  "<tr>".
+                  "<td>".$rivi["istumapaikkojenlkm"]."</td>".
+                  "<td>".$rivi["omamassa"]."</td>". 
+                  "<td>".$rivi["teknSuurSallKokmassa"]."</td>".
+                  "<td>".$rivi["tieliikSuurSallKokmassa"]."</td>".
+                  "<td>".$rivi["ajonKokPituus"]."</td>".
+                  "<td>".$rivi["ajonLeveys"]."</td>".
+                  "<td>".$rivi["ajonKorkeus"]."</td>".
+                  "<td>".$rivi["Kayttovoima"]."</td>".
+                  "<td>".$rivi["iskutilavuus"]."</td>".
+                  "<td>".$rivi["suurinNettoteho"]."</td>".
+                  "<td>".$rivi["sylintereidenLkm"]."</td>".
+                  "<td>".$rivi["ahdin"]."</td>".
+                  "</tr>";
+                  
+                echo "</tbody></thead></table>";
+                  include("taulukko4.php");
+                  
+                echo
+                  "<tr>".
+                  "<td>".$rivi["sahkohybridi"]."</td>".
+                  "<td>".$rivi["merkkiSelvakielinen"]."</td>".
+                  "<td>".$rivi["mallimerkinta"]."</td>".
+                  "<td>".$rivi["vaihteisto"]."</td>".
+                  "<td>".$rivi["vaihteidenlkm"]."</td>".
+                  "<td>".$rivi["kaupallinenNimi"]."</td>".
+                  "<td>".$rivi["voimanValJaTehostamistapa"]."</td>".
+                  "<td>".$rivi["tyyppihyvaksynta"]."</td>".
+                  "<td>".$rivi["yksittaisKayttovoima"]."</td>".
+                  "<td>".$rivi["kunta"]."</td>".
+                  "<td>".$rivi["Co2"]."</td>".
+                  "<td>".$rivi["mittarilukema"]."</td>".
+                  "<td>".$rivi["alue"]."</td>
+                  </tr>";
+*** File '(Unnamed)'
+hakua.php
+hakub.php
+hakub.php
+hakuc.php
+hakuc.php
+hakua.php
+habody.php
+hakua.php
+=======
 *** These modified files were found in JOE when it aborted on Tue Aug 18 10:30:48 2015
 *** JOE was aborted because the terminal closed
 
@@ -162,6 +299,7 @@ tekijat.php
 index.php
 body.php
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Wed Aug 19 11:12:36 2015
 *** JOE was aborted by UNIX signal 1
 
@@ -177,3 +315,133 @@ hakubuusi.php
 hakubuusi.php
 Trafi
 hakubuusi1.php
+=======
+*** These modified files were found in JOE when it aborted on Wed Aug 19 10:40:02 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+index.php
+hakua.php
+habody.php
+habody.php
+habody.php
+habody.php
+habody.php
+habody.php
+habody.php
+hakua.php
+hbbody.php
+hbbody.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 10:40:02 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+<<<<<<< HEAD
+hakua.php
+=======
+hcbody.php
+hcbody.php
+hakuc1.php
+hcbody.php
+hakuc1.php
+hcbody.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:52:32 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+index.php
+index.php
+habody.php
+hakua.php
+habody.php
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+<<<<<<< HEAD
+hakua.php
+hakua.php
+=======
+habody.php
+hakua.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:54:13 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+index.php
+habody.php
+hakua.php
+habody.php
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+<<<<<<< HEAD
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 11:29:14 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko6.php
+taulukko6.php
+taulukko3.php
+taulukko3.php
+taulukko6.php
+taulukko3.php
+hakub.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 19 12:59:55 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+taulukko5.php
+taulukko5.php
+taulukko5.php
+taulukko6.php
+taulukko6.php
+taulukko3.php
+taulukko3.php
+taulukko6.php
+taulukko3.php
+taulukko6.php
+hakuc.php
+=======
+hcbody.php
+hcbody.php
+styleinc.php
+>>>>>>> 2b2ba48a9531e14e7e7a3b55fea5aa9cdca2a169
+>>>>>>> 225140916390f8f31ccc976a29f667b4e2aea3f5
