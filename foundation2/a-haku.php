@@ -1,5 +1,4 @@
-
-<form action="habody.php" method="POST"> 
+<form action="a-body.php" method="POST"> 
                                                                                              
   <input type="text" placeholder="Haku" name="rek">                          
   <button class="secondary button" type="submit" name="laheta"
@@ -7,36 +6,23 @@ value="true">Hae</button>
 </form>
 <table class="table table-hover table.bordered">
 <?php  
-
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" .
 mysqli_connect_error());    
             }                           
             $yhteys->set_charset('utf8');                                        
-      if ($_POST['rek']) {
+            if ($_POST['rek']) {
                 $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot,
-trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
-                                                
-                                                WHERE
-trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
-                                              
-                                                AND trafi_ajoneuvot.vari =
-trafi_vari.koodintunnus
-                                                 
-                                                AND
-trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
-                                                
-               }								
-                
-      
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
+                                                WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'       
+                                                AND trafi_ajoneuvot.vari =trafi_vari.koodintunnus
+                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
+                                                }								        
               while ($rivi = mysqli_fetch_array($tulos)) {
-        echo
-"<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";
-                                                   
-         echo "<tr>
+              echo"<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";                                           
+              echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>       
@@ -45,18 +31,13 @@ trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>      
-            </tr>";
-                         
+                    </tr>";
                 }  
-                
-            mysqli_close($yhteys);
+                mysqli_close($yhteys);
         ?>   
         </table>
         </p>                      
         <script>                                     
-                                     
-          
- 
  </center>
  <script>
       document.write('<script src=js/vendor/' +
@@ -80,5 +61,3 @@ src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
           var doc = document.documentElement;
            doc.setAttribute('data-useragent', navigator.userAgent);
             </script>
-
-

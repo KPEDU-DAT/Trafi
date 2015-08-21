@@ -1,7 +1,11 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="fi">
   <head>
-    <title>Säätiö</title>
+    
+    
+    
+    
+    <title>Ajoneuvohaku</title>
     <? include("head.php"); ?>
     <link rel="stylesheet" type="text/css" href="foundation.css">
   </head>

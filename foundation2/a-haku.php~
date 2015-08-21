@@ -1,4 +1,3 @@
-
 <form action="habody.php" method="POST"> 
                                                                                              
   <input type="text" placeholder="Haku" name="rek">                          
@@ -7,7 +6,6 @@ value="true">Hae</button>
 </form>
 <table class="table table-hover table.bordered">
 <?php  
-
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" .
@@ -80,5 +78,3 @@ src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
           var doc = document.documentElement;
            doc.setAttribute('data-useragent', navigator.userAgent);
             </script>
-
-
