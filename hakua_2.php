@@ -4,7 +4,7 @@
 
   <head>
   
-  <title>YOLO</title>
+  <title>Haku A</title>
    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
@@ -49,7 +49,7 @@
   </div>
  </div>
  </form>
-<form action="hakua.php" method="POST"> 
+<form action="hakua_2.php" method="POST"> 
                                                                                              
   <input type="text" placeholder="Haku" name="rek">                          
   <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
@@ -65,13 +65,12 @@
       if ($_POST['rek']) {
                 $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
-                                                
+                                                FROM trafi_ajoneuvot 
+                                                CROSS JOIN trafi_rekisterinumerot 
+                                                LEFT OUTER JOIN trafi_vari
+                                                ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
-                                              
-                                                AND trafi_ajoneuvot.vari = trafi_vari.koodintunnus
-                                                 
-                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
+                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro;");
                                                 
                }								
                 
@@ -87,7 +86,7 @@
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
-                  <td>".$rivi['pitkaselite_fi']."</td>      
+                  <td>".$rivi['pitkaselite_fi']."</td>
             </tr>";
                          
                 }  

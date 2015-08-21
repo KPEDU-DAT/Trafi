@@ -65,11 +65,11 @@
       if ($_POST['rek']) {
                 $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
                 $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot NATURAL LEFT OUTER JOIN trafi_vari
+                                                FROM trafi_ajoneuvot, trafi_rekisterinumerot LEFT OUTER JOIN trafi_vari
+                                                
+                                                ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 
                                                 WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
-                                              
-                                                AND trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                  
                                                 AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro");
                                                 
