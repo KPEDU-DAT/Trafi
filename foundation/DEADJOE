@@ -98,6 +98,7 @@ habody.php
 hakuc.php
 hakua.php
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Mon Aug 17 11:29:41 2015
 *** JOE was aborted because the terminal closed
 
@@ -129,3 +130,68 @@ hakukonebeta.php
 hakukonebeta.php
 hakukonebeta.php
 hakub.php
+=======
+*** These modified files were found in JOE when it aborted on Tue Aug 18 09:46:22 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+hakua.php
+pull
+DEADJOE
+habody.php
+taulukko.php
+taulukko.php
+taulukko.php
+taulukko.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 18 10:30:48 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+tekijat.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot1.php
+tilastot.php
+tilastot.php
+tilastot.php
+tilastot.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 18 10:30:50 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+footer.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+index.php
+body.php
+
+*** File '(Unnamed)'
+footer.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+tekijat.php
+index.php
+body.php
+>>>>>>> 036b7c435ea5fbed36413ff50ab018c2341ccd5d
