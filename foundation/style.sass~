@@ -36,5 +36,5 @@ body	{
   border-width: 1px;
   border-color: black;
   position: fixed;
-  right: 0px;
+  float: right;
 }
