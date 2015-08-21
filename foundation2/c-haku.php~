@@ -13,7 +13,7 @@
   <body>
     <h1>Ajoneuvotiedot</h1>
         <p>
-            <form action="c-body.php" method="POST">
+            <form action="hakuc.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
@@ -33,7 +33,7 @@
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th>";                                        
+        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho</th>";                                        
         while($rivi = mysqli_fetch_array($tulos)) {
          echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
@@ -44,7 +44,8 @@
                   <td>".$rivi['ovienlukumaara']."</td> 
                   <td>".$rivi['istumapaikkojenlkm']."</td> 
                   <td>".$rivi['omamassa']."</td> 
-                  <td>".$rivi['iskutilavuus']."</td> 
+                  <td>".$rivi['iskutilavuus']."</td>
+                  <td>".$rivi['suurinNettoteho']."</td>
 			</tr>";
                 }
              	

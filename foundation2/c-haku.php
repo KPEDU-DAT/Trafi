@@ -13,7 +13,7 @@
   <body>
     <h1>Ajoneuvotiedot</h1>
         <p>
-            <form action="hakuc.php" method="POST">
+            <form action="c-body.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
