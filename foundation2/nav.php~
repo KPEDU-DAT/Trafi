@@ -43,7 +43,7 @@
     <ul class="dropdown">
       <li><a href="a-body.php">Hakukone A</a></li>
       <li><a href="b-body.php">Hakukone B</a></li>
-      <li><a href="#">Hakukone C</a></li>
+      <li><a href="c-body.php">Hakukone C</a></li>
       <li class="divider"></li>
       <li><a href="#">See all &rarr;</a></li>
     </ul>

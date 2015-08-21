@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, component
+    <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, component components, grid and more.">
     <meta name="author" content="">
     <link rel="stylesheet" href="http://foundation.zurb.com/assets/css/templates/foundation.css"/>
     <script src="http://foundation.zurb.com/assets/js/modernizr.js"></script>    

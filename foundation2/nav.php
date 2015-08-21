@@ -36,7 +36,7 @@
     </ul>
     </li>
     <li class="divider"></li>
-    <li><a href="#">Tiot</a></li>
+    <li><a href="t-body.php">Tilastot</a></li>
     <li class="divider"></li>
     <li class="has-dropdown">
     <a href="#">Hakukoneet</a>
