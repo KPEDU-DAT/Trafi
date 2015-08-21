@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="http://foundation.zurb.com/assets/css/templates/foundation.css"/>
     <script src="http://foundation.zurb.com/assets/js/modernizr.js"></script>
-    <title>C</title>      
+    <title>C-haku</title>      
     <? include("tyyli.php"); ?>
   </head>
   <body>
