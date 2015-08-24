@@ -35,6 +35,8 @@
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 LEFT OUTER JOIN trafi_korityyppi
                                                 ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
+                                                LEFT OUTER JOIN trafi_ajoneuvoluokka
+                                                ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
 
@@ -45,7 +47,7 @@
                   <td>".$rivi['mallimerkinta']."</td>
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td>".$rivi['ajoneuvoluokka']."</td>
+                  <td>".$rivi['lyhytselite_fi']."</td>
                   <td>".$rivi['ovienlukumaara']."</td> 
                   <td>".$rivi['istumapaikkojenlkm']."</td> 
                   <td>".$rivi['omamassa']."</td> 
@@ -62,14 +64,12 @@
         ?>
 		</table>
         </p>
-        <?php
         
-        ?>
-        <script>
-  document.write('<script src=js/vendor/' +
-  ('__proto__' in {} ? 'zepto' : 'jquery') +
-  '.js><\/script>')
-  </script>
+    <script>
+        document.write('<script src=js/vendor/' +
+        ('__proto__' in {} ? 'zepto' : 'jquery') +
+        '.js><\/script>')
+    </script>
 	<script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
 	<script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
 	<script>
@@ -78,9 +78,9 @@
 	<script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
 	<script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
 	<script>
-    	  $(document).foundation();
-    	  var doc = document.documentElement;
-    	  doc.setAttribute('data-useragent', navigator.userAgent);
+        $(document).foundation();
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
 
 
