@@ -153,7 +153,7 @@ mysqli_close($yhteys);
 }
 else
 {
-echo "Ei yhteyttä";
+echo "";
 }
 ?>
     </p>
