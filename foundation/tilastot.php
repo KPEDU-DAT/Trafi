@@ -45,16 +45,15 @@
                 $hselite = array("Yleisimmät merkit","Yleisimmät värit", "Yleisimmät ajoneuvoluokat");
                 $harvo = array("Määrä","Määrä", "Luokka");
                 $selite = array("merkkiSelvakielinen","pitkaselite_fi", "pitkaselite_fiu");
-                $arvo = array("COUNT(merkkiSelvakielinen)","COUNT(vari)", "COUNT(ajoneuvoluokka)");
+                $arvo = array("COUNT(merkkiSelvakielinen)","COUNT(vari)", "COUNT(trafi_ajoneuvot.ajoneuvoluokka)");
                 $fromWhere = array(" ",",trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus", ", trafi_ajoneuvoluokka WHERE travi_ajoneuvot.ajoneuvoluokka=trafi_ajoneuvoluokka.ajoneuvoluokka");
-                $groupby = array("merkkiSelvakielinen","vari", "ajoneuvoluokka");
+                $groupby = array("merkkiSelvakielinen","vari", "trafi_ajoneuvot.ajoneuvoluokka");
                 
                 echo "<thead><tr>
                         <th>".$hselite[$num]."</th>
                         <th>".$harvo[$num]."</th>
                       </thead>
                       <tbody>";
-                
                 $sql = "SELECT ".$selite[$num].", ".$arvo[$num]." FROM trafi_ajoneuvot".$fromWhere[$num]." GROUP BY ".$groupby[$num]." ORDER BY ".$arvo[$num]." DESC LIMIT 10";
                 $result = mysqli_query($yht, $sql);
                 while($row = mysqli_fetch_assoc($result)){
