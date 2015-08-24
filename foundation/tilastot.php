@@ -27,6 +27,7 @@
         <h3>TOP-10</h3>
         <a href="tilastot.php?table=0">Merkit</a><br>
         <a href="tilastot.php?table=1">Väri</a><br>
+        <a href="tilastot.php?table=2">Luokka</a></br>
     </div>
     <div class="small-6 medium-6 large-6 columns">
         <table>
@@ -41,12 +42,12 @@
                 else
                     $num = 0;
 
-                $hselite = array("Yleisimmät merkit","Yleisimmät värit");
-                $harvo = array("Määrä","Määrä");
-                $selite = array("merkkiSelvakielinen","pitkaselite_fi");
-                $arvo = array("COUNT(merkkiSelvakielinen)","COUNT(vari)");
-                $fromWhere = array(" ",",trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus");
-                $groupby = array("merkkiSelvakielinen","vari");
+                $hselite = array("Yleisimmät merkit","Yleisimmät värit", "Yleisimmät ajoneuvoluokat");
+                $harvo = array("Määrä","Määrä", "Luokka");
+                $selite = array("merkkiSelvakielinen","pitkaselite_fi", "pitkaselite_fiu");
+                $arvo = array("COUNT(merkkiSelvakielinen)","COUNT(vari)", "COUNT(ajoneuvoluokka)");
+                $fromWhere = array(" ",",trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus", ", trafi_ajoneuvoluokka WHERE travi_ajoneuvot.ajoneuvoluokka=trafi_ajoneuvoluokka.ajoneuvoluokka");
+                $groupby = array("merkkiSelvakielinen","vari", "ajoneuvoluokka");
                 
                 echo "<thead><tr>
                         <th>".$hselite[$num]."</th>
