@@ -1,0 +1,262 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html>
+
+  <head>
+
+  <title>Tyylit</title>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
+   <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
+   <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
+
+  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
+  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+   <head/>
+
+
+
+<style>
+#header {
+    background-color:#606060;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#nav {
+    line-height:30px;
+    background-color:#D0D0D0;
+    height:float;
+    width:450px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+	
+    width:600px;
+    float:left;
+    padding:10px;	 	 
+}
+
+
+</style>
+
+
+
+
+
+  </head>
+<body>
+
+<div id="header">
+<h1 style="color:white">Ajoneuvon tiedot</h1>
+</div>
+
+<div id="nav">
+<h2 style="color:#585858">Tekniset tiedot</h1>
+<table style="width:100%">
+<tr>  
+    <td><b>Merkki</b></td>
+    <td>1</td>
+  </tr>  
+
+<tr>
+    <td><b>Malli</b></td>
+    <td>2</td>		
+    
+  </tr>
+  <tr>
+    <td><b>Ensirekisteröinti pvm.</b></td>
+    <td>3</td>		
+    
+  </tr>
+  <tr>
+    <td><b>Väri</b></td>
+    <td>4</td>		
+    
+  </tr>
+ <tr>  
+    <td><b>Ajoneuvoluokka</b></td> 
+    <td>5</td>        
+  </tr>
+<tr>
+    <td><b>Ovien lukumäärä</b></td>
+    <td>6</td>    
+  </tr>
+<tr>
+    <td><b>Istumapaikkojen määrä</b></td>
+    <td>7</td>    
+  </tr>
+
+<tr>
+    <td><b>Massa</b></td>
+    <td>8</td>    
+  </tr>
+<tr>
+
+    <td><b>Iskutilavuus</b></td>
+    <td>9</td>    
+  </tr>
+<tr>
+
+    <td><b>Suurin nettoteho (kW)</b></td>
+    <td>10</td>    
+  </tr>
+<tr>
+
+    <td><b>Korityyppi</b></td>
+    <td>11</td>    
+  </tr>
+<tr>
+
+    <td><b>----Tässä painike joka näyttää lisätiedot--------</b></td>
+    <td>12</td>    
+  </tr>
+<tr>
+
+    <td><b>Korityyppi</b></td>
+    <td>13</td>    
+  </tr>
+<tr>
+
+    <td><b>Ohjaamotyyppi</b></td>
+    <td>14</td>    
+  </tr>
+<tr>
+
+    <td><b>Istumapaikkojen lukumäärä</b></td>
+    <td>15</td>    
+  </tr>
+<tr>
+
+    <td><b>Massa</b></td>
+    <td>16</td>    
+  </tr>
+<tr>
+
+    <td><b>Tekn. suurin sallittu kok.massa</b></td>
+    <td>17</td>    
+  </tr>
+<tr>
+
+    <td><b>Tieliik. suurin sallittu kok.massa</b></td>
+    <td>18</td>    
+  </tr>
+<tr>
+
+    <td><b>Käyttövoima</b></td>
+    <td>19</td>    
+  </tr>
+<tr>
+
+    <td><b>Iskutilavuus</b></td>
+    <td>20</td>    
+  </tr>
+<tr>
+
+    <td><b>Suurin nettoteho</b></td>
+    <td>21</td>    
+  </tr>
+<tr>
+
+    <td><b>Sylintereiden lukum.</b></td>
+    <td>22</td>    
+  </tr>
+<tr>
+
+    <td><b>Ahdin</b></td>
+    <td>23</td>    
+  </tr>
+<tr>
+
+    <td><b>Sähköhybridi</b></td>
+    <td>24</td>    
+  </tr>
+<tr>
+
+    <td><b>Selväkielinen merkki</b></td>
+    <td>25</td>    
+  </tr>
+<tr>
+
+    <td><b>Mallimerkintä</b></td>
+    <td>26</td>    
+  </tr>
+<tr>
+    <td><b>Vaihteiden lukum.</b></td>
+    <td>27</td>    
+  </tr>
+<tr>
+
+    <td><b>Voiman valjatehostamistapa</b></td>
+    <td>28</td>    
+  </tr>
+<tr>
+
+    <td><b>Tyyppihyväksyntä</b></td>
+    <td>29</td>    
+  </tr>
+<tr>
+
+    <td><b>Yksittäiskäyttövoima</b></td>
+    <td>30</td>    
+  </tr>
+
+<tr>
+    <td><b>Kunta</b></td>
+    <td>31</td>    
+  </tr>
+<tr>
+
+    <td><b>Co2 päästöt</b></td>
+    <td>32</td>    
+  </tr>
+<tr>
+
+    <td><b>Mittarilukema</b></td>
+    <td>33</td>    
+  </tr>
+
+
+</table>
+
+</div>
+
+<div id="section">
+<h1>Ajoneuvon kaupallinen nimi</h1>
+<p>
+Muutaman lauseen pituinen kuvaus auton perusominaisuuksista, kuten
+väri, ajoneuvoryhmä, koko jne.
+</p>
+<p>
+Lisää tietoa jos keksii. London is the capital city of England.
+It is the most populous city in the United Kingdom.
+</p>
+</div>
+
+
+</body>
+
+
+ <script>
+      document.write('<script src=js/vendor/' +
+      ('__proto__' in {} ? 'zepto' : 'jquery') +
+      '.js><\/script>')
+      </script>
+
+        <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
+        <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
+        <script>
+        $(document).foundation();
+        </script>
+        <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
+        <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
+        <script>
+         $(document).foundation();
+          var doc = document.documentElement;
+           doc.setAttribute('data-useragent', navigator.userAgent);
+            </script>
+
+</html>
