@@ -133,38 +133,20 @@ $tulos=mysqli_query($yhteys,"SELECT * FROM trafi_ajoneuvot
                             AND trafi_ajoneuvot.mallimerkinta LIKE
 '%".$Z."%';" );
     echo "<table>";
-    echo  "<tr><th>Luokka</th><th>1. rek.
-pvä</th><th>Ryhmä</th><th>dfjshkk</th><th>Väri</th>";
+    echo  "<tr><th>Luokka</th><th>1. rekisteröinti
+pvm</th><th>Ryhmä</th><th>Versio</th><th>Ovien Lkm</th><th>Korityyppi</th><th>Merkki</th><th>Malli</th><th>Co2 päästöt</th></tr>";
 while($rivi=mysqli_fetch_array($tulos)) {
     echo "<tr>
    	    
-    <td>".$rivi['ajoneuvoluokka']."</td>
+<td>".$rivi['ajoneuvoluokka']."</td>
 <td>".$rivi['ensirekisterointipvm']."</td>
-<td>".$rivi['ajoneuvoryhma']."</td> <td>".
-         $rivi['ajoneuvokaytto']."</td> <td>".$rivi['variantti']."</td>
-<td>".$rivi['versio']."</td> <td>".
-         $rivi['kayttoonottopvm']."</td> <td>".$rivi['vari']."</td>
-<td>".$rivi['ovienlukumaara']."</td> <td>".
-         $rivi['korityyppi']."</td> <td>".$rivi['ohjaamotyyppi']."</td>
-<td>".$rivi['istumapaikkojenlkm']."</td> <td>".
-         $rivi['omamassa']."</td> <td>".$rivi['teknSuurSallKokmassa']."</td>
-<td>".$rivi['tieliikSuurSallKokmassa']."</td> <td>".
-         $rivi['ajonKokPituus']."</td> <td>".$rivi['ajoLeveys']."</td>
-<td>".$rivi['ajonKorkeus']."</td> <td>".
-         $rivi['Kayttovoima']."</td> <td>".$rivi['iskutilavuus']."</td>
-<td>".$rivi['suurinNettoteho']."</td> <td>".
-         $rivi['sylintereidenLkm']."</td> <td>".$rivi['ahdin']."</td>
-<td>".$rivi['sahkohybridi']."</td> <td>".
-         $rivi['merkkiSelvakielinen']."</td>
-<td>".$rivi['mallimerkinta']."</td> <td>".$rivi['vaihteisto']."</td> <td>".
-         $rivi['vaihteidenlkm']."</td> <td>".$rivi['kaupallinenNimi']."</td>
-<td>".$rivi['voimanValJaTehostamistapa']."</td> <td>".
-         $rivi['tyyppihyvaksynta']."</td>
-<td>".$rivi['yksittaisKayttovoima']."</td> <td>".$rivi['kunta']."</td>
-<td>".
-         $rivi['Co2']."</td> <td>".$rivi['mittarilukema']."</td>
-<td>".$rivi['alue']."</td> <td>".
-         $rivi['valmistenumero2']."</td> <td>".$rivi['jarnro']."</td></tr>";
+<td>".$rivi['ajoneuvoryhma']."</td>
+<td>".$rivi['versio']."</td>
+<td>".$rivi['ovienlukumaara']."</td> 
+<td>".$rivi['korityyppi']."</td>
+<td>".$rivi['merkkiSelvakielinen']."</td>
+<td>".$rivi['kaupallinenNimi']."</td>
+<td>".$rivi['Co2']."</td></tr>";
   }
   echo "</table>";
 mysqli_close($yhteys);

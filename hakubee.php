@@ -31,6 +31,7 @@
         <option value="Volkswagen">Volkswagen</option>
         <option value="Volvo">Volvo</option>
       </select>
+    </form>
 
 
 
@@ -42,6 +43,12 @@
 
       $merkki = $_POST['merkki'];
 
+      echo"
+      <form type='POST' action='hakub_2.php'>
+       <select name='merkkix'>
+        <option value=".$merkki.">".$merkki."</option>
+       </select>
+      ";
       switch($merkki)
       {
        case "Audi";
@@ -176,6 +183,7 @@
     break;
      }
      ?>
+      </form>
       <button name="btn" value="TRUE">Seuraava</button>
      <?php
 
