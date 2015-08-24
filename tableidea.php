@@ -34,12 +34,14 @@
                <th width="300" bgcolor="e80000">Ajoneuvoluokka</th>
                <th width="200" bgcolor="e80000">Merkintä</th>
                <th width="200" bgcolor="e80000">Ensirekisteröinti</th>
-               <th width="200" bgcolor="e80000">Omamassa</th>
+               <th width="200" bgcolor="e80000">Massa</th>    
+               <th width="200" bgcolor="e80000">Käyttövoima</th>
             </tr>
 
            </thead>
            <tbody>
              <tr>
+               <td bgcolor="#FFF0F0">Auto</td>
                <td bgcolor="#FFF0F0">Auto</td>
                <td bgcolor="#FFF0F0">Auto</td>
                <td bgcolor="#FFF0F0">Auto</td>
@@ -52,3 +54,4 @@
     </div>
   </body>
 </html>
+
