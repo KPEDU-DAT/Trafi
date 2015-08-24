@@ -1,0 +1,188 @@
+<div class="row">
+																	
+				<div class="large-6 columns">
+					<h4 id="top">Tiedot</h4>
+										<table class="vehicle-specs">
+						
+												
+                        <tr>
+							<td>Rekisterinumero</td>	
+							<td>$rivi["rekisterinumero"]</td>
+						</tr>
+												<tr>
+							<td>Ajoneuvoluokka</td>
+							<td>$rivi["ajoneuvoluokka"]</td>
+						</tr>
+												<tr>
+							<td>Ensirekisteröinti pvm.</td>
+							<td>$rivi["ensirekisterointipvm"]</td>
+						</tr>
+												<tr>
+							<td>Ajoneuvoryhmä</td>
+							<td>$rivi["ajoneuvoryhma"]</td>
+						</tr>
+												<tr>
+							<td>Ajoneuvonkäyttö</td>
+							<td>$rivi["ajoneuvonkaytto"]</td>
+						</tr>
+												<tr>
+							<td>Variantti</td>
+							<td>$rivi["variantti"]</td>
+						</tr>
+												<tr>
+							<td>Versio</td>
+							<td>$rivi["versio"]</td>
+						</tr>
+												<tr>
+							<td>Käyttöönotto pvm.</td>
+							<td>$rivi["kayttoonottopvm"]</td>
+						</tr>
+												<tr>
+							<td>Väri</td>
+							<td>$rivi["vari"]</td>
+						</tr>
+												<tr>
+							<td>Ovien lukum.</td>
+							<td>$rivi["ovienlukumaara"]</td>
+						</tr>
+												<tr>
+							<td>Korityyppi</td>
+							<td>$rivi["korityyppi"]</td>
+						</tr>
+						
+						<tr>
+                            <td>Ohjaamotyyppi</td>           
+                            <td>$rivi["ohjaamotyyppi"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Istumapaikkojen lkm.</td>           
+                            <td>$rivi["istumapaikkojenlkm"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Massa</td>           
+                            <td>$rivi["omamassa"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Tekn. suurin sallittu kok.massa</td>           
+                            <td>$rivi["teknSuurSallKokmassa"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Tieliik. suurin sallittu kok.massa</td>           
+                            <td>$rivi["tieliikSuurSallKokmassa"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Ajon kok.pituus</td>           
+                            <td>$rivi["ajonKokPituus"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Leveys</td>           
+                            <td>$rivi["ajonLeveys"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Korkeus</td>           
+                            <td>$rivi["ajonKorkeus"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Käyttövoima</td>           
+                            <td>$rivi["Kayttovoima"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Iskutilavuus</td>
+                            <td>$rivi["iskutilavuus"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Suurin nettoteho</td>
+                            <td>$rivi["suurinNettoteho"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Sylintereiden lukum.</td>
+                            <td>$rivi["sylintereidenLkm"]</td>
+                        </tr>
+	
+						<tr>
+                            <td>Ahdin</td>
+                            <td>$rivi["ahdin"]</td>
+                        </tr>
+	
+						<tr>
+                            <td>Sähköhybridi</td>
+                            <td>$rivi["sahkohybridi"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Selväkielinen merkki</td>
+                            <td>$rivi["merkkiSelvakielinen"]</td>
+                        </tr>
+	
+						<tr>
+                            <td>Mallimerkintä</td>
+                            <td>$rivi["mallimerkinta"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Vaihteisto</td>
+                            <td>$rivi["vaihteisto"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Vaihteiden lukum.</td>
+                            <td>$rivi["vaihteidenlkm"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Kaupallinen nimi</td>
+                            <td>$rivi["kaupallinenNimi"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Voiman valjatehostamistapa</td>
+                            <td>$rivi["voimanValJaTehostamistapa"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Tyyppihyväksyntä</td>
+                            <td>$rivi["tyyppihyvaksynta"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Yksittäiskäyttövoima</td>
+                            <td>$rivi["yksittaisKayttovoima"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Kunta</td>
+                            <td>$rivi["kunta"]</td>
+                        </tr>
+
+						<tr>                                   
+                            <td>Co2 päästöt</td>            
+                            <td>$rivi["Co2"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Mittarilukema</td>
+                            <td>$rivi["mittarilukema"]</td>
+                        </tr>
+
+						<tr>
+                            <td>Alue</td>
+                            <td>$rivi["alue"]</td>
+                        </tr>
+
+
+
+											</table>
+									</div>
+			</div>
+
