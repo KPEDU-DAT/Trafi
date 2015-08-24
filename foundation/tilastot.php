@@ -46,7 +46,7 @@
                 $harvo = array("Määrä","Määrä", "Luokka");
                 $selite = array("merkkiSelvakielinen","pitkaselite_fi", "pitkaselite_fiu");
                 $arvo = array("COUNT(merkkiSelvakielinen)","COUNT(vari)", "COUNT(ajoneuvoluokka)");
-                $fromWhere = array(" ",",trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus", ", trafi_ajoneuvoluokka WHERE travi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka");
+                $fromWhere = array(" ",",trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus", ", trafi_ajoneuvoluokka WHERE travi_ajoneuvot.ajoneuvoluokka=trafi_ajoneuvoluokka.ajoneuvoluokka");
                 $groupby = array("merkkiSelvakielinen","vari", "ajoneuvoluokka");
                 
                 echo "<thead><tr>
