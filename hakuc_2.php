@@ -13,7 +13,7 @@
   <body>
     <h1>Ajoneuvotiedot</h1>
         <p>
-            <form action="hakuc.php" method="POST">
+            <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
@@ -29,29 +29,42 @@
 
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
-                $tulos = mysqli_query($yhteys, "SELECT *
-                                                FROM trafi_ajoneuvot
+
+                $tulos = mysqli_query($yhteys, "SELECT * 
+                                                FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
+                                                ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_korityyppi
+                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-                                                ORDER BY kayttoonottopvm DESC");
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Kunta</th><th>Vaihteisto</th><th>Väri</th>";                                        
+                                                ORDER BY kayttoonottopvm DESC;");
+
+        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
         while($rivi = mysqli_fetch_array($tulos)) {
-         echo "<tr>
+        echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
-                  <td>".$rivi['kunta']."</td>
-                  <td>".$rivi['vaihteisto']."</td>
-                  <td>".$rivi['vari']."</td>
-			</tr>";
+                  <td>".$rivi['ensirekisterointipvm']."</td>
+                  <td>".$rivi['pitkaselite_fi']."</td>
+                  <td>".$rivi['ajoneuvoluokka']."</td>
+                  <td>".$rivi['ovienlukumaara']."</td> 
+                  <td>".$rivi['istumapaikkojenlkm']."</td> 
+                  <td>".$rivi['omamassa']."</td> 
+                  <td>".$rivi['iskutilavuus']."</td>
+                  <td>".$rivi['suurinNettoteho']."</td>
+                  <td>".$rivi['PITKASELITE_fii']."</td>
+              </tr>";
+
                 }
              	
             }
-        
             mysqli_close($yhteys);
             
-
         ?>
 		</table>
         </p>
+        <?php
+        
+        ?>
         <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
