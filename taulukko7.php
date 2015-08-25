@@ -25,6 +25,14 @@
     padding:5px;
 }
 
+#header1 {
+    background-color:#606060;
+        color:white;
+            text-align:center;
+                padding:40px;
+                }
+                
+
 #table {
     
 	background-color:#D0D0D0;
@@ -35,7 +43,9 @@
 	background-color:#D0D0D0;
     padding:100px;
 }
-
+#button {
+    color:red;
+}
 
 
 </style>
@@ -44,7 +54,7 @@
 
 
 
-  </head>
+
 <body>
 
 
@@ -97,6 +107,7 @@
     <td><b>Iskutilavuus</b></td>
     <td><b>Suurin nettoteho (kW)</b></td>
     <td><b>Korityyppi</b></td>
+    <td><b>Kuvaus</b></td>
 
   </tr>
 <tr>
@@ -121,57 +132,19 @@
 <td>esim10</td>
 
 <td>esim11</td>
-</tr>
-<tr>
-<td>esim1</td>
 
-<td>esim2</td>
 
-<td>esim3</td>
+<td><a href="#">Näytä</a></td>
 
-<td>esim4</td>
 
-<td>esim5</td>
-
-<td>esim6</td>
-
-<td>esim7</td>
-
-<td>esim8</td>
-
-<td>esim9</td>
-
-<td>esim10</td>
-
-<td>esim11</td>
-</tr>
-<tr>
-<td>esim1</td>
-
-<td>esim2</td>
-
-<td>esim3</td>
-
-<td>esim4</td>
-
-<td>esim5</td>
-
-<td>esim6</td>
-
-<td>esim7</td>
-
-<td>esim8</td>
-
-<td>esim9</td>
-
-<td>esim10</td>
-
-<td>esim11</td>
 </tr>
 </table>
-<a href="#" class="button round success">Näytä lisää</a>
+
 </div>
 
+<div id="header1">
+
+</div>
 
 </body>
 
