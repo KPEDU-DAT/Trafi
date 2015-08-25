@@ -71,6 +71,7 @@
 
         echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
         while($rivi = mysqli_fetch_array($tulos)) {
+        $jarnro = $rivi['jarnro'];
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
@@ -83,13 +84,14 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
+                  <td>"."<a href='linkki' class='button' id=$jarnro>.button</a>"."<td>
               </tr>";
 
                 }
+        if ($POST['jarnro']){echo "moi";}
              	
             }
-            mysqli_close($yhteys);
-            
+            mysqli_close($yhteys);    
         ?>
 		</table>
 		</div>
