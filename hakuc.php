@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Haku C</title>
+
+	<title>Haku C</title>
 
     <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+<style>
+#header {
+    background-color:#606060;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
 
+#table {
+
+    background-color:#D0D0D0;
+    padding:100px;
+}
+#section {
+
+    background-color:#D0D0D0;
+    padding:100px;
+}
+
+
+
+</style>
   </head>
   <body>
     <h1>Ajoneuvotiedot</h1>
@@ -18,7 +40,7 @@
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table>
+			<table>
         <p>
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -59,9 +81,7 @@
         ?>
 		</table>
         </p>
-        <?php
-        
-        ?>
+
         <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
@@ -79,7 +99,5 @@
     	  var doc = document.documentElement;
     	  doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
-
-
 </body>
 </html>
