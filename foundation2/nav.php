@@ -1,3 +1,17 @@
+<style>
+.top-bar {
+background: #FFFFFF;
+text-color: #000000;
+ }     
+
+. {
+background: #FFFFFF;
+text-color: #000000;
+ } 
+  
+</style>
+
+
 <nav class="top-bar" data-topbar>
 <ul class="title-area">
   <li class="name">
@@ -49,5 +63,6 @@
     </ul>
   </li>
 </ul>
+</div>
 </section>
   </nav>
