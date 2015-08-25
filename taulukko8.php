@@ -17,44 +17,34 @@
 
 
 
-<style>
+  <style>
 #header {
-    background-color:#606060;
+    background-color:#D0D0D0;
     color:white;
     text-align:center;
     padding:5px;
 }
 
-#header1 {
-    background-color:#606060;
-        color:white;
-            text-align:center;
-                padding:40px;
-                }
-                
 
 #table {
-    
-	background-color:#D0D0D0;
-    padding:100px;	      
+    padding:200px;
 }
 #section {
-	
-	background-color:#D0D0D0;
+
+    
     padding:100px;
 }
-#button {
-    color:red;
-}
+ 
 
 
 </style>
+         
 
 
 
 
 
-  </head>
+
 <body>
 
 
@@ -88,61 +78,11 @@
 </div>
 </div>
 
-<div id="header">
-<h1 style="color:white">Tekniset tiedot</h1>
-</div>
 
-<div id="table">
-
-<table>
-<tr>  
-    <td><b>Merkki</b></td>
-    <td><b>Malli</b></td>
-    <td><b>Ensirekisteröinti pvm.</b></td>
-    <td><b>Väri</b></td>
-    <td><b>Ajoneuvoluokka</b></td> 
-    <td><b>Ovien lukumäärä</b></td>
-    <td><b>Istumapaikkojen määrä</b></td>
-    <td><b>Massa</b></td>
-    <td><b>Iskutilavuus</b></td>
-    <td><b>Suurin nettoteho (kW)</b></td>
-    <td><b>Korityyppi</b></td>
-    <td><b>Kuvaus</b></td>
-
-  </tr>
-<tr>
-<td>esim1</td>
-
-<td>esim2</td>
-
-<td>esim3</td>
-
-<td>esim4</td>
-
-<td>esim5</td>
-
-<td>esim6</td>
-
-<td>esim7</td>
-
-<td>esim8</td>
-
-<td>esim9</td>
-
-<td>esim10</td>
-
-<td>esim11</td>
-
-
-<td><a href="#">Näytä</a></td>
-
-
-</tr>
-</table>
 
 </div>
 
-<div id="header1">
+
 
 </div>
 

@@ -10,9 +10,38 @@
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
 
   </head>
+
+  <style>
+#header {
+    background-color:#D0D0D0;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+
+#table {
+    padding:200px;
+}
+#section {
+
+ 
+    padding:100px;
+}
+ 
+
+
+</style>
+
+
+
   <body>
-    <h1>Ajoneuvotiedot</h1>
-        <p>
+		<div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1> 
+        </div>
+        
+<div id="table">  
+	<p>
             <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
@@ -65,6 +94,7 @@
             mysqli_close($yhteys);    
         ?>
 		</table>
+		</div>
         </p>
         
     <script>
