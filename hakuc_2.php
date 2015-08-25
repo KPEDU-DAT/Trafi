@@ -10,9 +10,38 @@
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
 
   </head>
+
+  <style>
+#header {
+    background-color:#D0D0D0;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+
+#table {
+    padding:200px;
+}
+#section {
+
+ 
+    padding:100px;
+}
+ 
+
+
+</style>
+
+
+
   <body>
-    <h1>Ajoneuvotiedot</h1>
-        <p>
+		<div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1> 
+        </div>
+        
+<div id="table">  
+	<p>
             <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
@@ -35,6 +64,8 @@
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 LEFT OUTER JOIN trafi_korityyppi
                                                 ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
+                                                LEFT OUTER JOIN trafi_ajoneuvoluokka
+                                                ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
 
@@ -45,7 +76,7 @@
                   <td>".$rivi['mallimerkinta']."</td>
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td>".$rivi['ajoneuvoluokka']."</td>
+                  <td>".$rivi['lyhytselite_fi']."</td>
                   <td>".$rivi['ovienlukumaara']."</td> 
                   <td>".$rivi['istumapaikkojenlkm']."</td> 
                   <td>".$rivi['omamassa']."</td> 
@@ -61,15 +92,14 @@
             
         ?>
 		</table>
+		</div>
         </p>
-        <?php
         
-        ?>
-        <script>
-  document.write('<script src=js/vendor/' +
-  ('__proto__' in {} ? 'zepto' : 'jquery') +
-  '.js><\/script>')
-  </script>
+    <script>
+        document.write('<script src=js/vendor/' +
+        ('__proto__' in {} ? 'zepto' : 'jquery') +
+        '.js><\/script>')
+    </script>
 	<script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
 	<script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
 	<script>
@@ -78,9 +108,9 @@
 	<script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
 	<script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
 	<script>
-    	  $(document).foundation();
-    	  var doc = document.documentElement;
-    	  doc.setAttribute('data-useragent', navigator.userAgent);
+        $(document).foundation();
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
 
 

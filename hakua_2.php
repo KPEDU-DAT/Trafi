@@ -51,7 +51,7 @@
  </form>
 <form action="hakua_2.php" method="POST"> 
                                                                                              
-  <input type="text" placeholder="Haku" name="rek">                          
+  <input type="text" placeholder="Haku" name="rekisterinumero">                          
   <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
 </form>
 <table class="table table-hover table.bordered">
@@ -62,17 +62,17 @@
             }                           
             $yhteys->set_charset('utf8');                                        
 
-      if ($_POST['rek']) {
-                $rek = mysqli_real_escape_string($yhteys ,$_POST['rek']);
+      if ($_POST['rekisterinumero']) {
+                $rek = mysqli_real_escape_string($yhteys ,$_POST['rekisterinumero']);
                 $tulos = mysqli_query($yhteys, "SELECT *
                                                 FROM trafi_ajoneuvot 
                                                 CROSS JOIN trafi_rekisterinumerot 
                                                 LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
-                                                WHERE trafi_rekisterinumerot.rekisterinumero = '" . $rek . "'
-                                                AND trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro;");
+                                                WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
+                                                AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "';");
                                                 
-               }								
+               								
                 
       
               while ($rivi = mysqli_fetch_array($tulos)) {
@@ -88,7 +88,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
             </tr>";
-                         
+                }         
                 }  
 
                 

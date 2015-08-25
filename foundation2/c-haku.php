@@ -20,7 +20,8 @@
         </p>
 		<table>
         <p>
-        <?php
+  
+  <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
@@ -31,29 +32,34 @@
                 $tulos = mysqli_query($yhteys, "SELECT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_korityyppi
+                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
+                                                LEFT OUTER JOIN trafi_ajoneuvoluokka
+                                                ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho</th>";                                        
+        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
         while($rivi = mysqli_fetch_array($tulos)) {
-         echo "<tr>
+        echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td>".$rivi['ajoneuvoluokka']."</td>
+                  <td>".$rivi['lyhytselite_fi']."</td>
                   <td>".$rivi['ovienlukumaara']."</td> 
                   <td>".$rivi['istumapaikkojenlkm']."</td> 
                   <td>".$rivi['omamassa']."</td> 
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
-			</tr>";
+                  <td>".$rivi['PITKASELITE_fii']."</td>
+              </tr>";
                 }
              	
             }
             mysqli_close($yhteys);
             
         ?>
-		</table>
+  		</table>
         </p>
         <?php
         
