@@ -25,20 +25,17 @@
     padding:5px;
 }
 
-#nav {
-    line-height:30px;
-    background-color:#D0D0D0;
-    height:float;
-    width:450px;
-    float:left;
-    padding:5px;	      
+#table {
+    
+	background-color:#D0D0D0;
+    padding:100px;	      
 }
 #section {
 	
-    width:600px;
-    float:left;
-    padding:10px;	 	 
+	background-color:#D0D0D0;
+    padding:100px;
 }
+
 
 
 </style>
@@ -50,190 +47,129 @@
   </head>
 <body>
 
+
 <div id="header">
-<h1 style="color:white">Ajoneuvon tiedot</h1>
-</div>
-
-<div id="nav">
-<h2 style="color:#585858">Tekniset tiedot</h1>
-<table style="width:100%">
-<tr>  
-    <td><b>Merkki</b></td>
-    <td>1</td>
-  </tr>  
-
-<tr>
-    <td><b>Malli</b></td>
-    <td>2</td>		
-    
-  </tr>
-  <tr>
-    <td><b>Ensirekisteröinti pvm.</b></td>
-    <td>3</td>		
-    
-  </tr>
-  <tr>
-    <td><b>Väri</b></td>
-    <td>4</td>		
-    
-  </tr>
- <tr>  
-    <td><b>Ajoneuvoluokka</b></td> 
-    <td>5</td>        
-  </tr>
-<tr>
-    <td><b>Ovien lukumäärä</b></td>
-    <td>6</td>    
-  </tr>
-<tr>
-    <td><b>Istumapaikkojen määrä</b></td>
-    <td>7</td>    
-  </tr>
-
-<tr>
-    <td><b>Massa</b></td>
-    <td>8</td>    
-  </tr>
-<tr>
-
-    <td><b>Iskutilavuus</b></td>
-    <td>9</td>    
-  </tr>
-<tr>
-
-    <td><b>Suurin nettoteho (kW)</b></td>
-    <td>10</td>    
-  </tr>
-<tr>
-
-    <td><b>Korityyppi</b></td>
-    <td>11</td>    
-  </tr>
-<tr>
-
-    <td><b>----Tässä painike joka näyttää lisätiedot--------</b></td>
-    <td>12</td>    
-  </tr>
-<tr>
-
-    <td><b>Korityyppi</b></td>
-    <td>13</td>    
-  </tr>
-<tr>
-
-    <td><b>Ohjaamotyyppi</b></td>
-    <td>14</td>    
-  </tr>
-<tr>
-
-    <td><b>Istumapaikkojen lukumäärä</b></td>
-    <td>15</td>    
-  </tr>
-<tr>
-
-    <td><b>Massa</b></td>
-    <td>16</td>    
-  </tr>
-<tr>
-
-    <td><b>Tekn. suurin sallittu kok.massa</b></td>
-    <td>17</td>    
-  </tr>
-<tr>
-
-    <td><b>Tieliik. suurin sallittu kok.massa</b></td>
-    <td>18</td>    
-  </tr>
-<tr>
-
-    <td><b>Käyttövoima</b></td>
-    <td>19</td>    
-  </tr>
-<tr>
-
-    <td><b>Iskutilavuus</b></td>
-    <td>20</td>    
-  </tr>
-<tr>
-
-    <td><b>Suurin nettoteho</b></td>
-    <td>21</td>    
-  </tr>
-<tr>
-
-    <td><b>Sylintereiden lukum.</b></td>
-    <td>22</td>    
-  </tr>
-<tr>
-
-    <td><b>Ahdin</b></td>
-    <td>23</td>    
-  </tr>
-<tr>
-
-    <td><b>Sähköhybridi</b></td>
-    <td>24</td>    
-  </tr>
-<tr>
-
-    <td><b>Selväkielinen merkki</b></td>
-    <td>25</td>    
-  </tr>
-<tr>
-
-    <td><b>Mallimerkintä</b></td>
-    <td>26</td>    
-  </tr>
-<tr>
-    <td><b>Vaihteiden lukum.</b></td>
-    <td>27</td>    
-  </tr>
-<tr>
-
-    <td><b>Voiman valjatehostamistapa</b></td>
-    <td>28</td>    
-  </tr>
-<tr>
-
-    <td><b>Tyyppihyväksyntä</b></td>
-    <td>29</td>    
-  </tr>
-<tr>
-
-    <td><b>Yksittäiskäyttövoima</b></td>
-    <td>30</td>    
-  </tr>
-
-<tr>
-    <td><b>Kunta</b></td>
-    <td>31</td>    
-  </tr>
-<tr>
-
-    <td><b>Co2 päästöt</b></td>
-    <td>32</td>    
-  </tr>
-<tr>
-
-    <td><b>Mittarilukema</b></td>
-    <td>33</td>    
-  </tr>
-
-
-</table>
-
+<h1 style="color:white">Ajoneuvon kuvaus</h1>
 </div>
 
 <div id="section">
-<h1>Ajoneuvon kaupallinen nimi</h1>
-<p>
-Muutaman lauseen pituinen kuvaus auton perusominaisuuksista, kuten
-väri, ajoneuvoryhmä, koko jne.
-</p>
-<p>
-Lisää tietoa jos keksii. London is the capital city of England.
-It is the most populous city in the United Kingdom.
-</p>
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Ajoneuvo #1 kuvaus</h2>
+  <p>London is the capital city of England.</p>
+  <p>It is the most populous city in the United Kingdom,
+  with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Ajoneuvo #2 kuvaus</h2>
+  <p>Paris is the capital of France.</p> 
+  <p>The Paris area is one of the largest population centers in Europe,
+  with more than 12 million inhabitants.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Ajoneuvo #3 kuvaus</h2>
+  <p>Tokyo is the capital of Japan.</p>
+  <p>It is the center of the Greater Tokyo Area,
+  and the most populous metropolitan area in the world.</p>
+</div>
+</div>
+</div>
+
+<div id="header">
+<h1 style="color:white">Tekniset tiedot</h1>
+</div>
+
+<div id="table">
+
+<table>
+<tr>  
+    <td><b>Merkki</b></td>
+    <td><b>Malli</b></td>
+    <td><b>Ensirekisteröinti pvm.</b></td>
+    <td><b>Väri</b></td>
+    <td><b>Ajoneuvoluokka</b></td> 
+    <td><b>Ovien lukumäärä</b></td>
+    <td><b>Istumapaikkojen määrä</b></td>
+    <td><b>Massa</b></td>
+    <td><b>Iskutilavuus</b></td>
+    <td><b>Suurin nettoteho (kW)</b></td>
+    <td><b>Korityyppi</b></td>
+
+  </tr>
+<tr>
+<td>esim1</td>
+
+<td>esim2</td>
+
+<td>esim3</td>
+
+<td>esim4</td>
+
+<td>esim5</td>
+
+<td>esim6</td>
+
+<td>esim7</td>
+
+<td>esim8</td>
+
+<td>esim9</td>
+
+<td>esim10</td>
+
+<td>esim11</td>
+</tr>
+<tr>
+<td>esim1</td>
+
+<td>esim2</td>
+
+<td>esim3</td>
+
+<td>esim4</td>
+
+<td>esim5</td>
+
+<td>esim6</td>
+
+<td>esim7</td>
+
+<td>esim8</td>
+
+<td>esim9</td>
+
+<td>esim10</td>
+
+<td>esim11</td>
+</tr>
+<tr>
+<td>esim1</td>
+
+<td>esim2</td>
+
+<td>esim3</td>
+
+<td>esim4</td>
+
+<td>esim5</td>
+
+<td>esim6</td>
+
+<td>esim7</td>
+
+<td>esim8</td>
+
+<td>esim9</td>
+
+<td>esim10</td>
+
+<td>esim11</td>
+</tr>
+</table>
+<a href="#" class="button">Default Button</a>
 </div>
 
 

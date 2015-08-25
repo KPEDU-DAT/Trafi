@@ -169,7 +169,7 @@
 <td>esim11</td>
 </tr>
 </table>
-<a href="#" class="button">Default Button</a>
+<a href="#" class="button round success">Näytä lisää</a>
 </div>
 
 
