@@ -13,9 +13,12 @@
 
   <style>
 #header {
+    background-color:#D0D0D0;
+    color:white;
     
+ 9f1973ad075fb94554fcd834e881744ccd58a301
     text-align:center;
-    padding:50px;
+    padding:5px;
 }
 
 
@@ -42,6 +45,7 @@
 
   <body>
 		<div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1> 
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
@@ -55,7 +59,7 @@
 		<table class="responsive">
         <p>
         <?php
-            $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
@@ -77,7 +81,6 @@
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kuvaus</th></tr></thead>";                                    
 
         while($rivi = mysqli_fetch_array($tulos)) {
-        $jarnro = $rivi['jarnro'];
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
@@ -90,14 +93,27 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-                  <td><a href=\"taulukko8.php?id=".$rivi['jarnro'].$rivi['omamassa']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"taulukko8.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
-
+				
+				session_start();
+        			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
+        			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
+        			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];
+        			$_SESSION['pitkaselite_fi'] = $rivi['pitkaselite_fi'];
+        			$_SESSION['lyhytselite_fi'] = $rivi['lyhytselite_fi'];
+        			$_SESSION['ovienlukumaara'] = $rivi['ovienlukumaara'];
+        			$_SESSION['istumapaikkojenlkm'] = $rivi['istumapaikkojenlkm'];
+        			$_SESSION['omamassa'] = $rivi['omamassa'];
+        			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
+        			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
+        			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
+        		 '<br /><a href="taulukko8.php"> </a>'; 
+        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>'; 
                 }
-        if ($POST['jarnro']){echo "moi";}
-             	
             }
-            mysqli_close($yhteys);    
+     
+            mysqli_close($yhteys);
         ?>
 		</table>
 		</div>

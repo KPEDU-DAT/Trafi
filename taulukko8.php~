@@ -15,22 +15,34 @@
     <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
   <head/>
 
-
-
   <style>
     #header {
-      background-color:#D0D0D0;
-      color:white;
+      
       text-align:center;
-      padding:5px;
+      padding:50px;
     }
 
     #table {
       padding:200px;
     }
     
+    #h2
+        {
+        
+        padding:20px;
+        }
+    
     #section {
       padding:100px;
+    }
+    #box {
+          width: 100%;
+          background-color: #F0F0F0;
+              height: auto;
+            border: 2px solid #D0D0D0;
+              color:black;
+                  padding:25px;
+                  
     }
  
 
@@ -47,26 +59,61 @@
 
 
     <div id="header">
-      <h1 style="color:white">Ajoneuvon kuvaus</h1>
+      <h1>Ajoneuvon kuvaus</h1>
     </div>
+
+
 
     <div id="section">
-    <div class="w3-row-padding">
 
+<<<<<<< HEAD
     <div class="w3-third">
-      <h2>Ajoneuvo #1 kuvaus</h2>
+      <h2>Ajoneuvon kuvaus</h2>
       <p>
         <?php
-          echo "Ajoneuvo on sininen Mazda -merkkinen henkilöauto, mallia 4D SEDAN 323 GLX-1.5-BF1262/2400. 
+          session_start();
+          echo '<br /><a href="hakuc_2.php"> </a>';
+          echo "Ajoneuvo on "; 
+          echo $_SESSION['pitkaselite_fi'];
+          echo " "; 
+          echo $_SESSION['merkkiSelvakielinen']; 
+          echo " merkkinen ";
+          echo $_SESSION['lyhytselite_fi']; 
+          echo ", mallia "; 
+          echo $_SESSION['mallimerkinta']; 
+          echo ". Siinä on "; 
+          echo $_SESSION['istumapaikkojenlkm']; 
+          echo" istumapaikkaa, ja massaltaan se on "; 
+          echo $_SESSION['omamassa']; 
+          echo " kg. Suurin nettoteho on "; 
+          echo $_SESSION['suurinNettoteho']; 
+          echo " kW ja korityyppi on ";
+          echo $_SESSION['PITKASELITE_fii'];
+          echo ". Ajoneuvon iskutilavuus on ";
+          echo $_SESSION['iskutilavuus'];
+          echo " ja siinä on ";
+          echo $_SESSION['ovienlukumaara'];
+          echo " ovea. Se rekisteröitiin "; 
+          echo $_SESSION['ensirekisterointipvm']; 
+          echo".";
+=======
+      <div id="h2"><h2>Ajoneuvo #1 kuvaus</h2></div>
+      <div id="box">
+      <p>
+        <?php
+          echo "Ajoneuvo on sininen <b>Mazda</b> -merkkinen henkilöauto, mallia <b>4D SEDAN 323 GLX-1.5-BF1262/2400.</b> 
           Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
-          Se rekisteröitiin 1988-05-25."; 
+          Se rekisteröitiin <i>1988-05-25.</i>"; 
+>>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
         ?>
+        </div>
       </p>
+
     </div>
 
 
-    </div>
-    </div>
+
+
   </body>
 
 
