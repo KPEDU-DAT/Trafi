@@ -13,10 +13,10 @@
 
   <style>
 #header {
-    background-color:#D0D0D0;
-    color:white;
+    font-family:verdana;
+    font-size:300%;
     text-align:center;
-    padding:5px;
+    padding:50px;
 }
 
 
@@ -37,7 +37,7 @@
 
   <body>
 		<div id="header">
-        <h1 style="color:white">Ajoneuvotiedot</h1> 
+        <h1 style="color:black">Ajoneuvotiedot</h1> 
         </div>
         
 <div id="table">  

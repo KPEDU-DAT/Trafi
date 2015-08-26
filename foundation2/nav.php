@@ -22,8 +22,8 @@ text-color: #000000;
 
 </style>
 
-
-<nav class="top-bar" data-topbar>
+<div class="contain-to-grid sticky">
+<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">>
 <ul class="title-area">
   <li class="name">
     <h1><a href="index.php">Koti</a></h1>
@@ -77,3 +77,4 @@ text-color: #000000;
 </div>
 </section>
   </nav>
+</div>	
