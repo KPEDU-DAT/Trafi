@@ -84,11 +84,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-<<<<<<< HEAD
-                  <td>"."<a href='taulukko8.php' class='button' id=$jarnro>Hae tiedot</a>"."<td>
-=======
                   <td>"."<a href='taulukko8.php' class='small secondary button' id=$jarnro>Näytä kuvaus</a>"."<td>
->>>>>>> a185df69bf7e4ec0697ed93af1a87978ff595066
               </tr>";
 
                 }
@@ -120,5 +116,5 @@
     </script>
 
 
-</body>
+  </body>
 </html>
