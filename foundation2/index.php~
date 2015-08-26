@@ -17,10 +17,7 @@
  
   
     <? include("auto.php"); ?>
-  
-  <? include("a-haku.php"); ?>
-  
-  
+
 
 
 <script>

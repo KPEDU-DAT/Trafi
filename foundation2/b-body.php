@@ -18,22 +18,6 @@
   <div class="small-6 medium-6 large-6 small-centered medium-centered large-centered columns">
     <? include("b-haku.php"); ?>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
