@@ -57,7 +57,7 @@
       <h2>Ajoneuvo #1 kuvaus</h2>
       <p>
         <?php
-          echo $_POST['omamassa'];
+          Ajoneuvo on punainen Opel ASTRA-F-CC henkilöauto. Sen massa on 1070 kg. echo $_POST['omamassa'];
         ?>
       </p>
     </div>
