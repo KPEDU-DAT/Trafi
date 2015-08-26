@@ -13,10 +13,10 @@
 
   <style>
 #header {
-    background-color:#D0D0D0;
-    color:white;
+    font-family:verdana;
+    font-size:300%;
     text-align:center;
-    padding:5px;
+    padding:50px;
 }
 
 
@@ -37,7 +37,7 @@
 
   <body>
 		<div id="header">
-        <h1 style="color:white">Ajoneuvotiedot</h1> 
+        <h1 style="color:black">Ajoneuvotiedot</h1> 
         </div>
         
 <div id="table">  
@@ -84,11 +84,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-<<<<<<< HEAD
-                  <td>"."<a href='taulukko8.php' class='button' id=$jarnro>Hae tiedot</a>"."<td>
-=======
-                  <td>"."<a href='taulukko8.php' class='small secondary button' id=$jarnro>Näytä kuvaus</a>"."<td>
->>>>>>> a185df69bf7e4ec0697ed93af1a87978ff595066
+                  <td><a href=\"taulukko8.php?id=".$rivi['jarnro'].$rivi['omamassa']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
 
                 }
@@ -120,5 +116,5 @@
     </script>
 
 
-</body>
+  </body>
 </html>

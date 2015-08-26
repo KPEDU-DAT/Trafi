@@ -2,28 +2,20 @@
 .top-bar {
 background: #FFFFFF;
 text-color: #000000;
- }     
+ }
 
 . {top-bar-section ul
 background: #FFFFFF;
 text-color: #000000;
- } 
-  
+ }
+
 . {top-bar-section ul.right
 background: #FFFFFF;
 text-color: #000000;
   }
-  
-  
-
-
-
-
-
 </style>
-
-
-<nav class="top-bar" data-topbar>
+<div class="contain-to-grid sticky">
+<nav class="top-bar" data-topbar  data-options="sticky_on: [small,large]">		
 <ul class="title-area">
   <li class="name">
     <h1><a href="index.php">Koti</a></h1>
@@ -77,3 +69,4 @@ text-color: #000000;
 </div>
 </section>
   </nav>
+</div>
