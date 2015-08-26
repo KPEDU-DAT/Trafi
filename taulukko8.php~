@@ -55,7 +55,11 @@
 
     <div class="w3-third">
       <h2>Ajoneuvo #1 kuvaus</h2>
-      <p></p>
+      <p>
+        <?php
+          echo $_POST['omamassa'];
+        ?>
+      </p>
     </div>
 
 
