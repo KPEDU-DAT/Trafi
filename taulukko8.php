@@ -5,39 +5,49 @@
   <head>
 
   <title>Tyylit</title>
-   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
-   <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
-   <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
+    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
+    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
-  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
-   <head/>
-
-
+    <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
+    <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+  <head/>
 
   <style>
-#header {
-    background-color:#D0D0D0;
-    color:white;
-    text-align:center;
-    padding:5px;
-}
+    #header {
+      
+      text-align:center;
+      padding:50px;
+    }
 
-
-#table {
-    padding:200px;
-}
-#section {
-
+    #table {
+      padding:200px;
+    }
     
-    padding:100px;
-}
+    #h2
+        {
+        
+        padding:20px;
+        }
+    
+    #section {
+      padding:100px;
+    }
+    #box {
+          width: 100%;
+          background-color: #F0F0F0;
+              height: auto;
+            border: 2px solid #D0D0D0;
+              color:black;
+                  padding:25px;
+                  
+    }
  
 
 
-</style>
+  </style>
          
 
 
@@ -45,67 +55,85 @@
 
 
 
-<body>
+  <body>
 
 
-<div id="header">
-<h1 style="color:white">Ajoneuvon kuvaus</h1>
-</div>
-
-<div id="section">
-<div class="w3-row-padding">
-
-<div class="w3-third">
-  <h2>Ajoneuvo #1 kuvaus</h2>
-  <p>London is the capital city of England.</p>
-  <p>It is the most populous city in the United Kingdom,
-  with a metropolitan area of over 13 million inhabitants.</p>
-</div>
-
-<div class="w3-third">
-  <h2>Ajoneuvo #2 kuvaus</h2>
-  <p>Paris is the capital of France.</p> 
-  <p>The Paris area is one of the largest population centers in Europe,
-  with more than 12 million inhabitants.</p>
-</div>
-
-<div class="w3-third">
-  <h2>Ajoneuvo #3 kuvaus</h2>
-  <p>Tokyo is the capital of Japan.</p>
-  <p>It is the center of the Greater Tokyo Area,
-  and the most populous metropolitan area in the world.</p>
-</div>
-</div>
-</div>
+    <div id="header">
+      <h1>Ajoneuvon kuvaus</h1>
+    </div>
 
 
 
-</div>
+    <div id="section">
+
+<<<<<<< HEAD
+    <div class="w3-third">
+      <h2>Ajoneuvon kuvaus</h2>
+      <p>
+        <?php
+          session_start();
+          echo '<br /><a href="hakuc_2.php"> </a>';
+          echo "Ajoneuvo on "; 
+          echo $_SESSION['pitkaselite_fi'];
+          echo " "; 
+          echo $_SESSION['merkkiSelvakielinen']; 
+          echo " merkkinen ";
+          echo $_SESSION['lyhytselite_fi']; 
+          echo ", mallia "; 
+          echo $_SESSION['mallimerkinta']; 
+          echo ". Siinä on "; 
+          echo $_SESSION['istumapaikkojenlkm']; 
+          echo" istumapaikkaa, ja massaltaan se on "; 
+          echo $_SESSION['omamassa']; 
+          echo " kg. Suurin nettoteho on "; 
+          echo $_SESSION['suurinNettoteho']; 
+          echo " kW ja korityyppi on ";
+          echo $_SESSION['PITKASELITE_fii'];
+          echo ". Ajoneuvon iskutilavuus on ";
+          echo $_SESSION['iskutilavuus'];
+          echo " ja siinä on ";
+          echo $_SESSION['ovienlukumaara'];
+          echo " ovea. Se rekisteröitiin "; 
+          echo $_SESSION['ensirekisterointipvm']; 
+          echo".";
+=======
+      <div id="h2"><h2>Ajoneuvo #1 kuvaus</h2></div>
+      <div id="box">
+      <p>
+        <?php
+          echo "Ajoneuvo on sininen <b>Mazda</b> -merkkinen henkilöauto, mallia <b>4D SEDAN 323 GLX-1.5-BF1262/2400.</b> 
+          Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
+          Se rekisteröitiin <i>1988-05-25.</i>"; 
+>>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
+        ?>
+        </div>
+      </p>
+
+    </div>
 
 
 
-</div>
 
-</body>
+  </body>
 
 
- <script>
+  <script>
       document.write('<script src=js/vendor/' +
       ('__proto__' in {} ? 'zepto' : 'jquery') +
       '.js><\/script>')
       </script>
 
-        <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
-        <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
-        <script>
+      <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
+      <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
+      <script>
         $(document).foundation();
-        </script>
-        <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
-        <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
-        <script>
+      </script>
+      <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
+      <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
+      <script>
          $(document).foundation();
           var doc = document.documentElement;
            doc.setAttribute('data-useragent', navigator.userAgent);
-            </script>
+  </script>
 
 </html>

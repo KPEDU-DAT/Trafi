@@ -33,6 +33,7 @@ index.php
 a-body.php
 a-body.php
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Mon Aug 24 10:58:49 2015
 *** JOE was aborted because the terminal closed
 
@@ -242,3 +243,43 @@ b-haku.php
 b-haku.php
 b-haku.php
 b-haku2.php
+=======
+*** These modified files were found in JOE when it aborted on Tue Aug 25 10:01:28 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+c-body.php
+a-body.php
+a-body.php
+b-body.php
+b-body.php
+nav.php
+foundation-icons.zip
+auto.p
+auto.png
+nav.php
+index.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 26 11:14:24 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+top
+bar
+topbar
+
+*** File '(Unnamed)'
+foundation.css
+index.php
+nav.php
+b-body.php
+b-body.php
+b-body.php
+tyyli.php
+tyyli.php
+b-body.php
+b-body.php
+nav.php
+nav.php
+nav.php
+>>>>>>> 8e82179b9a92804f032404a1a08a13c82a9b4025

@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
-
   </head>
   <body>
     <h1>Ajoneuvotiedot</h1>
@@ -58,10 +57,9 @@
             
         ?>
 		</table>
+
         </p>
-        <?php
-        
-        ?>
+
         <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
@@ -79,7 +77,5 @@
     	  var doc = document.documentElement;
     	  doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
-
-
 </body>
 </html>

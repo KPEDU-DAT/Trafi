@@ -20,6 +20,26 @@
 <style>
 
  img{padding-top: 150px;}
+
+
+#header {
+    background-color:#D0D0D0;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+
+#table {
+    padding:200px;
+}
+#section {
+
+
+    padding:100px;
+}
+
+
  
 </style>
     
@@ -29,18 +49,23 @@
   
   </head>  
  <body>
- <center>
+
+        <div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1>
+        </div>
+ 
+<center>
  <div class="large-12 medium-12 small-12 columns">
  <img src="http://www.comparateur-assurance-auto.biz/images/auto.png">
  </div>
- 
+<div id="table"> 
  <form>
  <div class="row">
   <div class="large-12 columns">
    <div class="row collapse postfix-round">
     <div class="small-9 columns">
    
-    </div>
+ 
      <div class="small-3 columns">
      
      </div>
@@ -87,6 +112,7 @@
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
+                  <td>"."<a href='taulukko8.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
             </tr>";
                 }         
                 }  
@@ -98,12 +124,15 @@
 
         ?>   
         </table>
+		</center>
+		</div>
+		
         </p>                      
         <script>                                     
                                      
           
  
- </center>
+ 
  <script>
       document.write('<script src=js/vendor/' +
       ('__proto__' in {} ? 'zepto' : 'jquery') +
