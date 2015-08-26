@@ -10,9 +10,38 @@
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
 
   </head>
+
+  <style>
+#header {
+    background-color:#D0D0D0;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+
+#table {
+    padding:200px;
+}
+#section {
+
+ 
+    padding:100px;
+}
+ 
+
+
+</style>
+
+
+
   <body>
-    <h1>Ajoneuvotiedot</h1>
-        <p>
+		<div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1> 
+        </div>
+        
+<div id="table">  
+	<p>
             <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
@@ -42,6 +71,7 @@
 
         echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
         while($rivi = mysqli_fetch_array($tulos)) {
+        $jarnro = $rivi['jarnro'];
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
@@ -54,15 +84,21 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
+<<<<<<< HEAD
+                  <td>"."<a href='taulukko8.php' class='button' id=$jarnro>Hae tiedot</a>"."<td>
+=======
+                  <td>"."<a href='taulukko8.php' class='small secondary button' id=$jarnro>Näytä kuvaus</a>"."<td>
+>>>>>>> a185df69bf7e4ec0697ed93af1a87978ff595066
               </tr>";
 
                 }
+        if ($POST['jarnro']){echo "moi";}
              	
             }
-            mysqli_close($yhteys);
-            
+            mysqli_close($yhteys);    
         ?>
 		</table>
+		</div>
         </p>
         
     <script>
