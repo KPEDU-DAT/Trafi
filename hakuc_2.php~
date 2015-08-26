@@ -84,7 +84,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-                  <td>"."<a href='linkki' class='button' id=$jarnro>.button</a>"."<td>
+                  <td>"."<a href='taulukko8.php' class='button' id=$jarnro>.button</a>"."<td>
               </tr>";
 
                 }
