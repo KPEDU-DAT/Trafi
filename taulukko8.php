@@ -19,18 +19,32 @@
 
   <style>
     #header {
-      background-color:#D0D0D0;
-      color:white;
+      
       text-align:center;
-      padding:5px;
+      padding:50px;
     }
 
     #table {
       padding:200px;
     }
     
+    #h2
+        {
+        
+        padding:20px;
+        }
+    
     #section {
       padding:100px;
+    }
+    #box {
+          width: 100%;
+          background-color: #F0F0F0;
+              height: auto;
+            border: 2px solid #D0D0D0;
+              color:black;
+                  padding:25px;
+                  
     }
  
 
@@ -47,26 +61,29 @@
 
 
     <div id="header">
-      <h1 style="color:white">Ajoneuvon kuvaus</h1>
+      <h1>Ajoneuvon kuvaus</h1>
     </div>
+
+
 
     <div id="section">
-    <div class="w3-row-padding">
 
-    <div class="w3-third">
-      <h2>Ajoneuvo #1 kuvaus</h2>
+      <div id="h2"><h2>Ajoneuvo #1 kuvaus</h2></div>
+      <div id="box">
       <p>
         <?php
-          echo "Ajoneuvo on sininen Mazda -merkkinen henkilöauto, mallia 4D SEDAN 323 GLX-1.5-BF1262/2400. 
+          echo "Ajoneuvo on sininen <b>Mazda</b> -merkkinen henkilöauto, mallia <b>4D SEDAN 323 GLX-1.5-BF1262/2400.</b> 
           Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
-          Se rekisteröitiin 1988-05-25."; 
+          Se rekisteröitiin <i>1988-05-25.</i>"; 
         ?>
+        </div>
       </p>
+
     </div>
 
 
-    </div>
-    </div>
+
+
   </body>
 
 

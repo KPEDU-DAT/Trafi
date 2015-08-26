@@ -13,15 +13,20 @@
 
   <style>
 #header {
-    font-family:verdana;
-    font-size:300%;
+    
     text-align:center;
     padding:50px;
 }
 
 
 #table {
-    padding:200px;
+    
+        
+                padding:200px;
+    
+                
+                
+    
 }
 #section {
 
@@ -37,7 +42,7 @@
 
   <body>
 		<div id="header">
-        <h1 style="color:black">Ajoneuvotiedot</h1> 
+        <h1>Ajoneuvotiedot</h1> 
         </div>
         
 <div id="table">  
@@ -47,7 +52,7 @@
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table>
+		<table class="responsive">
         <p>
         <?php
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -68,8 +73,9 @@
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
+        
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kuvaus</th></tr></thead>";                                    
 
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
         while($rivi = mysqli_fetch_array($tulos)) {
         $jarnro = $rivi['jarnro'];
         echo "<tr>
@@ -114,7 +120,13 @@
         var doc = document.documentElement;
         doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
-
+    
+    
+    <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
+    <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
+    
+    
+    
 
   </body>
 </html>
