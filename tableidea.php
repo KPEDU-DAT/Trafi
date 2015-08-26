@@ -30,20 +30,20 @@
         </div>
         <ul class="pricing-table">
          <li class="title">Auto</li>
-         <li class="price">Ajoneuvoluokka</li>
+         <li class="bullet-item">Ajoneuvoluokka</li>
          <li class="bullet-item">Ajoneuvokäyttö</li>
          <li class="bullet-item">Käyttöönotto</li>
          <li class="bullet-item">Korityyppi</li>
-         <li class="price">Oma Massa</li>
+         <li class="bullet-item">Oma Massa</li>
          <li class="bullet-item">Pituus</li>
          <li class="bullet-item">Käyttövoima</li>
          <li class="bullet-item">Sylintereiden Lukumäärä</li>
-         <li class="price">Merkki</li>
+         <li class="bullet-item">Merkki</li>         
          <li class="bullet-item">Vaihteiden Lukumäärä</li>
          <li class="bullet-item">Tyyppihyväksyntä</li>
          <li class="bullet-item">Co2</li>
-         <li class="bullet-item">Valmistenumero</li>
-        </ul>
+         <li class="bullet-item">Valmistenumero</li>      
+         </ul>
          </div>
        </div>
     </div>
