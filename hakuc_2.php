@@ -13,15 +13,25 @@
 
   <style>
 #header {
+<<<<<<< HEAD
     background-color:#D0D0D0;
     color:white;
+=======
+    
+>>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
     text-align:center;
     padding:5px;
 }
 
 
 #table {
-    padding:200px;
+    
+        
+                padding:200px;
+    
+                
+                
+    
 }
 #section {
 
@@ -37,7 +47,11 @@
 
   <body>
 		<div id="header">
+<<<<<<< HEAD
         <h1 style="color:white">Ajoneuvotiedot</h1> 
+=======
+        <h1>Ajoneuvotiedot</h1> 
+>>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
         </div>
         
 <div id="table">  
@@ -47,7 +61,7 @@
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table>
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -68,8 +82,13 @@
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
+        
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kuvaus</th></tr></thead>";                                    
 
+<<<<<<< HEAD
         echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa (kg)</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
+=======
+>>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
         while($rivi = mysqli_fetch_array($tulos)) {
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
@@ -126,7 +145,13 @@
         var doc = document.documentElement;
         doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
-
+    
+    
+    <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
+    <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
+    
+    
+    
 
   </body>
 </html>

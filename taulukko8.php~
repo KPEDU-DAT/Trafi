@@ -58,8 +58,13 @@
       <p>
         <?php
           echo "Ajoneuvo on sininen Mazda -merkkinen henkilöauto, mallia 4D SEDAN 323 GLX-1.5-BF1262/2400. 
+<<<<<<< HEAD
                 Siinä on 5 istumapaikkaa, ja massaltaan se on  kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
                 Se rekisteröitiin 1988-05-25.";
+=======
+          Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
+          Se rekisteröitiin 1988-05-25."; 
+>>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
         ?>
       </p>
     </div>
