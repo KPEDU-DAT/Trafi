@@ -13,12 +13,10 @@
 
   <style>
 #header {
-<<<<<<< HEAD
     background-color:#D0D0D0;
     color:white;
-=======
     
->>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
+ 9f1973ad075fb94554fcd834e881744ccd58a301
     text-align:center;
     padding:5px;
 }
@@ -47,11 +45,8 @@
 
   <body>
 		<div id="header">
-<<<<<<< HEAD
         <h1 style="color:white">Ajoneuvotiedot</h1> 
-=======
         <h1>Ajoneuvotiedot</h1> 
->>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
         </div>
         
 <div id="table">  
@@ -85,10 +80,6 @@
         
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kuvaus</th></tr></thead>";                                    
 
-<<<<<<< HEAD
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa (kg)</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
-=======
->>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
         while($rivi = mysqli_fetch_array($tulos)) {
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
