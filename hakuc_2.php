@@ -21,7 +21,9 @@
           padding:50px;
       }
       #table {
-        padding:300px;
+	
+			padding: 100px;
+        
       }
       
        
@@ -39,11 +41,15 @@
      <div id="table">  
 	<p>
             <form action="hakuc_2.php" method="POST">
+                 <div class="row">
+      				<div class="large-8 columns">
+        			<div class="row collapse prefix-radius">
+          			<div class="large-16 columns">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table class="responsive">
+		<table>
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -104,7 +110,10 @@
         ?>
 		</table>
 		</div>
-        </p>
+        </div>
+		</div>
+		</div>
+		</p>
         
     <script>
         document.write('<script src=js/vendor/' +
