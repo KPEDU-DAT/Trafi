@@ -12,44 +12,34 @@
   </head>
 
   <style>
-#header {
-    background-color:#D0D0D0;
-    color:white;
+      #header {
+         
+         
     
- 9f1973ad075fb94554fcd834e881744ccd58a301
-    text-align:center;
-    padding:5px;
-}
 
-
-#table {
-    
-        
-                padding:200px;
-    
-                
-                
-    
-}
-#section {
-
- 
-    padding:100px;
-}
+          text-align:center;
+          padding:5px;
+      }
+      #table {
+        padding:200px;
+      }
+      
+      #section {
+        padding:100px;
+      }
  
 
 
-</style>
+  </style>
 
 
 
   <body>
 		<div id="header">
-        <h1 style="color:white">Ajoneuvotiedot</h1> 
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-<div id="table">  
+     <div id="table">  
 	<p>
             <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
@@ -93,7 +83,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-                  <td><a href=\"taulukko8.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
 				
 				session_start();

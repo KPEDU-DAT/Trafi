@@ -26,23 +26,22 @@
       padding:200px;
     }
     
-    #h2
-        {
+    #h2{
         
         padding:20px;
-        }
+    }
     
     #section {
       padding:100px;
     }
+    
     #box {
           width: 100%;
           background-color: #F0F0F0;
-              height: auto;
-            border: 2px solid #D0D0D0;
-              color:black;
-                  padding:25px;
-                  
+          height: auto;
+          border: 2px solid #D0D0D0;
+          color:black;
+          padding:25px;         
     }
  
 
@@ -58,32 +57,41 @@
   <body>
 
 
-    <div id="header">
-      <h1>Ajoneuvon kuvaus</h1>
-    </div>
+
+
+     <div id="section">
+    
+  
 
 
 
-    <div id="section">
-
-<<<<<<< HEAD
     <div class="w3-third">
       <h2>Ajoneuvon kuvaus</h2>
+      <div id="box">
       <p>
         <?php
           session_start();
           echo '<br /><a href="hakuc_2.php"> </a>';
           echo "Ajoneuvo on "; 
-          echo $_SESSION['pitkaselite_fi'];
-          echo " "; 
-          echo $_SESSION['merkkiSelvakielinen']; 
-          echo " merkkinen ";
-          echo $_SESSION['lyhytselite_fi']; 
-          echo ", mallia "; 
-          echo $_SESSION['mallimerkinta']; 
-          echo ". Siinä on "; 
-          echo $_SESSION['istumapaikkojenlkm']; 
-          echo" istumapaikkaa, ja massaltaan se on "; 
+          echo $_SESION['pitkaselite_fi'];
+          echo " ";
+          if ($_SESSION['merkkiSelkielinen'] != NULL){
+          echo $_SESSION['merkkiSelvakielinen'];
+          echo " merkkinen ";} 
+          else echo " ";
+          if ($_SESSION['lyhytselite_fi'] != NULL){
+          echo $_SESSION['lyhytselite_fi'];}
+          else echo " kulkuneuvo";
+          if ($_SESSION['mallimerkinta'] != NULL){ 
+          echo ", mallia ";
+          echo $_SESION['mallimerkinta'];
+          else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
+          echo ". ";}
+          else  echo $_SESSION['mallimerkinta'];
+          echo ". Siinä on ";
+          if ($_SESSION['istumapaikkojenlkm'] != NULL){
+          echo $_SESSION['istumapaikkojenlkm'];}
+          echo" istumapaikkaa, ja massaltaan se on ";
           echo $_SESSION['omamassa']; 
           echo " kg. Suurin nettoteho on "; 
           echo $_SESSION['suurinNettoteho']; 
@@ -96,19 +104,7 @@
           echo " ovea. Se rekisteröitiin "; 
           echo $_SESSION['ensirekisterointipvm']; 
           echo".";
-=======
-      <div id="h2"><h2>Ajoneuvo #1 kuvaus</h2></div>
-      <div id="box">
-      <p>
-        <?php
-          echo "Ajoneuvo on sininen <b>Mazda</b> -merkkinen henkilöauto, mallia <b>4D SEDAN 323 GLX-1.5-BF1262/2400.</b> 
-          Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
-          Se rekisteröitiin <i>1988-05-25.</i>"; 
->>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
-        ?>
-        </div>
-      </p>
-
+          ?> 
     </div>
 
 

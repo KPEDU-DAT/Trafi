@@ -12,34 +12,44 @@
   </head>
 
   <style>
-      #header {
-         
-         
+#header {
+    background-color:#D0D0D0;
+    color:white;
     
+ 9f1973ad075fb94554fcd834e881744ccd58a301
+    text-align:center;
+    padding:5px;
+}
 
-          text-align:center;
-          padding:5px;
-      }
-      #table {
-        padding:200px;
-      }
-      
-      #section {
-        padding:100px;
-      }
+
+#table {
+    
+        
+                padding:200px;
+    
+                
+                
+    
+}
+#section {
+
+ 
+    padding:100px;
+}
  
 
 
-  </style>
+</style>
 
 
 
   <body>
 		<div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1> 
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-     <div id="table">  
+<div id="table">  
 	<p>
             <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
