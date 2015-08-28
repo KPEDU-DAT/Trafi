@@ -26,23 +26,22 @@
       padding:200px;
     }
     
-    #h2
-        {
+    #h2{
         
         padding:20px;
-        }
+    }
     
     #section {
       padding:100px;
     }
+    
     #box {
           width: 100%;
           background-color: #F0F0F0;
-              height: auto;
-            border: 2px solid #D0D0D0;
-              color:black;
-                  padding:25px;
-                  
+          height: auto;
+          border: 2px solid #D0D0D0;
+          color:black;
+          padding:25px;         
     }
  
 
@@ -69,7 +68,7 @@
         <?php
           session_start();
           echo '<br /><a href="hakuc_2.php"> </a>';
-          echo "Ajoneuvo on "; 
+          echo "Ajoneuvo oni "; 
           echo $_SESSION['pitkaselite_fi'];
           echo " "; 
           echo $_SESSION['merkkiSelvakielinen']; 
