@@ -4617,7 +4617,7 @@ meta.foundation-mq-topbar {
       line-height: 2.8125rem;
       margin: 0; }
       .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
-        color: #000000;
+        color: #FFFFFF;
         display: block;
         font-weight: normal;
         padding: 0 0.9375rem;
@@ -6322,10 +6322,14 @@ th.hide-for-touch {
 @media not print {
   .show-for-print {
     display: none !important; } }
-.jussi {
-  color: #ffaacc; }
+.img {
+  padding-top: 100px; }
 
-.mikko {
-  color: #aaffcc; }
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 90%;
+  overflow: hidden; }
 
 /*# sourceMappingURL=foundation.css.map */
