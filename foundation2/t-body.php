@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."> 
     <meta name="author" content="">
-    <link rel="stylesheet" href="http://foundation.zurb.com/assets/css/templates/foundation.css"/>
-    <script src="http://foundation.zurb.com/assets/js/modernizr.js"></script>
+    <link rel="stylesheet" href="https://github.com/KPEDU-DAT/Trafi/blob/master/foundation2/bower_components/foundation/css/foundation.css"/>
+    <script src="https://github.com/KPEDU-DAT/Trafi/blob/master/foundation2/bower_components/modernizr/modernizr.js"></script>
     <title>Tilastot</title>
     <? include("tyyli.php"); ?>
   </head>
@@ -48,7 +48,6 @@
 <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
 <script>
       $(document).foundation();
-
       var doc = document.documentElement;
       doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
