@@ -6322,5 +6322,10 @@ th.hide-for-touch {
 @media not print {
   .show-for-print {
     display: none !important; } }
+.jussi {
+  color: #ffaacc; }
+
+.mikko {
+  color: #aaffcc; }
 
 /*# sourceMappingURL=foundation.css.map */
