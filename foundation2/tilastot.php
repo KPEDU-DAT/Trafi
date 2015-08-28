@@ -2,7 +2,6 @@
 <html class="no-js" lang="en">
   <head>
     <?php
-
         $yht = mysqli_connect("localhost", "data14", "mv2Mqbm888DvqbjT", "data14");
         echo mysqli_error($yht);
         mysqli_set_charset($yht,"utf8");
@@ -36,7 +35,6 @@
                     $num = $_GET["table"];
                 else
                     $num = 0;
-
                 $hselite = array("Yleisimmät merkit","Yleisimmät värit");
                 $harvo = array("Määrä","Määrä");
                 $selite = array("merkkiSelvakielinen","pitkaselite_fi");

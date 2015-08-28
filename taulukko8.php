@@ -58,7 +58,11 @@
 
 
 
+
      <div id="section">
+    
+  
+
 
 
     <div class="w3-third">
@@ -68,17 +72,26 @@
         <?php
           session_start();
           echo '<br /><a href="hakuc_2.php"> </a>';
-          echo "Ajoneuvo oni "; 
-          echo $_SESSION['pitkaselite_fi'];
-          echo " "; 
-          echo $_SESSION['merkkiSelvakielinen']; 
-          echo " merkkinen ";
-          echo $_SESSION['lyhytselite_fi']; 
-          echo ", mallia "; 
-          echo $_SESSION['mallimerkinta']; 
-          echo ". Siinä on "; 
-          echo $_SESSION['istumapaikkojenlkm']; 
-          echo" istumapaikkaa, ja massaltaan se on "; 
+          echo "Ajoneuvo on "; 
+          echo $_SESION['pitkaselite_fi'];
+          echo " ";
+          if ($_SESSION['merkkiSelkielinen'] != NULL){
+          echo $_SESSION['merkkiSelvakielinen'];
+          echo " merkkinen ";} 
+          else echo " ";
+          if ($_SESSION['lyhytselite_fi'] != NULL){
+          echo $_SESSION['lyhytselite_fi'];}
+          else echo " kulkuneuvo";
+          if ($_SESSION['mallimerkinta'] != NULL){ 
+          echo ", mallia ";
+          echo $_SESION['mallimerkinta'];
+          else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
+          echo ". ";}
+          else  echo $_SESSION['mallimerkinta'];
+          echo ". Siinä on ";
+          if ($_SESSION['istumapaikkojenlkm'] != NULL){
+          echo $_SESSION['istumapaikkojenlkm'];}
+          echo" istumapaikkaa, ja massaltaan se on ";
           echo $_SESSION['omamassa']; 
           echo " kg. Suurin nettoteho on "; 
           echo $_SESSION['suurinNettoteho']; 
