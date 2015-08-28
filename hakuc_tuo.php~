@@ -58,11 +58,7 @@
 
 
 
-
-     <div id="section">
-    
-  
-
+    <div id="section">
 
 
     <div class="w3-third">
@@ -73,9 +69,9 @@
           session_start();
           echo '<br /><a href="hakuc_2.php"> </a>';
           echo "Ajoneuvo on "; 
-          echo $_SESION['pitkaselite_fi'];
+          echo $_SESSION['pitkaselite_fi'];
           echo " ";
-          if ($_SESSION['merkkiSelkielinen'] != NULL){
+          if ($_SESSION['merkkiSelvakielinen'] != NULL){
           echo $_SESSION['merkkiSelvakielinen'];
           echo " merkkinen ";} 
           else echo " ";
@@ -84,12 +80,12 @@
           else echo " kulkuneuvo";
           if ($_SESSION['mallimerkinta'] != NULL){ 
           echo ", mallia ";
-          echo $_SESION['mallimerkinta'];
+          echo $_SESSION['mallimerkinta'];}
           else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
           echo ". ";}
           else  echo $_SESSION['mallimerkinta'];
           echo ". Siinä on ";
-          if ($_SESSION['istumapaikkojenlkm'] != NULL){
+          if ($_SESSION['istumapaikkojenlkm'] != NULL && ){
           echo $_SESSION['istumapaikkojenlkm'];}
           echo" istumapaikkaa, ja massaltaan se on ";
           echo $_SESSION['omamassa']; 

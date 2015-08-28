@@ -112,8 +112,24 @@
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td>"."<a href='taulukko8.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
             </tr>";
+            
+            session_start();
+        			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
+        			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
+        			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];
+        			$_SESSION['pitkaselite_fi'] = $rivi['pitkaselite_fi'];
+        			$_SESSION['lyhytselite_fi'] = $rivi['lyhytselite_fi'];
+        			$_SESSION['ovienlukumaara'] = $rivi['ovienlukumaara'];
+        			$_SESSION['istumapaikkojenlkm'] = $rivi['istumapaikkojenlkm'];
+        			$_SESSION['omamassa'] = $rivi['omamassa'];
+        			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
+        			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
+        			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
+        		 '<br /><a href="taulukko8.php"> </a>'; 
+        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>';
+            
                 }         
                 }  
 
