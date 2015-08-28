@@ -79,7 +79,7 @@
           echo $_SESSION['lyhytselite_fi'];}
           else echo " kulkuneuvo";
           if ($_SESSION['mallimerkinta'] != NULL){ 
-          eco ", mallia ";
+          echo ", mallia ";
           echo $_SESION['mallimerkinta'];
           else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
           echo ". ";}
