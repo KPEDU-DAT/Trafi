@@ -58,7 +58,7 @@
 
 
 
-    <div id="section">
+    <div id"section">
 
 
     <div class="w3-third">
@@ -69,9 +69,9 @@
           session_start();
           echo '<br /><a href="hakuc_2.php"> </a>';
           echo "Ajoneuvo on "; 
-          echo $_SESSION['pitkaselite_fi'];
+          echo $_SESION['pitkaselite_fi'];
           echo " ";
-          if ($_SESSION['merkkiSelvakielinen'] != NULL){
+          if ($_SESSION['merkkiSelkielinen'] != NULL){
           echo $_SESSION['merkkiSelvakielinen'];
           echo " merkkinen ";} 
           else echo " ";
@@ -79,8 +79,8 @@
           echo $_SESSION['lyhytselite_fi'];}
           else echo " kulkuneuvo";
           if ($_SESSION['mallimerkinta'] != NULL){ 
-          echo ", mallia ";
-          echo $_SESSION['mallimerkinta'];}
+          eco ", mallia ";
+          echo $_SESION['mallimerkinta'];
           else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
           echo ". ";}
           else  echo $_SESSION['mallimerkinta'];
