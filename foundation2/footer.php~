@@ -1,8 +1,7 @@
 <!-- FOOTER -->
       <style>
       footer {
-    position: absolute;
-    left: 0;
+    position: fixed;
     bottom: 0;
     height: 50px;
     width: 90%;
