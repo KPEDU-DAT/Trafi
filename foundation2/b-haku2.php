@@ -27,4 +27,4 @@
       <button name="nappi" value="True">Seuraava</button>
     </form>  
 	
-	<? include(""); ?>
+	<? include("b-php2.php"); ?>
