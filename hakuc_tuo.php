@@ -85,7 +85,7 @@
           echo ". ";}
           else  echo $_SESSION['mallimerkinta'];
           echo ". Siinä on ";
-          if ($_SESSION['istumapaikkojenlkm'] != NULL && ){
+          if ($_SESSION['istumapaikkojenlkm'] != NULL  ){
           echo $_SESSION['istumapaikkojenlkm'];}
           echo" istumapaikkaa, ja massaltaan se on ";
           echo $_SESSION['omamassa']; 
