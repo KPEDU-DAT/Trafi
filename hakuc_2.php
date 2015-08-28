@@ -18,16 +18,13 @@
     
 
           text-align:center;
-          padding:5px;
+          padding:50px;
       }
       #table {
-        padding:200px;
+        padding:300px;
       }
       
-      #section {
-        padding:100px;
-      }
- 
+       
 
 
   </style>

@@ -61,7 +61,7 @@
     <div id="section">
 
 
-    <div class="w3-third">
+    
       <h2>Ajoneuvon kuvaus</h2>
       <div id="box">
       <p>
@@ -102,7 +102,7 @@
           echo".";
           ?> 
     </div>
-
+</div>
 
 
 

@@ -83,7 +83,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-                  <td><a href=\"taulukko8.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
 				
 				session_start();
