@@ -64,6 +64,7 @@
 
     <div class="w3-third">
       <h2>Ajoneuvon kuvaus</h2>
+      <div id="box">
       <p>
         <?php
           session_start();
@@ -91,13 +92,7 @@
           echo " ovea. Se rekisteröitiin "; 
           echo $_SESSION['ensirekisterointipvm']; 
           echo".";
-          ?>
-      <div id="h2"><h2>Ajoneuvo #1 kuvaus</h2></div>
-      <div id="box">
-      <p>
-        </div>
-      </p>
-
+          ?> 
     </div>
 
 
