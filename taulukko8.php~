@@ -58,15 +58,10 @@
   <body>
 
 
-    <div id="header">
-      <h1>Ajoneuvon kuvaus</h1>
-    </div>
-
-
 
     <div id="section">
 
-<<<<<<< HEAD
+
     <div class="w3-third">
       <h2>Ajoneuvon kuvaus</h2>
       <p>
@@ -96,16 +91,10 @@
           echo " ovea. Se rekisteröitiin "; 
           echo $_SESSION['ensirekisterointipvm']; 
           echo".";
-=======
+          ?>
       <div id="h2"><h2>Ajoneuvo #1 kuvaus</h2></div>
       <div id="box">
       <p>
-        <?php
-          echo "Ajoneuvo on sininen <b>Mazda</b> -merkkinen henkilöauto, mallia <b>4D SEDAN 323 GLX-1.5-BF1262/2400.</b> 
-          Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
-          Se rekisteröitiin <i>1988-05-25.</i>"; 
->>>>>>> 9f1973ad075fb94554fcd834e881744ccd58a301
-        ?>
         </div>
       </p>
 
