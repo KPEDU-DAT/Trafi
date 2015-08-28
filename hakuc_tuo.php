@@ -85,11 +85,16 @@
           echo ". ";}
           else  echo $_SESSION['mallimerkinta'];
           echo ". Siinä on ";
-          if ($_SESSION['istumapaikkojenlkm'] != NULL && ){
-          echo $_SESSION['istumapaikkojenlkm'];}
-          echo" istumapaikkaa, ja massaltaan se on ";
-          echo $_SESSION['omamassa']; 
-          echo " kg. Suurin nettoteho on "; 
+          if ($_SESSION['istumapaikkojenlkm'] != NULL && $_SESSION['omamassa'] != NULL){
+          echo $_SESSION['istumapaikkojenlkm'];
+          echo" istumapaikkaa, ja massaltaan se on ";}
+          else if ($_SESSION['istumapaikkojenlkm'] != NULL){
+          echo $_SESSION['istumapaikkojenlkm'];
+          echo " istumapaikkaa";}
+          if ($_SESSION['omamassa'] != NULL){
+          echo $_SESSION['omamassa'];
+          echo " kg.";}
+          echo " Suurin nettoteho on "; 
           echo $_SESSION['suurinNettoteho']; 
           echo " kW ja korityyppi on ";
           echo $_SESSION['PITKASELITE_fii'];
