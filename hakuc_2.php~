@@ -40,7 +40,7 @@
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
- <div id="table">  
+     <div id="table">  
 	<p>
             <form action="hakuc_2.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
