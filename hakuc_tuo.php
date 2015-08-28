@@ -47,13 +47,6 @@
 
 
   </style>
-         
-
-
-
-
-
-
   <body>
 
 
@@ -94,17 +87,34 @@
           if ($_SESSION['omamassa'] != NULL){
           echo $_SESSION['omamassa'];
           echo " kg.";}
-          echo " Suurin nettoteho on "; 
-          echo $_SESSION['suurinNettoteho']; 
-          echo " kW ja korityyppi on ";
+          if ($_SESSION['suurinNettoteho'] != NULL){
+          echo " Suurin nettoteho on ";
+          echo $_SESSION['suurinNettoteho'];
+          echo " kW. ";}
+          if ($_SESSION['PITKASELITE_fii'] != NULL){
+          echo " Korityyppi on ";
           echo $_SESSION['PITKASELITE_fii'];
-          echo ". Ajoneuvon iskutilavuus on ";
+          echo ".";}
+          if ($_SESSION['iskutilavuus'] != NULL && $_SESSION['ovienlukumäärä'] != NULL){
+          echo " Ajoneuvon iskutilavuus on ";
           echo $_SESSION['iskutilavuus'];
-          echo " ja siinä on ";
+          echo " cm^3 ja siinä on ";
           echo $_SESSION['ovienlukumaara'];
-          echo " ovea. Se rekisteröitiin "; 
+          echo " ovea.";}
+          else if ($_SESSION['iskutilavuus'] != NULL) {
+          echo " Ajoneuvon iskutilavuus on ";
+          echo $_SESSION['iskutilavuus'];
+          echo " cm^3. ";}
+          else if ($_SESSION['ovienlukumäärä'] != NULL){
+          echo "Siinä on ";
+          echo $_SESSION['ovienlukumaara'];
+          echo " ovea.";}
+          else echo " ";
+          if ($_SESSION['ensirekisterointipvm'] != NULL){
+          echo "Se rekisteröitiin "; 
           echo $_SESSION['ensirekisterointipvm']; 
-          echo".";
+          echo ".";}
+          else ".";
           ?> 
     </div>
 
