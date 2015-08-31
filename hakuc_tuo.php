@@ -19,11 +19,7 @@
   <body>
 
 
-
-  
-
-
-    
+     <div class="header"> 
       <h2>Ajoneuvon kuvaus</h2>
       <div class="box">
       <p>
@@ -101,7 +97,7 @@ mysqli_close($yhteys);
 
           ?> 
     </div>
-
+</div>
 
 
 
