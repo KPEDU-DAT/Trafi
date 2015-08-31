@@ -61,16 +61,17 @@
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
 
-                $tulos = mysqli_query($yhteys, "SELECT * 
+                $tulos = mysqli_query($yhteys, "SELECT DISTINCT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 LEFT OUTER JOIN trafi_korityyppi
-                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
+                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KO          
                                                 LEFT OUTER JOIN trafi_ajoneuvoluokka
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 LEFT OUTER JOIN trafi_kunta
-                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnus
-                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "';");
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
+                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+												;");
         
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
 
