@@ -35,7 +35,7 @@
             $yhteys->set_charset('utf8');
 
           session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';
+          echo '<br /><a href="hakuc_2.php"> </a>';  
           echo "Ajoneuvo on "; 
           echo $_SESSION['pitkaselite_fi'];
           echo " ";
@@ -95,8 +95,12 @@
           echo $_SESSION['pitkaseliteu_fi'];
           echo ".";}
           else echo " ";
+<<<<<<< HEAD
 mysqli_close($yhteys);
 
+=======
+        
+>>>>>>> 187b77d2ee620853997292f46b678e26f9f8fe31
           ?> 
     </div>
 
