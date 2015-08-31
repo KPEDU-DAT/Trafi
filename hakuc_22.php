@@ -8,27 +8,16 @@
 
     <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
 	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
-
+	
   </head>
 
   <style>
       #header {
          
-         
-    
-
           text-align:center;
           padding:50px;
       }
-      #table {
-	
-			padding: 100px;
-        
-      }
-      
-       
-
-
+    
   </style>
 
 
@@ -38,18 +27,16 @@
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-     <div id="table">  
+     
 	<p>
-            <form action="hakuc_2.php" method="POST">
-                 <div class="row">
-      				<div class="large-8 columns">
-        			<div class="row collapse prefix-radius">
-          			<div class="large-16 columns">
-                <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
-                <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+            <form action="hakuc_22.php" method="POST">
+                  <div class="row">
+                  <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
+                  <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table>
+        <div class="small-6 medium-6 large-6 columns">
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -112,12 +99,13 @@
      
             mysqli_close($yhteys);
         ?>
+		</p>
 		</table>
-		</div>
+	
         </div>
 		</div>
 		</div>
-		</p>
+		
         
     <script>
         document.write('<script src=js/vendor/' +
@@ -138,8 +126,8 @@
     </script>
     
     
-    <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
-    <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
+    <link type="css" media="screen" rel="stylesheet" href="http://cosmo.kpedu.fi/~jonatanlogland/projekti/Trafi/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
+    <script type="javascript" src="http://cosmo.kpedu.fi/~jonatanlogland/projekti/Trafi/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
     
     
     
