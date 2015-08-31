@@ -7,11 +7,10 @@ if(mysqli_connect_errno())
 die("MySQL, virhe yhteyden luonnissa: ".mysqli_connect_error());
 }
 $yhteys->set_charset('utf8');
-$tulos=mysqli_query($yhteys,"SELECT title FROM shukari_model
-                            WHERE make_id LIKE '".$Y."%';" );
-echo "<select name='malli'>";
+$tulos=mysqli_query($yhteys,"SELECT * FROM shukari_make;");
+echo "<select name='merkki'>";
 while($rivi=mysqli_fetch_array($tulos))	{
-  echo "<option value=".$rivi['mallimerkinta'].">".$rivi['mallimerkinta']."</option>";
+  echo "<option value=".$rivi['id'].">".$rivi['title']."</option>";
 };
 echo "</select>";
 mysqli_close($yhteys);
