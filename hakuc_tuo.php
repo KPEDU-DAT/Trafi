@@ -19,8 +19,8 @@
   <body>
 
 
-     
       <h2>Ajoneuvon kuvaus</h2>
+      
       <div class="box">
       <p>
         <?php
