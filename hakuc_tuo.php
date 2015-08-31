@@ -95,7 +95,7 @@
           echo " Korityyppi on ";
           echo $_SESSION['PITKASELITE_fii'];
           echo ".";}
-          if ($_SESSION['iskutilavuus'] != NULL && $_SESSION['ovienlukumäärä'] != NULL){
+          if ($_SESSION['iskutilavuus'] != NULL && $_SESSION['ovienlukumäärä'] != "0"){
           echo " Ajoneuvon iskutilavuus on ";
           echo $_SESSION['iskutilavuus'];
           echo " cm^3 ja siinä on ";
@@ -108,13 +108,18 @@
           else if ($_SESSION['ovienlukumäärä'] != NULL){
           echo "Siinä on ";
           echo $_SESSION['ovienlukumaara'];
-          echo " ovea.";}
+          echo " ovea. ";}
           else echo " ";
           if ($_SESSION['ensirekisterointipvm'] != NULL){
           echo "Se rekisteröitiin "; 
-          echo $_SESSION['ensirekisterointipvm']; 
+          echo $_SESSION['ensirekisterointipvm'];
           echo ".";}
           else ".";
+          if ($_SESSION['pitkaseliteu_fi'] != NULL){
+          echo "Se sijaitsee paikassa ";
+          echo $_SESSION['pitkaseliteu_fi'];
+          echo ".";}
+          else echo " ";
           ?> 
     </div>
 </div>
