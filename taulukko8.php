@@ -15,67 +15,23 @@
     <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
   <head/>
 
-  <style>
-    #header {
-      
-      text-align:center;
-      padding:50px;
-    }
-
-    #table {
-      padding:200px;
-    }
-    
-    #h2{
-        
-        padding:20px;
-    }
-    
-    #section {
-      padding:100px;
-    }
-    
-    #box {
-          width: 100%;
-          background-color: #F0F0F0;
-          height: auto;
-          border: 2px solid #D0D0D0;
-          color:black;
-          padding:25px;         
-    }
- 
-
-
-  </style>
-         
-
-
-
-
-
+  
 
   <body>
 
 
 
-
-     <div id="section">
     
-  
-
-
-
-    <div class="w3-third">
       <h2>Ajoneuvon kuvaus</h2>
-      <div id="box">
+      <div class="box">
       <p>
         <?php
           session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';
-          echo "Ajoneuvo on "; 
-          echo $_SESION['pitkaselite_fi'];
+          echo '<br /><a href="kopiokoskalogo.php"> </a>';
+		  echo "Ajoneuvo on "; 
+          echo $_SESSION['pitkaselite_fi'];
           echo " ";
-          if ($_SESSION['merkkiSelkielinen'] != NULL){
+          if ($_SESSION['merkkiSelvakielinen'] != NULL){
           echo $_SESSION['merkkiSelvakielinen'];
           echo " merkkinen ";} 
           else echo " ";
@@ -84,7 +40,7 @@
           else echo " kulkuneuvo";
           if ($_SESSION['mallimerkinta'] != NULL){ 
           echo ", mallia ";
-          echo $_SESION['mallimerkinta'];
+          echo $_SESSION['mallimerkinta'];}
           else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
           echo ". ";}
           else  echo $_SESSION['mallimerkinta'];

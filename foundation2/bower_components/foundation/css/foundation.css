@@ -6322,9 +6322,6 @@ th.hide-for-touch {
 @media not print {
   .show-for-print {
     display: none !important; } }
-.jussi {
-  color: #000000; }
-
 .img {
   padding-top: 100px; }
 
@@ -6337,5 +6334,17 @@ th.hide-for-touch {
 
 .mikko {
   color: #000000; }
+
+.header {
+  text-align: center;
+  padding: 50px; }
+
+.box {
+  width: 100%;
+  background-color: #F0F0F0;
+  height: auto;
+  border: 2px solid #D0D0D0;
+  color: black;
+  padding: 25px; }
 
 /*# sourceMappingURL=foundation.css.map */

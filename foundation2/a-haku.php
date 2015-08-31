@@ -1,9 +1,12 @@
+
+
+
 <form action="a-body.php" method="POST"> 
                                                                                              
 <input type="text" placeholder="Haku" name="rekisterinumero">                          
   <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
 </form>
-<table class="table table-hover table.bordered">
+<table class="responsive table table-hover table.bordered">
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -29,13 +32,16 @@
          echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
-                  <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['mallimerkinta']."</td>
+                
+              
+                       
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  <td><a href=\"taulukko.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
             </tr>";
             
             session_start();
@@ -57,7 +63,11 @@
                 }  
                 
             mysqli_close($yhteys);
-        ?>   
+        ?> 
+        </div>
+        </div>
+        </div>
+          
         </table>
 		</center>
 		</div>

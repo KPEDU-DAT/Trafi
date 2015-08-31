@@ -154,6 +154,22 @@ hakuc_2.php
 hakuc_2.php
 hakuc_2.php
 
+<<<<<<< HEAD
+*** These modified files were found in JOE when it aborted on Wed Aug 26 13:18:02 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+testi.php
+testi.php
+tavoite4.php
+tavoite2_tun.php
+tavoite2_tun.php
+varaaos.php
+phpsql2.php
+testi.php
+hakuc_2
+hakuc_2.php
+=======
 *** These modified files were found in JOE when it aborted on Wed Aug 26 10:56:51 2015
 *** JOE was aborted because the terminal closed
 
@@ -214,6 +230,7 @@ hakuc_tuo.php
 hakuc_tuo.php
 hakuc_tuo.php
 hakuc_tuo.php
+>>>>>>> 145eddc4738efb33c8cf327312cbd08b5cb927f1
 hakuc_2.php
 
 *** These modified files were found in JOE when it aborted on Mon Aug 31 09:32:06 2015
