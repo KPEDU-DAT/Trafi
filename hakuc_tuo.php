@@ -11,25 +11,27 @@
     <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
-    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
-  <head/>
+  </head>
 
   
   <body>
 
 
-
-  
-
-
-    
+     
       <h2>Ajoneuvon kuvaus</h2>
       <div class="box">
       <p>
         <?php
+          $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+            if(mysqli_connect_errno()) {
+                die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
+            }
+            $yhteys->set_charset('utf8');
+
           session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';
+          echo '<br /><a href="hakuc_2.php"> </a>';  
           echo "Ajoneuvo on "; 
           echo $_SESSION['pitkaselite_fi'];
           echo " ";
@@ -89,6 +91,10 @@
           echo $_SESSION['pitkaseliteu_fi'];
           echo ".";}
           else echo " ";
+
+mysqli_close($yhteys);
+
+
           ?> 
     </div>
 
