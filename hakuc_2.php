@@ -106,8 +106,8 @@
         			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
         			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
         			$_SESSION['pitkaseliteu_fi'] = $rivi['pitkaseliteu_fi'];
-        		 '<br /><a href="taulukko8.php"> </a>'; 
-        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>'; 
+        		 '<br /><a href="hakuc_tuo.php"> </a>'; 
+        		 '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>'; 
                 }
             }
      
