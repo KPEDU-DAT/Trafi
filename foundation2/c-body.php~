@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, component components, grid and more.">
     <meta name="author" content="">
-    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
-    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+    <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
 
     <title>C-haku</title>      
     <? include("tyyli.php"); ?>
