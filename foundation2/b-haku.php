@@ -1,6 +1,6 @@
 <form method="POST" action="b-body.php">
   <p>Valitse haluamasi merkki: </p>
-    <select name="merkki">
+<!--    <select name="merkki">
       <option value="Audi">Audi</option>
       <option value="BMW">BMW</option>
       <option value="Citroen">Citroen</option>
@@ -15,6 +15,8 @@
       <option value="Volkswagen">Volkswagen</option>
       <option value="Volvo">Volvo</option>
     </select>
+    -->
+    <? include("makeb.php"); ?>
       <p>  Valitse haluttu vuosimalli: </p>
     <select name="vuosi">
       <option value="1990">1990</option>
@@ -43,7 +45,6 @@
   <? include("b-php2.php"); ?>
   <button name="button" value="true" type="submit"> Seuraava</button>
 </form>
-<? echo $X." ".$Y." "; ?>
 <script>
       document.write('<script src=js/vendor/' +
       ('__proto__' in {} ? 'zepto' : 'jquery') +
