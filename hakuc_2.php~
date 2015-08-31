@@ -68,10 +68,12 @@
                                                 ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
                                                 LEFT OUTER JOIN trafi_ajoneuvoluokka
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnus
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
                                                 ORDER BY kayttoonottopvm DESC;");
         
-        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kuvaus</th></tr></thead>";                                    
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
 
         while($rivi = mysqli_fetch_array($tulos)) {
         echo "<tr>
@@ -86,6 +88,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
+                  <td>".$rivi['pitkaseliteu_fi']."</td> 
                   <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
 				
@@ -101,6 +104,7 @@
         			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
         			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
         			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
+        			$_SESSION['pitkaseliteu_fi'] = $rivi['pitkaseliteu_fi'];
         		 '<br /><a href="taulukko8.php"> </a>'; 
         		 '<br /><a href="taulukko8.php?' . SID . '"> </a>'; 
                 }
