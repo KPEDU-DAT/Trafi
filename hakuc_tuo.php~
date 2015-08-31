@@ -11,52 +11,21 @@
     <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
-    <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-    <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+    <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
   <head/>
 
-  <style>
-    #header {
-      
-      text-align:center;
-      padding:50px;
-    }
-
-    #table {
-      padding:200px;
-    }
-    
-    #h2{
-        
-        padding:20px;
-    }
-    
-    #section {
-      padding:100px;
-    }
-    
-    #box {
-          width: 100%;
-          background-color: #F0F0F0;
-          height: auto;
-          border: 2px solid #D0D0D0;
-          color:black;
-          padding:25px;         
-    }
- 
-
-
-  </style>
+  
   <body>
 
 
 
-    <div id="section">
+  
 
 
     
       <h2>Ajoneuvon kuvaus</h2>
-      <div id="box">
+      <div class="box">
       <p>
         <?php
           session_start();
@@ -122,7 +91,7 @@
           else echo " ";
           ?> 
     </div>
-</div>
+
 
 
 
