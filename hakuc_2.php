@@ -6,35 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Haku C</title>
 
-    <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+	<script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
 
   </head>
 
-  <style>
-      #header {
-         
-         
-    
-
-          text-align:center;
-          padding:50px;
-      }
-      #table {
-	
-			padding: 100px;
-        
-      }
-      
-       
-
-
-  </style>
-
-
-
+  
   <body>
-		<div id="header">
+		<div class="header">
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
