@@ -35,7 +35,6 @@
 <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/js/foundation/foundation.js"></script>
 <script>
       $(document).foundation();
-
       var doc = document.documentElement;
       doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
