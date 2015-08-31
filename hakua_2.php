@@ -109,21 +109,29 @@
                 
       
               while ($rivi = mysqli_fetch_array($tulos)) {
-        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th></tr>";
+                 
                                                    
-         echo "<tr>
+         echo "<tr> 
+                  
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
-                  <td>".$rivi['mallimerkinta']."</td>
-                
-              
-                       
+                  <td>".$rivi['mallimerkinta']."</td>      
+                 
+                  
+                  
+                  <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
+                  
+                  <tr><th>Iskutilavuus</th><th>Väri</th></tr>
+                  
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
+                  
                   <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  
             </tr>";
             
             session_start();
@@ -149,7 +157,8 @@
             mysqli_close($yhteys);
 
 
-        ?> 
+        ?>
+         
         </div>
         </div>
         </div>
