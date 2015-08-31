@@ -12,44 +12,51 @@
   </head>
 
   <style>
-      #header {
-         
-         
+#header {
+    background-color:#D0D0D0;
+    color:white;
     
+ 9f1973ad075fb94554fcd834e881744ccd58a301
+    text-align:center;
+    padding:5px;
+}
 
-          text-align:center;
-          padding:50px;
-      }
-      #table {
-	
-			padding: 100px;
+
+#table {
+    
         
-      }
-      
-       
+                padding:200px;
+    
+                
+                
+    
+}
+#section {
+
+ 
+    padding:100px;
+}
+ 
 
 
-  </style>
+</style>
 
 
 
   <body>
 		<div id="header">
+        <h1 style="color:white">Ajoneuvotiedot</h1> 
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-     <div id="table">  
+<div id="table">  
 	<p>
             <form action="hakuc_2.php" method="POST">
-                 <div class="row">
-      				<div class="large-8 columns">
-        			<div class="row collapse prefix-radius">
-          			<div class="large-16 columns">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>
         </p>
-		<table>
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -68,11 +75,10 @@
                                                 ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
                                                 LEFT OUTER JOIN trafi_ajoneuvoluokka
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
-                                                LEFT OUTER JOIN trafi_kunta
-                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnus
-                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "';");
+                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+                                                ORDER BY kayttoonottopvm DESC;");
         
-        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kuvaus</th></tr></thead>";                                    
 
         while($rivi = mysqli_fetch_array($tulos)) {
         echo "<tr>
@@ -87,8 +93,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
-                  <td>".$rivi['pitkaseliteu_fi']."</td> 
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"taulukko8.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
 				
 				session_start();
@@ -103,7 +108,6 @@
         			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
         			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
         			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
-        			$_SESSION['pitkaseliteu_fi'] = $rivi['pitkaseliteu_fi'];
         		 '<br /><a href="taulukko8.php"> </a>'; 
         		 '<br /><a href="taulukko8.php?' . SID . '"> </a>'; 
                 }
@@ -113,10 +117,7 @@
         ?>
 		</table>
 		</div>
-        </div>
-		</div>
-		</div>
-		</p>
+        </p>
         
     <script>
         document.write('<script src=js/vendor/' +

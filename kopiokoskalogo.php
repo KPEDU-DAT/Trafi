@@ -51,7 +51,7 @@
         
 <div id="table">  
 	<p>
-            <form action="hakuc_2.php" method="POST">
+            <form action="kopiokoskalogo.php" method="POST">
                 <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                 <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
             </form>

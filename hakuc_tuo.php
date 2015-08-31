@@ -111,12 +111,12 @@
           echo " ovea. ";}
           else echo " ";
           if ($_SESSION['ensirekisterointipvm'] != NULL){
-          echo "Se rekisteröitiin "; 
+          echo " Se rekisteröitiin "; 
           echo $_SESSION['ensirekisterointipvm'];
-          echo ".";}
-          else ".";
+          echo ". ";}
+          else ". ";
           if ($_SESSION['pitkaseliteu_fi'] != NULL){
-          echo "Se sijaitsee paikassa ";
+          echo "Ajoneuvo sijaitsee paikassa ";
           echo $_SESSION['pitkaseliteu_fi'];
           echo ".";}
           else echo " ";
