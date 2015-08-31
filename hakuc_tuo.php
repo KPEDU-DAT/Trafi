@@ -29,7 +29,7 @@
       <p>
         <?php
           session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';
+          echo '<br /><a href="hakuc_2.php"> </a>';  
           echo "Ajoneuvo on "; 
           echo $_SESSION['pitkaselite_fi'];
           echo " ";
@@ -89,6 +89,7 @@
           echo $_SESSION['pitkaseliteu_fi'];
           echo ".";}
           else echo " ";
+        
           ?> 
     </div>
 
