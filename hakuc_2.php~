@@ -70,8 +70,7 @@
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnus
-                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-                                                ORDER BY kayttoonottopvm DESC;");
+                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "';");
         
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
 
