@@ -30,7 +30,6 @@
      
 	<p>
             <form action="hakuc_22.php" method="POST">
-                  <div class="row" style="height: 100px;"></div>
                   <div class="row">
                   <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                   <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
@@ -127,8 +126,8 @@
     </script>
     
     
-    <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
-    <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
+    <link type="css" media="screen" rel="stylesheet" href="http://cosmo.kpedu.fi/~jonatanlogland/projekti/Trafi/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
+    <script type="javascript" src="http://cosmo.kpedu.fi/~jonatanlogland/projekti/Trafi/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
     
     
     
