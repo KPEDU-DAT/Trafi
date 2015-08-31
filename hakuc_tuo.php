@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
-  <head/>
+  </head>
 
   
   <body>
@@ -95,12 +95,10 @@
           echo $_SESSION['pitkaseliteu_fi'];
           echo ".";}
           else echo " ";
-<<<<<<< HEAD
+
 mysqli_close($yhteys);
 
-=======
-        
->>>>>>> 187b77d2ee620853997292f46b678e26f9f8fe31
+
           ?> 
     </div>
 
