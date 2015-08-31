@@ -1,3 +1,4 @@
+<div class="nav">
 <div class="contain-to-grid sticky">
 <nav class="top-bar" data-topbar  data-options="sticky_on: [small,large]">		
 <ul class="title-area">
@@ -24,4 +25,5 @@
 </ul>
 </section>
   </nav>
+</div>
 </div>
