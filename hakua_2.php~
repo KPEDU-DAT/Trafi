@@ -30,9 +30,7 @@
 }
 
 
-#table {
-    padding:200px;
-}
+
 #section {
 
 
@@ -75,9 +73,19 @@
  </div>
  </form>
 <form action="hakua_2.php" method="POST"> 
-                                                                                             
-  <input type="text" placeholder="Haku" name="rekisterinumero">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+  <div class="row">
+  <div class="large-12 columns">
+    <div class="row collapse postfix-round">
+    <div class="small-9 columns">                                                                                           
+  <input type="text" placeholder="Haku" name="rekisterinumero">
+  </div>
+  <div class="small-3 columns">                          
+  <button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </form>
 <table class="table table-hover table.bordered">
 <?php  
@@ -106,13 +114,16 @@
          echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
-                  <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['mallimerkinta']."</td>
+                
+              
+                       
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td>"."<a href='taulukko8.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
             </tr>";
             
             session_start();
@@ -138,7 +149,11 @@
             mysqli_close($yhteys);
 
 
-        ?>   
+        ?> 
+        </div>
+        </div>
+        </div>
+          
         </table>
 		</center>
 		</div>
