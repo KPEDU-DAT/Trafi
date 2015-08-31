@@ -71,7 +71,11 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+<<<<<<< HEAD
 												ORDER BY trafi_ajoneuvot.jarnro;");
+=======
+												;");
+>>>>>>> 285b77f06e9959ac1aa1c2c859b7f66918b39c16
         
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
 
