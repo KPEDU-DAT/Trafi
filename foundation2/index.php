@@ -27,12 +27,12 @@
   '.js><\/script>')
   </script>
 <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
-<script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
+<script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/js/foundation.min.js"></script>
 <script>
     $(document).foundation();
   </script>
 <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
-<script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
+<script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/js/foundation/foundation.js"></script>
 <script>
       $(document).foundation();
 

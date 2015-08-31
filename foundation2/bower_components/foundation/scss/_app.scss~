@@ -1,0 +1,11 @@
+.jussi{
+color: #000000;
+}	
+.img{
+	padding-top: 100px;}
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 90%;
+    overflow:hidden;}
