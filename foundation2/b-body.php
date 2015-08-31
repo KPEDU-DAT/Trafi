@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, component components, grid and more.">
     <meta name="author" content="">
-    <link rel="stylesheet" href="http://foundation.zurb.com/assets/css/templates/foundation.css"/>
-    <script src="http://foundation.zurb.com/assets/js/modernizr.js"></script>
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+
+<link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    
+
+
+    
     <title>B-haku</title>
     <? include("tyyli.php"); ?>
   </head>
@@ -18,22 +25,6 @@
   <div class="small-6 medium-6 large-6 small-centered medium-centered large-centered columns">
     <? include("b-haku.php"); ?>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +

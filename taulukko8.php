@@ -15,58 +15,57 @@
     <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
   <head/>
 
-
-
-  <style>
-    #header {
-      background-color:#D0D0D0;
-      color:white;
-      text-align:center;
-      padding:5px;
-    }
-
-    #table {
-      padding:200px;
-    }
-    
-    #section {
-      padding:100px;
-    }
- 
-
-
-  </style>
-         
-
-
-
-
-
+  
 
   <body>
 
 
-    <div id="header">
-      <h1 style="color:white">Ajoneuvon kuvaus</h1>
-    </div>
 
-    <div id="section">
-    <div class="w3-row-padding">
-
-    <div class="w3-third">
-      <h2>Ajoneuvo #1 kuvaus</h2>
+    
+      <h2>Ajoneuvon kuvaus</h2>
+      <div class="box">
       <p>
         <?php
-          echo "Ajoneuvo on sininen Mazda -merkkinen henkilöauto, mallia 4D SEDAN 323 GLX-1.5-BF1262/2400. 
-          Siinä on 5 istumapaikkaa, ja massaltaan se on 930 kg. Suurin nettoteho on 0 ja korityyppi on tyhjä.
-          Se rekisteröitiin 1988-05-25."; 
-        ?>
-      </p>
+          session_start();
+          echo '<br /><a href="kopiokoskalogo.php"> </a>';
+		  echo "Ajoneuvo on "; 
+          echo $_SESSION['pitkaselite_fi'];
+          echo " ";
+          if ($_SESSION['merkkiSelvakielinen'] != NULL){
+          echo $_SESSION['merkkiSelvakielinen'];
+          echo " merkkinen ";} 
+          else echo " ";
+          if ($_SESSION['lyhytselite_fi'] != NULL){
+          echo $_SESSION['lyhytselite_fi'];}
+          else echo " kulkuneuvo";
+          if ($_SESSION['mallimerkinta'] != NULL){ 
+          echo ", mallia ";
+          echo $_SESSION['mallimerkinta'];}
+          else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
+          echo ". ";}
+          else  echo $_SESSION['mallimerkinta'];
+          echo ". Siinä on ";
+          if ($_SESSION['istumapaikkojenlkm'] != NULL){
+          echo $_SESSION['istumapaikkojenlkm'];}
+          echo" istumapaikkaa, ja massaltaan se on ";
+          echo $_SESSION['omamassa']; 
+          echo " kg. Suurin nettoteho on "; 
+          echo $_SESSION['suurinNettoteho']; 
+          echo " kW ja korityyppi on ";
+          echo $_SESSION['PITKASELITE_fii'];
+          echo ". Ajoneuvon iskutilavuus on ";
+          echo $_SESSION['iskutilavuus'];
+          echo " ja siinä on ";
+          echo $_SESSION['ovienlukumaara'];
+          echo " ovea. Se rekisteröitiin "; 
+          echo $_SESSION['ensirekisterointipvm']; 
+          echo".";
+          ?> 
     </div>
 
 
-    </div>
-    </div>
+
+
   </body>
 
 

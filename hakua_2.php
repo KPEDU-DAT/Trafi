@@ -30,9 +30,7 @@
 }
 
 
-#table {
-    padding:200px;
-}
+
 #section {
 
 
@@ -75,11 +73,21 @@
  </div>
  </form>
 <form action="hakua_2.php" method="POST"> 
-                                                                                             
-  <input type="text" placeholder="Haku" name="rekisterinumero">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+  <div class="row">
+  <div class="large-12 columns">
+    <div class="row collapse postfix-round">
+    <div class="small-9 columns">                                                                                           
+  <input type="text" placeholder="Haku" name="rekisterinumero">
+  </div>
+  <div class="small-3 columns">                          
+  <button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 </form>
-<table class="table table-hover table.bordered">
+<table class="responsive table table-hover table.bordered">
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -106,13 +114,33 @@
          echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
-                  <td>".$rivi['mallimerkinta']."</td>       
+                  <td>".$rivi['mallimerkinta']."</td>
+                
+              
+                       
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['kunta']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
             </tr>";
+            
+            session_start();
+        			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
+        			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
+        			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];
+        			$_SESSION['pitkaselite_fi'] = $rivi['pitkaselite_fi'];
+        			$_SESSION['lyhytselite_fi'] = $rivi['lyhytselite_fi'];
+        			$_SESSION['ovienlukumaara'] = $rivi['ovienlukumaara'];
+        			$_SESSION['istumapaikkojenlkm'] = $rivi['istumapaikkojenlkm'];
+        			$_SESSION['omamassa'] = $rivi['omamassa'];
+        			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
+        			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
+        			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
+        		 '<br /><a href="taulukko8.php"> </a>'; 
+        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>';
+            
                 }         
                 }  
 
@@ -121,7 +149,11 @@
             mysqli_close($yhteys);
 
 
-        ?>   
+        ?> 
+        </div>
+        </div>
+        </div>
+          
         </table>
 		</center>
 		</div>

@@ -20,25 +20,30 @@
         </p>
 		<table>
         <p>
-  
-  <?php
-            $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+
+  		</table>
+        </p>
+<?php
+			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
-                $tulos = mysqli_query($yhteys, "SELECT * 
+                $tulos = mysqli_query($yhteys, "SELECT DISTINCT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 LEFT OUTER JOIN trafi_korityyppi
-                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
+                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KO          
                                                 LEFT OUTER JOIN trafi_ajoneuvoluokka
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-                                                ORDER BY kayttoonottopvm DESC;");
-        echo  "<tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th>";                                    
+												;");
+        
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
         while($rivi = mysqli_fetch_array($tulos)) {
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
@@ -52,18 +57,31 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
+                  <td>".$rivi['pitkaseliteu_fi']."</td> 
+                  <td><a href=\"taulukko.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
+				
+				session_start();
+        			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
+        			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
+        			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];
+        			$_SESSION['pitkaselite_fi'] = $rivi['pitkaselite_fi'];
+        			$_SESSION['lyhytselite_fi'] = $rivi['lyhytselite_fi'];
+        			$_SESSION['ovienlukumaara'] = $rivi['ovienlukumaara'];
+        			$_SESSION['istumapaikkojenlkm'] = $rivi['istumapaikkojenlkm'];
+        			$_SESSION['omamassa'] = $rivi['omamassa'];
+        			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
+        			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
+        			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
+        			$_SESSION['pitkaseliteu_fi'] = $rivi['pitkaseliteu_fi'];
+        		 '<br /><a href="taulukko8.php"> </a>'; 
+        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>'; 
                 }
-             	
             }
+     
             mysqli_close($yhteys);
-            
         ?>
-  		</table>
-        </p>
-        <?php
         
-        ?>
         <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +

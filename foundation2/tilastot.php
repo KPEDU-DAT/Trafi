@@ -2,7 +2,6 @@
 <html class="no-js" lang="en">
   <head>
     <?php
-
         $yht = mysqli_connect("localhost", "data14", "mv2Mqbm888DvqbjT", "data14");
         echo mysqli_error($yht);
         mysqli_set_charset($yht,"utf8");
@@ -11,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation</title>
-    <script src="js/vendor/modernizr.js"></script>
+    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/js/vendor/modernizr.js"></script>
   </head>
 
   <body>                                                             
@@ -36,7 +35,6 @@
                     $num = $_GET["table"];
                 else
                     $num = 0;
-
                 $hselite = array("Yleisimmät merkit","Yleisimmät värit");
                 $harvo = array("Määrä","Määrä");
                 $selite = array("merkkiSelvakielinen","pitkaselite_fi");
@@ -68,8 +66,8 @@
   </body>
   
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
+    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/js/vendor/jquery.js"></script>
+    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/js/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
