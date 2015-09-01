@@ -33,7 +33,6 @@
                   </div>
             </form>
         </p>
-        <div class="small-6 medium-6 large-6 columns">
 		<table class="responsive">
         <p>
         <?php
