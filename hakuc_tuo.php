@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html>
@@ -28,79 +31,21 @@
       <div class="box">
       <p>
         <?php
+          echo '<br /><a href="hakuc_2.php"> </a>';
           $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
-
-          session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';  
-          echo "Ajoneuvo on "; 
-          echo $_SESSION['pitkaselite_fi'];
-          echo " ";
-          if ($_SESSION['merkkiSelvakielinen'] != NULL){
-          echo $_SESSION['merkkiSelvakielinen'];
-          echo " merkkinen ";} 
-          else echo " ";
-          if ($_SESSION['lyhytselite_fi'] != NULL){
-          echo $_SESSION['lyhytselite_fi'];}
-          else echo " kulkuneuvo";
-          if ($_SESSION['mallimerkinta'] != NULL){ 
-          echo ", mallia ";
-          echo $_SESSION['mallimerkinta'];}
-          else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
-          echo ". ";}
-          else  echo $_SESSION['mallimerkinta'];
-          echo ". Siinä on ";
-          if ($_SESSION['istumapaikkojenlkm'] != NULL && $_SESSION['omamassa'] != NULL){
-          echo $_SESSION['istumapaikkojenlkm'];
-          echo" istumapaikkaa, ja massaltaan se on ";}
-          else if ($_SESSION['istumapaikkojenlkm'] != NULL){
-          echo $_SESSION['istumapaikkojenlkm'];
-          echo " istumapaikkaa";}
-          if ($_SESSION['omamassa'] != NULL){
-          echo $_SESSION['omamassa'];
-          echo " kg.";}
-          if ($_SESSION['suurinNettoteho'] != NULL){
-          echo " Suurin nettoteho on ";
-          echo $_SESSION['suurinNettoteho'];
-          echo " kW. ";}
-          if ($_SESSION['PITKASELITE_fii'] != NULL){
-          echo " Korityyppi on ";
-          echo $_SESSION['PITKASELITE_fii'];
-          echo ".";}
-          if ($_SESSION['iskutilavuus'] != NULL && $_SESSION['ovienlukumäärä'] != "0"){
-          echo " Ajoneuvon iskutilavuus on ";
-          echo $_SESSION['iskutilavuus'];
-          echo " cm^3 ja siinä on ";
-          echo $_SESSION['ovienlukumaara'];
-          echo " ovea.";}
-          else if ($_SESSION['iskutilavuus'] != NULL) {
-          echo " Ajoneuvon iskutilavuus on ";
-          echo $_SESSION['iskutilavuus'];
-          echo " cm^3. ";}
-          else if ($_SESSION['ovienlukumäärä'] != NULL){
-          echo "Siinä on ";
-          echo $_SESSION['ovienlukumaara'];
-          echo " ovea. ";}
-          else echo " ";
-          if ($_SESSION['ensirekisterointipvm'] != NULL){
-          echo " Se rekisteröitiin "; 
-          echo $_SESSION['ensirekisterointipvm'];
-          echo ". ";}
-          else ". ";
-          if ($_SESSION['pitkaseliteu_fi'] != NULL){
-          echo "Ajoneuvo sijaitsee paikassa ";
-          echo $_SESSION['pitkaseliteu_fi'];
-          echo ".";}
-          else echo " ";
-<<<<<<< HEAD
-mysqli_close($yhteys);
-
-=======
-        
->>>>>>> 187b77d2ee620853997292f46b678e26f9f8fe31
+            
+            $sql = "SELECT * FROM trafi_ajoneuvot 
+                    WHERE trafi_ajonevot.jarnro = $id ";       
+            echo $_SESSION['ensirekisterointipvm']; 
+            // aja SQL lause
+            // tulosta se
+            
+            
+            mysqli_close($yhteys);
           ?> 
     </div>
 
