@@ -36,7 +36,10 @@
   </head>
 
   <body>
-       <div class="row"></div>
+  <? include("nav.php"); ?>
+  <? include("auto.php"); ?>
+  
+         <div class="row"></div>
       <div class=" small-3 medium-3 large-3 small-centered medium-centered large-centered columns">
    
       </div>
@@ -72,6 +75,7 @@
         </table>
     </div>
     </div>
+    
   </body>
   <? include("footer.php"); ?>
 
