@@ -11,13 +11,24 @@
 
   </head>
 
+<style>
+
+#tasaus {
+
+float:auto;
+
+}
+</style>
+
+
+
   <div class="tableresponsive">
   <body>
 		<div class="header">
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-     <div class="tasaus">
+     <div id="tasaus">
 	<p>
             <form action="hakuc_2.php" method="POST">
                  <div class="row">
