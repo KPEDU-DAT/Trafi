@@ -20,6 +20,8 @@
                                                 CROSS JOIN trafi_rekisterinumerot 
                                                 LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
                                                 AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "';");
                                                 
@@ -38,7 +40,7 @@
                   
                   <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
-                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   
                   <tr><th>Iskutilavuus</th><th>Väri</th></tr>
