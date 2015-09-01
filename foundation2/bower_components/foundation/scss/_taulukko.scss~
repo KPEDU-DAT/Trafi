@@ -56,8 +56,8 @@ only screen and (max-width: 1400px),
 	td:nth-of-type(8):before { content: "Massa"; }
 	td:nth-of-type(9):before { content: "Iskutilavuus"; }
 	td:nth-of-type(10):before { content: "Suurin nettoteho (kW)"; }
-	td:nth-of-type(10):before { content: "Kori"; }
-	td:nth-of-type(10):before { content: "Kunta"; }
-	td:nth-of-type(10):before { content: "Kuvaus"; }
+	td:nth-of-type(11):before { content: "Kori"; }
+	td:nth-of-type(12):before { content: "Kunta"; }
+	td:nth-of-type(13):before { content: "Kuvaus"; }
 }
 }
