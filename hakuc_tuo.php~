@@ -13,18 +13,18 @@
 
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
-  <head/>
+  </head>
 
   
   <body>
 
-
-
-  
-
-
-    
+<style>
+#testi {
+padding:200px;
+}
+</style>     
       <h2>Ajoneuvon kuvaus</h2>
+      <div id="testi">
       <div class="box">
       <p>
         <?php
@@ -97,9 +97,14 @@
           else echo " ";
 
 mysqli_close($yhteys);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f35b823a43656feac0dae1c06c499a79e46120b7
           ?> 
     </div>
-
+</div>
 
 
 
