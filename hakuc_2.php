@@ -17,7 +17,7 @@
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-     <div id="table">  
+     
 	<p>
             <form action="hakuc_2.php" method="POST">
                  <div class="row">
