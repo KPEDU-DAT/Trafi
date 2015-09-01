@@ -11,24 +11,42 @@
 
   </head>
 
-  
+<style>
+
+#testi {
+
+    text-align:center;
+
+}
+</style>
+
+  <div class="tableresponsive">
   <body>
-		<div class="header">
+	
+	
+	<div class="tasaus">	
         <h1>Ajoneuvotiedot</h1> 
-        </div>
         
-     <div id="table">  
+        
+     
 	<p>
             <form action="hakuc_2.php" method="POST">
                  <div class="row">
-      				<div class="large-8 columns">
-        			<div class="row collapse prefix-radius">
-          			<div class="large-16 columns">
-                <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
-                <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
+                  <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
             </form>
         </p>
-		<table>
+        
+        <div class="testi">
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -40,7 +58,7 @@
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
 
-                $tulos = mysqli_query($yhteys, "SELECT * 
+                $tulos = mysqli_query($yhteys, "SELECT DISTINCT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 LEFT OUTER JOIN trafi_korityyppi
@@ -52,9 +70,10 @@
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
 												ORDER BY trafi_ajoneuvot.jarnro;");
         
-        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
-
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
+              
         while($rivi = mysqli_fetch_array($tulos)) {
+        
         echo "<tr>
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>
@@ -68,11 +87,12 @@
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>
-                  <td>".$rivi['jarnro']."</td> 
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä</a></td>
               </tr>";
 				
 				session_start();
+				    '<br /><a href="hakuc_tuo.php"> </a>';
+				                     '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>';
         			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
         			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
         			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];
@@ -94,9 +114,12 @@
         ?>
 		</table>
 		</div>
+		</div>
+		</div>
         </div>
 		</div>
 		</div>
+        </div>
 		</p>
         
     <script>

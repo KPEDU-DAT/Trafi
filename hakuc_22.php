@@ -11,6 +11,14 @@
 	
   </head>
 
+<style>
+    #container {
+    overflow: auto; 
+    overflow-y: hidden;
+    }
+</style>
+
+
   
   <body>
 		<div class="header">
@@ -21,13 +29,29 @@
 	<p>
             <form action="hakuc_22.php" method="POST">
                   <div class="row">
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
                   <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
-                  <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
             </form>
         </p>
-        <div class="small-6 medium-6 large-6 columns">
+        <div id="container">
 		<table class="responsive">
         <p>
+        
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";
+        
+        </p>
+        
+        <p>
+        
+        
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -95,7 +119,7 @@
         </div>
 		</div>
 		</div>
-		
+		</div>
         
     <script>
         document.write('<script src=js/vendor/' +

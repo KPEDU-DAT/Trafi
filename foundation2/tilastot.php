@@ -31,12 +31,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation</title>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="js/vendor/modernizr.js"></script>
   </head>
 
-  <body>                                                             
-   
-    <div class="row"></div>
+  <body>
+  <? include("nav.php"); ?>
+  <? include("auto.php"); ?>
+  
+         <div class="row"></div>
       <div class=" small-3 medium-3 large-3 small-centered medium-centered large-centered columns">
    
       </div>
@@ -72,6 +75,7 @@
         </table>
     </div>
     </div>
+    
   </body>
   <? include("footer.php"); ?>
 

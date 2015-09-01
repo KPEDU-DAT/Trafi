@@ -1,3 +1,4 @@
+<div class="nav">
 <div class="contain-to-grid sticky">
 <nav class="top-bar" data-topbar  data-options="sticky_on: [small,large]">		
 <ul class="title-area">
@@ -9,7 +10,7 @@
 <section class="top-bar-section">
 <ul class="right">
   <li class="divider"></li>
-    <li><a href="t-body.php">Tilastot</a></li>
+    <li><a href="tilastot.php">Tilastot</a></li>
     <li class="divider"></li>
     <li class="has-dropdown">
     <a href="#">Hakukoneet</a>
@@ -24,4 +25,5 @@
 </ul>
 </section>
   </nav>
+</div>
 </div>

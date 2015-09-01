@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."> 
     <meta name="author" content="">
-    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
-    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
+<link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+    <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
+    
+
     <title>Tilastot</title>
     <? include("tyyli.php"); ?>
   </head>
   <body>
   <? include("nav.php"); ?>
   <? include("auto.php"); ?>
-
 <div class="small-6 medium-6 large-6 small-centered medium-centered large-centered columns">
   <? include("tilastot.php"); ?>
 </div>

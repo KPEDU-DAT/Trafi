@@ -1,3 +1,4 @@
+@charset "UTF-8";
 meta.foundation-version {
   font-family: "/5.5.2/"; }
 
@@ -6332,8 +6333,10 @@ th.hide-for-touch {
   width: 90%;
   overflow: hidden; }
 
-.mikko {
-  color: #000000; }
+.tasaus {
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px; }
 
 .header {
   text-align: center;
@@ -6346,5 +6349,78 @@ th.hide-for-touch {
   border: 2px solid #D0D0D0;
   color: black;
   padding: 50px; }
+
+@media only screen and (max-width: 1400px), (min-device-width: 768px) and (max-device-width: 2000px) {
+  .tableresponsive {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+    /*
+    Label the data
+    */ }
+    .tableresponsive table, .tableresponsive thead, .tableresponsive tbody, .tableresponsive th, .tableresponsive td, .tableresponsive tr {
+      display: block; }
+    .tableresponsive thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px; }
+    .tableresponsive tr {
+      border: 1px solid #ccc; }
+    .tableresponsive td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%; }
+    .tableresponsive td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 60%;
+      padding-right: 10px;
+      white-space: nowrap; }
+    .tableresponsive td:nth-of-type(1):before {
+      content: "Merkki"; }
+    .tableresponsive td:nth-of-type(2):before {
+      content: "Malli"; }
+    .tableresponsive td:nth-of-type(3):before {
+      content: "Rekisteröinti"; }
+    .tableresponsive td:nth-of-type(4):before {
+      content: "Väri"; }
+    .tableresponsive td:nth-of-type(5):before {
+      content: "Luokka"; }
+    .tableresponsive td:nth-of-type(6):before {
+      content: "Ovien lukumäärä"; }
+    .tableresponsive td:nth-of-type(7):before {
+      content: "Istumapaikkojen määrä"; }
+    .tableresponsive td:nth-of-type(8):before {
+      content: "Massa"; }
+    .tableresponsive td:nth-of-type(9):before {
+      content: "Iskutilavuus"; }
+    .tableresponsive td:nth-of-type(10):before {
+      content: "Suurin nettoteho (kW)"; }
+    .tableresponsive td:nth-of-type(11):before {
+      content: "Kori"; }
+    .tableresponsive td:nth-of-type(12):before {
+      content: "Kunta"; }
+    .tableresponsive td:nth-of-type(13):before {
+      content: "Kuvaus"; } }
+
+.icon-bar three-up {
+  primary-color: #ffffff;
+  icon-bar-bg: primary-color;
+  icon-bar-font-color: #FFFFFF;
+  icon-bar-font-color-hover: #FFFFFF;
+  icon-bar-font-size: 100rem;
+  icon-bar-hover-color: #008CBA;
+  icon-bar-icon-color: #FFFFFF;
+  icon-bar-icon-color-hover: #FFFFFF;
+  icon-bar-icon-size: 1.875rem;
+  icon-bar-image-width: 1.875rem;
+  icon-bar-image-height: 1.875rem;
+  icon-bar-active-color: #008CBA;
+  icon-bar-item-padding: 1.25rem;
+  icon-bar-disabled-opacity: 0.7; }
 
 /*# sourceMappingURL=foundation.css.map */

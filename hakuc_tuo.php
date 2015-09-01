@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html>
@@ -24,76 +27,94 @@
       <div class="box">
       <p>
         <?php
+          $id = $_GET['id'];
+          
           $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
-            if(mysqli_connect_errno()) {
-                die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
-            }
-            $yhteys->set_charset('utf8');
+          
+          if(mysqli_connect_errno()) {
+            die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
+          }
+          $yhteys->set_charset('utf8');
 
-          session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';  
-          echo "Ajoneuvo on "; 
-          echo $_SESSION['pitkaselite_fi'];
+          								$sql = "SELECT * FROM trafi_ajoneuvot
+												LEFT OUTER JOIN trafi_vari
+                                              	ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_korityyppi
+                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KO          
+                                                LEFT OUTER JOIN trafi_ajoneuvoluokka
+                                                ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss 
+												WHERE jarnro = $id ";       
+          
+          // aja SQL lause
+          $res = mysqli_query($yhteys,$sql) or die("<br>$sql<br>$id ");
+          
+          // tulosta se
+          $auto = mysqli_fetch_object($res);
+     
+		  echo "Ajoneuvo on ";
+          echo $auto->pitkaselite_fi;      
           echo " ";
-          if ($_SESSION['merkkiSelvakielinen'] != NULL){
-          echo $_SESSION['merkkiSelvakielinen'];
-          echo " merkkinen ";} 
+          if ($auto->merkkiSelvakielinen != NULL){      
+          echo $auto->merkkiSelvakielinen;      
+          echo " merkkinen ";}   
           else echo " ";
-          if ($_SESSION['lyhytselite_fi'] != NULL){
-          echo $_SESSION['lyhytselite_fi'];}
+          if ($auto->lyhytselite_fi != NULL){      
+          echo $auto->lyhytselite_fi;}      
           else echo " kulkuneuvo";
-          if ($_SESSION['mallimerkinta'] != NULL){ 
+          if ($auto->mallimerkinta != NULL){       
           echo ", mallia ";
-          echo $_SESSION['mallimerkinta'];}
-          else if ($_SESSION['mallimerkinta'] != NULL && $_SESSION['istumapaikkojenlkm'] != NULL) {
+          echo $auto->mallimerkinta;}      
+          else if ($auto->mallimerkinta != NULL && $auto->istumapaikkojenlkm != NULL) {            
           echo ". ";}
-          else  echo $_SESSION['mallimerkinta'];
+          else  echo $auto->mallimerkinta;      
           echo ". Siinä on ";
-          if ($_SESSION['istumapaikkojenlkm'] != NULL && $_SESSION['omamassa'] != NULL){
-          echo $_SESSION['istumapaikkojenlkm'];
+          if ($auto->istumapaikkojenlkm != NULL && $auto->omamassa != NULL){            
+          echo $auto->istumapaikkojenlkm;                                                          
           echo" istumapaikkaa, ja massaltaan se on ";}
-          else if ($_SESSION['istumapaikkojenlkm'] != NULL){
-          echo $_SESSION['istumapaikkojenlkm'];
-          echo " istumapaikkaa";}
-          if ($_SESSION['omamassa'] != NULL){
-          echo $_SESSION['omamassa'];
+          else if ($auto->istumapaikkojenlkm != NULL){      
+          echo $auto->istumapaikkojenlkm;      
+          echo " istumapaikkaa";}                                                       
+          if ($auto->omamassa != NULL){      
+          echo $auto->omamassa;      
           echo " kg.";}
-          if ($_SESSION['suurinNettoteho'] != NULL){
+          if ($auto->suurinNettoteho != NULL){      
           echo " Suurin nettoteho on ";
-          echo $_SESSION['suurinNettoteho'];
+          echo $auto->suurinNettoteho;      
           echo " kW. ";}
-          if ($_SESSION['PITKASELITE_fii'] != NULL){
+          if ($auto->PITKASELITE_fii != NULL){      
           echo " Korityyppi on ";
-          echo $_SESSION['PITKASELITE_fii'];
+          echo $auto->PITKASELITE_fii;      
           echo ".";}
-          if ($_SESSION['iskutilavuus'] != NULL && $_SESSION['ovienlukumäärä'] != "0"){
+          if ($auto->iskutilavuus != NULL && $auto->ovienlukumaara != "0"){
           echo " Ajoneuvon iskutilavuus on ";
-          echo $_SESSION['iskutilavuus'];
+          echo $auto->iskutilavuus;
           echo " cm^3 ja siinä on ";
-          echo $_SESSION['ovienlukumaara'];
+          echo $auto->ovienlukumaara;
           echo " ovea.";}
-          else if ($_SESSION['iskutilavuus'] != NULL) {
+          else if ($auto->iskutilavuus != NULL) {
           echo " Ajoneuvon iskutilavuus on ";
-          echo $_SESSION['iskutilavuus'];
+          echo $auto->iskutilavuus;
           echo " cm^3. ";}
-          else if ($_SESSION['ovienlukumäärä'] != NULL){
+          else if ($auto->ovienlukumaara != NULL){
           echo "Siinä on ";
-          echo $_SESSION['ovienlukumaara'];
+          echo $auto->ovienlukumaara;
           echo " ovea. ";}
           else echo " ";
-          if ($_SESSION['ensirekisterointipvm'] != NULL){
-          echo " Se rekisteröitiin "; 
-          echo $_SESSION['ensirekisterointipvm'];
+          if ($auto->ensirekisterointipvm != NULL){
+          echo " Se rekisteröitiin ";
+          echo $auto->ensirekisterointipvm;
           echo ". ";}
           else ". ";
-          if ($_SESSION['pitkaseliteu_fi'] != NULL){
+          if ($auto->pitkaseliteu_fi != NULL){
           echo "Ajoneuvo sijaitsee paikassa ";
-          echo $_SESSION['pitkaseliteu_fi'];
+          echo $auto->pitkaseliteu_fi;
           echo ".";}
           else echo " ";
 
-mysqli_close($yhteys);
-
+          
+          mysqli_close($yhteys);
 
           ?> 
     </div>

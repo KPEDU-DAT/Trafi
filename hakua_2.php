@@ -11,8 +11,8 @@
    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
    
-  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="/~alexhassel/foundation/bower_components/foundation/css/foundation.css"/>
+  <script src="/~erkkasailynoja/foundation/bower_components/modernizr/modernizr.js"></script>
    <head/>
 
   
@@ -80,7 +80,7 @@
   <input type="text" placeholder="Haku" name="rekisterinumero">
   </div>
   <div class="small-3 columns">                          
-  <button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+  <button class="button postfix default" type="submit" name="laheta" value="true">Hae</button>
   </div>
   </div>
   </div>
@@ -102,6 +102,8 @@
                                                 CROSS JOIN trafi_rekisterinumerot 
                                                 LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
                                                 AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "';");
                                                 
@@ -122,7 +124,7 @@
                   
                   <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
-                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   
                   <tr><th>Iskutilavuus</th><th>Väri</th></tr>
@@ -130,7 +132,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
                   
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
                   
             </tr>";
             
