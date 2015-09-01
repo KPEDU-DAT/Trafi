@@ -11,6 +11,14 @@
 	
   </head>
 
+<style>
+    #container {
+    overflow: auto; 
+    overflow-y: hidden;
+    }
+</style>
+
+
   
   <body>
 		<div class="header">
@@ -33,8 +41,17 @@
                   </div>
             </form>
         </p>
+        <div id="container">
 		<table class="responsive">
         <p>
+        
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";
+        
+        </p>
+        
+        <p>
+        
+        
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -102,7 +119,7 @@
         </div>
 		</div>
 		</div>
-		
+		</div>
         
     <script>
         document.write('<script src=js/vendor/' +
