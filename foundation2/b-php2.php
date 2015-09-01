@@ -16,12 +16,13 @@ $tulos2=mysqli_query($yhteys,"SELECT * FROM shukari_make;");
 echo "<select name='merkki'>";
 
 while($rivi2=mysqli_fetch_array($tulos2)) {
-  echo '<option value="'.$rivi['id'].'"';
+  echo '<option value="'.$rivi2['id'].'"';
     if($rivi2['id']==$X)
       { echo 'selected="selected"'; }
   echo ">".$rivi2['title']."</option>";
 };
-
+  echo "</select>";
+echo "<select name='vuosi'>";
   for($i='1970';$i<='2015';$i++)
     {
     echo '<option value="'.$i.'"';
@@ -29,6 +30,7 @@ while($rivi2=mysqli_fetch_array($tulos2)) {
         {echo 'selected="selected"';}
     echo '>'.$i.'</option>';
     }
+    echo "</select>";
 
 
 echo "</select>";

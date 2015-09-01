@@ -8,21 +8,21 @@ $yhteys->set_charset('utf8');
 $tulos1=mysqli_query($yhteys,"SELECT title FROM shukari_model
                             WHERE shukari_model.make_id LIKE '".$X."%';" );
 echo "<select name='title'>";
-while($rivi=mysqli_fetch_array($tulos1))	{
-  echo "<option value=".$rivi['title'].">".$rivi['title']."</option>";
+while($rivi1=mysqli_fetch_array($tulos1))	{
+  echo "<option value=".$rivi1['title'].">".$rivi1['title']."</option>";
 };
 
-$yhteys->set_charset('utf8');
-$tulos=mysqli_query($yhteys,"SELECT * FROM shukari_make;");
+$tulos2=mysqli_query($yhteys,"SELECT * FROM shukari_make;");
 echo "<select name='merkki'>";
 
-while($rivi=mysqli_fetch_array($tulos)) {
+while($rivi2=mysqli_fetch_array($tulos2)) {
   echo '<option value="'.$rivi['id'].'"';
-    if($rivi['id']==$X)
+    if($rivi2['id']==$X)
       { echo 'selected="selected"'; }
-  echo ">".$rivi['title']."</option>";
+  echo ">".$rivi2['title']."</option>";
 };
-
+  echo "</select>";
+echo "<select name='vuosi'>";
   for($i='1970';$i<='2015';$i++)
     {
     echo '<option value="'.$i.'"';
@@ -30,6 +30,7 @@ while($rivi=mysqli_fetch_array($tulos)) {
         {echo 'selected="selected"';}
     echo '>'.$i.'</option>';
     }
+    echo "</select>";
 
 
 echo "</select>";
