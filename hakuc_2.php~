@@ -13,22 +13,22 @@
 
 <style>
 
-#tasaus {
+#testi {
 
-float:auto;
+    text-align:center;
 
 }
 </style>
 
-
-
   <div class="tableresponsive">
   <body>
-		<div class="header">
+	
+	
+	<div class="tasaus">	
         <h1>Ajoneuvotiedot</h1> 
-        </div>
         
-     <div id="tasaus">
+        
+     
 	<p>
             <form action="hakuc_2.php" method="POST">
                  <div class="row">
@@ -44,7 +44,9 @@ float:auto;
                   </div>
             </form>
         </p>
-		<table>
+        
+        <div class="testi">
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -89,8 +91,7 @@ float:auto;
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>
-                 
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä</a></td>
               </tr>";
 				
 				session_start();
@@ -116,6 +117,7 @@ float:auto;
             mysqli_close($yhteys);
         ?>
 		</table>
+		</div>
 		</div>
 		</div>
         </div>
