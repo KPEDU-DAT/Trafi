@@ -1,3 +1,11 @@
+
+.tableresponsive {
+
+
+
+
+
+
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -51,4 +59,5 @@ only screen and (max-width: 760px),
 	td:nth-of-type(10):before { content: "Korityyppi"; }
 	td:nth-of-type(10):before { content: "Kunta"; }
 	td:nth-of-type(10):before { content: "Kuvaus"; }
+}
 }

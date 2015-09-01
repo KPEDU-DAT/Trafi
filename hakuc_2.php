@@ -57,7 +57,7 @@
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
 												ORDER BY trafi_ajoneuvot.jarnro;");
         
-        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
         while($rivi = mysqli_fetch_array($tulos)) {
         
@@ -74,7 +74,7 @@
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>
-                  <td>".$rivi['jarnro']."</td> 
+                 
                   <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
               </tr>";
 				

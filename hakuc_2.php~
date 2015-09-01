@@ -11,7 +11,7 @@
 
   </head>
 
-  
+  <div class="tableresponsive">
   <body>
 		<div class="header">
         <h1>Ajoneuvotiedot</h1> 
@@ -105,6 +105,7 @@
         </div>
 		</div>
 		</div>
+        </div>
 		</p>
         
     <script>
