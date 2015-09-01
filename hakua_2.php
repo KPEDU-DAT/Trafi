@@ -11,8 +11,8 @@
    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
    
-  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
-  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="/~alexhassel/foundation/bower_components/foundation/css/foundation.css"/>
+  <script src="/~erkkasailynoja/foundation/bower_components/modernizr/modernizr.js"></script>
    <head/>
 
   
@@ -80,7 +80,7 @@
   <input type="text" placeholder="Haku" name="rekisterinumero">
   </div>
   <div class="small-3 columns">                          
-  <button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+  <button class="button postfix default" type="submit" name="laheta" value="true">Hae</button>
   </div>
   </div>
   </div>
@@ -130,7 +130,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
                   
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
                   
             </tr>";
             
