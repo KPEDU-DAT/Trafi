@@ -1,11 +1,21 @@
 
 
 
-<form action="a-body.php" method="POST"> 
+
                                                                                              
-<input type="text" placeholder="Haku" name="rekisterinumero">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
-</form>
+
+
+title>Haku A</title>
+   <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
+           <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
+              <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
+                 
+                   <link rel="stylesheet" href="/~alexhassel/foundation/bower_components/foundation/css/foundation.css"/>
+                     <script src="/~erkkasailynoja/foundation/bower_components/modernizr/modernizr.js"></script>
+                        <head/>
+                        
 <table class="responsive table table-hover table.bordered">
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -20,6 +30,8 @@
                                                 CROSS JOIN trafi_rekisterinumerot 
                                                 LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
                                                 AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "';");
                                                 
@@ -38,19 +50,15 @@
                   
                   <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
-                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   
                   <tr><th>Iskutilavuus</th><th>Väri</th></tr>
                   
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-<<<<<<< HEAD
-                  <td><a href=\"taulukko.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
-=======
                   
                   <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
->>>>>>> 6cc9be2d752d75506ae3b552f31e8cae41197738
             </tr>";
             
             session_start();
