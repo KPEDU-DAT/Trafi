@@ -1,5 +1,5 @@
 <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-
+<!---
 <?php
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
 if(mysqli_connect_errno())
@@ -20,7 +20,7 @@ while($rivi=mysqli_fetch_array($tulos)) {
 echo "</select>";
 mysqli_close($yhteys);
 ?>
-
+--!>
 
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
