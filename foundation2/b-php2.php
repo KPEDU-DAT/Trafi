@@ -5,12 +5,6 @@ if(mysqli_connect_errno())
 die("MySQL, virhe yhteyden luonnissa: ".mysqli_connect_error());
 }
 $yhteys->set_charset('utf8');
-$tulos1=mysqli_query($yhteys,"SELECT title FROM shukari_model
-                            WHERE shukari_model.make_id LIKE '".$X."%';" );
-echo "<select name='title'>";
-while($rivi1=mysqli_fetch_array($tulos1))	{
-  echo "<option value=".$rivi1['title'].">".$rivi1['title']."</option>";
-};
 
 $tulos2=mysqli_query($yhteys,"SELECT * FROM shukari_make;");
 echo "<select name='merkki'>";
@@ -32,6 +26,12 @@ echo "<select name='vuosi'>";
     }
     echo "</select>";
 
+$tulos1=mysqli_query($yhteys,"SELECT title FROM shukari_model
+                            WHERE shukari_model.make_id LIKE '".$X."%';" );
+echo "<select name='title'>";
+while($rivi1=mysqli_fetch_array($tulos1))	{
+  echo "<option value=".$rivi1['title'].">".$rivi1['title']."</option>";
+};
 
 echo "</select>";
 mysqli_close($yhteys);
