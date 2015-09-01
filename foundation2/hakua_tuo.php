@@ -18,9 +18,9 @@
   
   <body>
 
-
+      <? include("nav.php"); ?>
+      <? include("auto.php"); ?>
       <h2>Ajoneuvon kuvaus</h2>
-      
       <div class="box">
       <p>
         <?php
@@ -96,7 +96,7 @@ mysqli_close($yhteys);
 
 
 
-
+  <? include("footer.php"); ?>
   </body>
 
 
