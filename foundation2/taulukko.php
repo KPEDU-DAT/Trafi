@@ -11,7 +11,7 @@
     <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
-    <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
   <head/>
 
@@ -122,7 +122,7 @@
           ?> 
     </div>
 </div>
-
+<? include("footer.php"); ?>
 
 
   </body>
