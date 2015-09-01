@@ -4,10 +4,8 @@ $Y=$_POST['vuosi'];
 ?>
 <form method="POST" action="b-body.php">
   <p>Valitse haluamasi merkki ja vuosimalli: </p>
-    <? include("makeb.php"); ?>
-    <? include("b-phpyear.php"); ?>
-    <? include("b-php2.php"); ?>
-    <? include("b-hakures.php"); ?>
+    <?	include("b-php2.php"); 
+        include("b-hakures.php"); ?>
   <button name="button" value="true" type="submit" data-reveal-id="myModal"> Seuraava</button>
 </form>
 <script>
