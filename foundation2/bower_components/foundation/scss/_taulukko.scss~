@@ -7,7 +7,7 @@
 
 
 @media 
-only screen and (max-width: 1080px),
+only screen and (max-width: 1400px),
 (min-device-width: 768px) and (max-device-width: 2000px)  {
 
 	/* Force table to not be like tables anymore */
@@ -56,8 +56,8 @@ only screen and (max-width: 1080px),
 	td:nth-of-type(8):before { content: "Massa"; }
 	td:nth-of-type(9):before { content: "Iskutilavuus"; }
 	td:nth-of-type(10):before { content: "Suurin nettoteho (kW)"; }
-	td:nth-of-type(10):before { content: "Kori"; }
-	td:nth-of-type(10):before { content: "Kunta"; }
-	td:nth-of-type(10):before { content: "Kuvaus"; }
+	td:nth-of-type(11):before { content: "Kori"; }
+	td:nth-of-type(12):before { content: "Kunta"; }
+	td:nth-of-type(13):before { content: "Kuvaus"; }
 }
 }

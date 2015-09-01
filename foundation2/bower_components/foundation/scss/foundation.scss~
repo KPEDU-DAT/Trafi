@@ -48,3 +48,4 @@
 @import 'c';
 @import 'tilastot';
 @import 'logo';
+@import 'taulukko';
