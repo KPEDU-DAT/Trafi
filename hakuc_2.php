@@ -15,11 +15,13 @@
 
   <div class="tableresponsive">
   <body>
-		<div id="tasaus">
+	
+	
+	<div class="tasaus">	
         <h1>Ajoneuvotiedot</h1> 
-        </div>
         
-     <div id="tasaus">
+        
+     
 	<p>
             <form action="hakuc_2.php" method="POST">
                  <div class="row">
