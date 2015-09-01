@@ -11,19 +11,9 @@
 	
   </head>
 
-  <style>
-      #header {
-         
-          text-align:center;
-          padding:50px;
-      }
-    
-  </style>
-
-
-
+  
   <body>
-		<div id="header">
+		<div class="header">
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
