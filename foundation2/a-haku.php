@@ -1,12 +1,39 @@
 
 
 
-<form action="a-body.php" method="POST"> 
+
                                                                                              
-<input type="text" placeholder="Haku" name="rekisterinumero">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
-</form>
-<table class="responsive table table-hover table.bordered">
+
+
+
+ 
+
+         <div class="tableresponsive">
+  <body>
+
+
+    <div class="tasaus">
+        <h1>Ajoneuvotiedot</h1>
+
+
+
+    <p>
+            <form action="a-body.php" method="POST"> 
+                 <div class="row">
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
+                  <input type="text" placeholder="Anna Rekisterinumero:" name="rekisterinumero">
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
+            </form>
+        </p>
+        <table>
+        <p>
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
