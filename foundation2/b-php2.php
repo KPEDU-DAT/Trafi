@@ -1,6 +1,4 @@
 <?php
-$X=$_POST['merkki'];
-$Y=$_POST['vuosi'];
 $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
 if(mysqli_connect_errno())
 {

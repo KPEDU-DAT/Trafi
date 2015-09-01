@@ -45,8 +45,12 @@
                   
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
+<<<<<<< HEAD
+                  <td><a href=\"taulukko.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+=======
                   
                   <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
+>>>>>>> 6cc9be2d752d75506ae3b552f31e8cae41197738
             </tr>";
             
             session_start();

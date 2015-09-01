@@ -21,11 +21,18 @@
 	<p>
             <form action="hakuc_22.php" method="POST">
                   <div class="row">
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
                   <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
-                  <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
             </form>
         </p>
-        <div class="small-6 medium-6 large-6 columns">
 		<table class="responsive">
         <p>
         <?php
