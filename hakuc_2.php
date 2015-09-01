@@ -40,7 +40,7 @@
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
 
-                $tulos = mysqli_query($yhteys, "SELECT * 
+                $tulos = mysqli_query($yhteys, "SELECT DISTINCT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
                                                 LEFT OUTER JOIN trafi_korityyppi
@@ -73,6 +73,8 @@
               </tr>";
 				
 				session_start();
+				    '<br /><a href="hakuc_tuo.php"> </a>';
+				                     '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>';
         			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
         			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
         			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];

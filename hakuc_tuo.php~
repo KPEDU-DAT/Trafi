@@ -97,8 +97,11 @@ padding:200px;
           else echo " ";
 
 mysqli_close($yhteys);
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f35b823a43656feac0dae1c06c499a79e46120b7
           ?> 
     </div>
 </div>

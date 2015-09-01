@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html>
@@ -24,11 +27,23 @@
       <div class="box">
       <p>
         <?php
+          echo '<br /><a href="hakuc_2.php"> </a>';
           $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
+<<<<<<< HEAD
+            
+            $sql = "SELECT * FROM trafi_ajoneuvot 
+                    WHERE trafi_ajonevot.jarnro = $id ";       
+            echo $_SESSION['ensirekisterointipvm']; 
+            // aja SQL lause
+            // tulosta se
+            
+            
+            mysqli_close($yhteys);
+=======
 
           session_start();
           echo '<br /><a href="hakuc_2.php"> </a>';  
@@ -95,6 +110,7 @@
 mysqli_close($yhteys);
 
 
+>>>>>>> f35b823a43656feac0dae1c06c499a79e46120b7
           ?> 
     </div>
 
