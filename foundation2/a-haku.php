@@ -29,21 +29,26 @@
                 
       
               while ($rivi = mysqli_fetch_array($tulos)) {
-        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th>";
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th>";
                                                    
          echo "<tr>
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
-                  <td>".$rivi['mallimerkinta']."</td>
-                
-              
-                       
+                  <td>".$rivi['mallimerkinta']."</td>      
+                 
+                  
+                  
+                  <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
+                  
+                  <tr><th>Iskutilavuus</th><th>Väri</th></tr>
+                  
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  <td><a href=\"taulukko.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
+                  
+                  <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
             </tr>";
             
             session_start();
