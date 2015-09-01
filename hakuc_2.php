@@ -17,7 +17,7 @@
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
-     
+     <div class="tasaus">
 	<p>
             <form action="hakuc_2.php" method="POST">
                  <div class="row">
@@ -101,6 +101,7 @@
             mysqli_close($yhteys);
         ?>
 		</table>
+		</div>
 		</div>
         </div>
 		</div>
