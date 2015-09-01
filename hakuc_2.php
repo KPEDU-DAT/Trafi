@@ -46,7 +46,7 @@
         </p>
         
         <div class="testi">
-		<table class="responsive">
+		<table>
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
