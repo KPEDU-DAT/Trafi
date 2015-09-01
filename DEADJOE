@@ -233,6 +233,7 @@ hakuc_tuo.php
 >>>>>>> 145eddc4738efb33c8cf327312cbd08b5cb927f1
 hakuc_2.php
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Mon Aug 31 09:32:06 2015
 *** JOE was aborted because the terminal closed
 
@@ -400,3 +401,36 @@ hakuc_tuo.php
 taulukko8.php
 hakuc_2.php
 * Build Log *
+=======
+*** These modified files were found in JOE when it aborted on Mon Aug 31 11:01:46 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_tuo.php
+hakuc_2.php
+hakuc_tuo.php
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+kopiokoskalogo.php
+
+*** These modified files were found in JOE when it aborted on Mon Aug 31 11:03:28 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_tuo.php
+hakuc_2.php
+hakuc_tuo.php
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+kopiokoskalogo.php
+>>>>>>> bcaa7f5e9d8adef05424a4b95f9c9c6a7d00eb8f
