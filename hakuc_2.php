@@ -11,20 +11,11 @@
 
   </head>
 
-<style>
-
-#tasaus {
-
-float:auto;
-
-}
-</style>
-
 
 
   <div class="tableresponsive">
   <body>
-		<div class="header">
+		<div id="tasaus">
         <h1>Ajoneuvotiedot</h1> 
         </div>
         
