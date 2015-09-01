@@ -11,7 +11,14 @@
 
   </head>
 
+<style>
 
+#testi {
+
+    text-align:center;
+
+}
+</style>
 
   <div class="tableresponsive">
   <body>
@@ -37,7 +44,9 @@
                   </div>
             </form>
         </p>
-		<table>
+        
+        <div class="testi">
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -78,8 +87,7 @@
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>
-                 
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä</a></td>
               </tr>";
 				
 				session_start();
@@ -105,6 +113,7 @@
             mysqli_close($yhteys);
         ?>
 		</table>
+		</div>
 		</div>
 		</div>
         </div>
