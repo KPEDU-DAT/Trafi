@@ -128,10 +128,9 @@ session_start();
             	die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
           	}   
           		$yhtey->set_charset('utf8');
-				$id = $yhtey->real_escape_string(trim(htmlentities(strip_tags($_GET['id']))));
-				$asia = ("SELECT jarnro, haku_maara
-                          FROM trafi_ajoneuvot
-						  UPDATE trafi_ajoneuvot.haku_maara
+				$id = $_GET['id'];
+				$asia = ("
+						  UPDATE trafi_ajoneuvot
 						  SET haku_maara = haku_maara + 1
 						  WHERE jarnro = '$id';");
                 
