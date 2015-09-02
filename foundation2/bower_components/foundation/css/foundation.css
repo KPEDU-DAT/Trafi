@@ -2997,14 +2997,15 @@ label.error {
 .icon-bar {
   display: inline-block;
   font-size: 0;
-  width: 100%;
-  background: #333333; }
+  width: 40%;
+  background: #FFFFFF; }
   .icon-bar > * {
+    margin: right;
     display: block;
     float: left;
     font-size: 1rem;
     margin: 0 auto;
-    padding: 1.25rem;
+    padding: 1rem;
     text-align: center;
     width: 25%; }
     .icon-bar > * i, .icon-bar > * img {
@@ -3013,11 +3014,11 @@ label.error {
       .icon-bar > * i + label, .icon-bar > * img + label {
         margin-top: .0625rem; }
     .icon-bar > * i {
-      font-size: 1.875rem;
+      font-size: 1rem;
       vertical-align: middle; }
     .icon-bar > * img {
-      height: 1.875rem;
-      width: 1.875rem; }
+      height: 1rem;
+      width: 1rem; }
   .icon-bar.label-right > * i, .icon-bar.label-right > * img {
     display: inline-block;
     margin: 0 .0625rem 0 0; }
@@ -3052,31 +3053,31 @@ label.error {
         width: auto; } }
   .icon-bar > * {
     font-size: 1rem;
-    padding: 1.25rem; }
+    padding: 1rem; }
     .icon-bar > * i + label, .icon-bar > * img + label {
       margin-top: .0625rem;
       font-size: 1rem; }
     .icon-bar > * i {
-      font-size: 1.875rem; }
+      font-size: 1rem; }
     .icon-bar > * img {
-      height: 1.875rem;
-      width: 1.875rem; }
+      height: 1rem;
+      width: 1rem; }
   .icon-bar > * label {
-    color: #FFFFFF; }
+    color: #000000; }
   .icon-bar > * i {
-    color: #FFFFFF; }
+    color: #000000; }
   .icon-bar > a:hover {
-    background: #008CBA; }
+    background: #FFFFFF; }
     .icon-bar > a:hover label {
-      color: #FFFFFF; }
+      color: black; }
     .icon-bar > a:hover i {
-      color: #FFFFFF; }
+      color: #000000; }
   .icon-bar > a.active {
-    background: #008CBA; }
+    background: #FFFFFF; }
     .icon-bar > a.active label {
-      color: #FFFFFF; }
+      color: black; }
     .icon-bar > a.active i {
-      color: #FFFFFF; }
+      color: #000000; }
   .icon-bar .item.disabled {
     cursor: not-allowed;
     opacity: 0.7;
@@ -6336,23 +6337,20 @@ th.hide-for-touch {
 .tasaus {
   text-align: center;
   margin: 0 auto;
-  padding: 50px;
-  padding-bottom: 50px; }
-
-.header {
-  text-align: center;
-  padding: 150px; }
-
-.box {
-  float: auto;
-  height: 400px;
-  width: 500px;
-  background-color: #F0F0F0;
-  border: 2px solid #D0D0D0;
-  color: black;
   padding: 50px; }
 
-@media only screen and (max-width: 1400px), (min-device-width: 768px) and (max-device-width: 2000px) {
+.header {
+  padding: 50px; }
+
+.box {
+  padding: 50px;
+  height: auto;
+  width: auto;
+  background-color: #F0F0F0;
+  border: 2px solid #D0D0D0;
+  color: black; }
+
+@media only screen and (max-width: 1500px), (min-device-width: 768px) and (max-device-width: 2000px) {
   .tableresponsive {
     /* Force table to not be like tables anymore */
     /* Hide table headers (but not display: none;, for accessibility) */
@@ -6366,7 +6364,7 @@ th.hide-for-touch {
       top: -9999px;
       left: -9999px; }
     .tableresponsive tr {
-      border: 1px solid #ccc; }
+      border: 1px solid #FFFFFF; }
     .tableresponsive td {
       /* Behave  like a "row" */
       border: none;
@@ -6378,9 +6376,9 @@ th.hide-for-touch {
       position: absolute;
       /* Top/left values mimic padding */
       top: 6px;
-      left: 6px;
+      left: 10px;
       width: 60%;
-      padding-right: 10px;
+      padding-right: 1px;
       white-space: nowrap; }
     .tableresponsive td:nth-of-type(1):before {
       content: "Merkki"; }
@@ -6395,22 +6393,18 @@ th.hide-for-touch {
     .tableresponsive td:nth-of-type(6):before {
       content: "Ovien lukumäärä"; }
     .tableresponsive td:nth-of-type(7):before {
-      content: "Istumapaikkojen määrä"; }
+      content: "Ist.paik. määrä"; }
     .tableresponsive td:nth-of-type(8):before {
       content: "Massa"; }
     .tableresponsive td:nth-of-type(9):before {
       content: "Iskutilavuus"; }
     .tableresponsive td:nth-of-type(10):before {
-      content: "Suurin nettoteho (kW)"; }
+      content: "S.nettoteho (kW)"; }
     .tableresponsive td:nth-of-type(11):before {
       content: "Kori"; }
     .tableresponsive td:nth-of-type(12):before {
       content: "Kunta"; }
     .tableresponsive td:nth-of-type(13):before {
       content: "Kuvaus"; } }
-
-.icon-bar {
-  padding-left: 100px;
-  padding-right: 100px; }
 
 /*# sourceMappingURL=foundation.css.map */

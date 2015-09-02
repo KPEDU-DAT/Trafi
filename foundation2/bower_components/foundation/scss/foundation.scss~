@@ -49,3 +49,4 @@
 @import 'tilastot';
 @import 'logo';
 @import 'taulukko';
+@import 'icon-bar';

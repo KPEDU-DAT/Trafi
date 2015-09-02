@@ -44,7 +44,7 @@
       $merkki = $_POST['merkki'];
 
       echo"
-      <form type='POST' action='hakub_2.php'>
+      <form type='POST' action='hakubee.php'>
        <select name='merkkix'>
         <option value=".$merkki.">".$merkki."</option>
        </select>

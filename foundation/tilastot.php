@@ -25,15 +25,16 @@
                  "<th>Yleisimmät korityypit</th><th>Määrä</th><th>Osuus</th>");
    
    
-   $data = array("SELECT merkkiSelvakielinen,COUNT(merkkiSelvakielinen),CONCAT(ROUND(((COUNT(merkkiSelvakielinen))/".$all."),1),' %') FROM trafi_ajoneuvot GROUP BY merkkiSelvakielinen ORDER BY COUNT(merkkiSelvakielinen) DESC",
-                 "SELECT pitkaselite_fi,COUNT(vari),CONCAT(ROUND(((COUNT(vari))/".$all."),1),' %') FROM trafi_ajoneuvot,trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus GROUP BY vari ORDER BY COUNT(vari) DESC",
-                 "SELECT lyhytselite_fi,pitkaselite_fiu,COUNT(pitkaselite_fiu),CONCAT(ROUND(((COUNT(pitkaselite_fiu))/".$all."),1),' %') FROM trafi_ajoneuvot,trafi_ajoneuvoluokka WHERE trafi_ajoneuvot.ajoneuvoluokka=trafi_ajoneuvoluokka.ajoneuvoluokka GROUP BY pitkaselite_fiu ORDER BY COUNT(pitkaselite_fiu) DESC",
-                 "SELECT PITKASELITE_fi,COUNT(PITKASELITE_fi),CONCAT(ROUND(((COUNT(PITKASELITE_fi))/".$all."),1),' %') FROM trafi_ajoneuvot,trafi_ajoneuvoryhma WHERE trafi_ajoneuvot.ajoneuvoryhma=trafi_ajoneuvoryhma.KOODINTUNNUS GROUP BY PITKASELITE_fi ORDER BY COUNT(PITKASELITE_fi) DESC",
-                 "SELECT lyhytselite_fi,COUNT(lyhytselite_fi),CONCAT(ROUND(((COUNT(lyhytselite_fi))/".$all."),1),' %') FROM trafi_ajoneuvot,trafi_kaytto WHERE trafi_ajoneuvot.ajoneuvonkaytto=trafi_kaytto.ajoneuvonkaytto GROUP BY lyhytselite_fi ORDER BY COUNT(lyhytselite_fi) DESC",
-                 "SELECT SELITE_fi,COUNT(SELITE_fi),CONCAT(ROUND(((COUNT(SELITE_fi))/".$all."),1),' %') FROM trafi_ajoneuvot,trafi_kayttovoima WHERE trafi_ajoneuvot.Kayttovoima=trafi_kayttovoima.KOODINTUNNUS GROUP BY SELITE_fi ORDER BY COUNT(SELITE_fi) DESC",
-                 "SELECT PITKASELITE_fii,COUNT(PITKASELITE_fii),CONCAT(ROUND(((COUNT(PITKASELITE_fii))/".$all."),1),' %') FROM trafi_ajoneuvot,trafi_korityyppi WHERE trafi_ajoneuvot.korityyppi=trafi_korityyppi.KO GROUP BY PITKASELITE_fii ORDER BY COUNT(PITKASELITE_fii) DESC");
+   $data = array("SELECT merkkiSelvakielinen,COUNT(merkkiSelvakielinen) FROM trafi_ajoneuvot GROUP BY merkkiSelvakielinen ORDER BY COUNT(merkkiSelvakielinen) DESC",
+                 "SELECT pitkaselite_fi,COUNT(vari) FROM trafi_ajoneuvot,trafi_vari WHERE trafi_ajoneuvot.vari=trafi_vari.koodintunnus GROUP BY vari ORDER BY COUNT(vari) DESC",
+                 "SELECT lyhytselite_fi,pitkaselite_fiu,COUNT(pitkaselite_fiu) FROM trafi_ajoneuvot,trafi_ajoneuvoluokka WHERE trafi_ajoneuvot.ajoneuvoluokka=trafi_ajoneuvoluokka.ajoneuvoluokka GROUP BY pitkaselite_fiu ORDER BY COUNT(pitkaselite_fiu) DESC",
+                 "SELECT PITKASELITE_fi,COUNT(PITKASELITE_fi) FROM trafi_ajoneuvot,trafi_ajoneuvoryhma WHERE trafi_ajoneuvot.ajoneuvoryhma=trafi_ajoneuvoryhma.KOODINTUNNUS GROUP BY PITKASELITE_fi ORDER BY COUNT(PITKASELITE_fi) DESC",
+                 "SELECT lyhytselite_fi,COUNT(lyhytselite_fi) FROM trafi_ajoneuvot,trafi_kaytto WHERE trafi_ajoneuvot.ajoneuvonkaytto=trafi_kaytto.ajoneuvonkaytto GROUP BY lyhytselite_fi ORDER BY COUNT(lyhytselite_fi) DESC",
+                 "SELECT SELITE_fi,COUNT(SELITE_fi) FROM trafi_ajoneuvot,trafi_kayttovoima WHERE trafi_ajoneuvot.Kayttovoima=trafi_kayttovoima.KOODINTUNNUS GROUP BY SELITE_fi ORDER BY COUNT(SELITE_fi) DESC",
+                 "SELECT PITKASELITE_fii,COUNT(PITKASELITE_fii) FROM trafi_ajoneuvot,trafi_korityyppi WHERE trafi_ajoneuvot.korityyppi=trafi_korityyppi.KO GROUP BY PITKASELITE_fii ORDER BY COUNT(PITKASELITE_fii) DESC");
 
-
+        $total_query = mysqli_query($yht, "SELECT COUNT(jarnro) FROM trafi_ajoneuvot");
+        $total_value = mysqli_fetch_array($total_query, MYSQLI_NUM)[0];
     ?>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,11 +66,11 @@
         <table class="responsive" id="table">
         <thead>
         <?php
-//          $sql = $data[$num]." DESC LIMIT 10";
+            $sql = $data[$num] . " LIMIT 25";
             echo "<tr>".$head[$num];
    echo "</thead>";
     echo "<tbody>";
-            $sql = $data[$num];
+//            $sql = $data[$num];
             $result = mysqli_query($yht, $sql);
             echo mysqli_error($yht);
             while($row = mysqli_fetch_array($result,MYSQLI_NUM)){
@@ -79,6 +80,7 @@
                  echo "<td>".$row[$i]."</td>";
                  $i++;
               }
+              echo "<td>" . sprintf('%0.3f', $row[1] / $total_value * 100) . "</td>";
            }
 ?>
         </tbody>
