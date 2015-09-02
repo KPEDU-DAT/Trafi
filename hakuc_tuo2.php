@@ -19,6 +19,30 @@ session_start();
   </head>
 
 
+<style>
+
+#nav
+{
+  line-height:auto;
+    background-color:white;
+    height:400px;
+    width:200px;
+    float:left;
+    padding:5px;
+	border: 2px solid #D0D0D0;	
+}
+
+#box {
+            padding:100px;
+            height:400px;
+            width: 500px;
+            background-color: #F0F0F0;
+            border: 2px solid #D0D0D0;
+            color:black;
+        }
+
+
+</style>
 
   
   <body>
@@ -27,7 +51,10 @@ session_start();
       <h1>Ajoneuvon kuvaus</h1>
       </div>
       <div class="header">
-      <div class="box">
+	<div id="nav">
+	moi
+	</div>
+      <div id="box">
       <p>
         <?php
           $id = $_GET['id'];

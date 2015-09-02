@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Tue Aug 25 09:34:21 2015
 *** JOE was aborted because the terminal closed
 
@@ -144,11 +145,18 @@ hakuc_2.php
 hakuc_2.php
 hakuc_2.php
 hakuc_2.php
+=======
+*** These modified files were found in JOE when it aborted on Wed Sep  2 10:35:46 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+>>>>>>> a5deccae9827ad5cd13403c64c156b98a0d9f38b
 hakuc_2.php
 hakuc_2.php
 hakuc_2.php
 hakuc_2.php
 hakuc_2.php
+<<<<<<< HEAD
 hakuc_2.php
 hakuc_2.php
 hakuc_2.php
@@ -224,10 +232,13 @@ hakuc_2.php
 hakuc_2.php
 hakuc_tuo.php
 hakuc_tuo.php
+=======
+>>>>>>> a5deccae9827ad5cd13403c64c156b98a0d9f38b
 hakuc_tuo.php
 hakuc_tuo.php
 hakuc_tuo.php
 hakuc_tuo.php
+<<<<<<< HEAD
 hakuc_tuo.php
 hakuc_tuo.php
 >>>>>>> 145eddc4738efb33c8cf327312cbd08b5cb927f1
@@ -434,3 +445,10 @@ _c.scss
 _c.scss
 kopiokoskalogo.php
 >>>>>>> bcaa7f5e9d8adef05424a4b95f9c9c6a7d00eb8f
+=======
+hakuc_2.php
+hakuc_tuo.php
+hakuc_tuo.php
+hakuc_tuo.php
+hakuc_tuo.php
+>>>>>>> a5deccae9827ad5cd13403c64c156b98a0d9f38b
