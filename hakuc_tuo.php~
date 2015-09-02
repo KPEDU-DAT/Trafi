@@ -7,7 +7,7 @@ session_start();
 
   <head>
 
-  <title>Tyylit</title>
+  <title>Kuvaus</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
@@ -17,6 +17,8 @@ session_start();
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
   </head>
+
+
 
   
   <body>
@@ -119,8 +121,8 @@ session_start();
 
           ?> 
     </div>
-
 </div>
+
 
 
   </body>

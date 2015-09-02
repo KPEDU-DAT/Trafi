@@ -11,22 +11,15 @@
 
   </head>
 
-<style>
-
-#testi {
-
-    text-align:center;
-
-}
-</style>
 
   <div class="tableresponsive">
   <body>
 	
 	
-	<div class="tasaus">	
+	    <div class="tasaus">
         <h1>Ajoneuvotiedot</h1> 
-        
+    
+    
         
      
 	<p>
@@ -44,9 +37,10 @@
                   </div>
             </form>
         </p>
+        <div class="header">
+        </div>
         
-        <div class="testi">
-		<table class="responsive">
+		<table>
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
