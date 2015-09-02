@@ -21,8 +21,8 @@ session_start();
   
   <body>
 
-
-      <h2>Ajoneuvon kuvaus</h2>
+      <div class="tasaus">
+      <h1>Ajoneuvon kuvaus</h1>
       
       <div class="box">
       <p>
@@ -118,7 +118,7 @@ session_start();
 
           ?> 
     </div>
-
+</div>
 
 
 
