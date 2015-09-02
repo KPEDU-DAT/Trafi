@@ -1,11 +1,15 @@
 .icon-bar{
 background: #ffffff;
-width:50%;
-align: right;
+background-hover: #ffffff;
+width:100%;
+
 }
 .label{
 color: #000000;
 }
-.a{
+.a.item{
+color: #000000;
+}
+a{
 color: #000000;
 }
