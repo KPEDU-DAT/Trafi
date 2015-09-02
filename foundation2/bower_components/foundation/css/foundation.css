@@ -6336,16 +6336,18 @@ th.hide-for-touch {
 .tasaus {
   text-align: center;
   margin: 0 auto;
-  padding: 50px; }
+  padding: 50px;
+  padding-bottom: 50px; }
 
 .header {
   text-align: center;
-  padding: 50px; }
+  padding: 150px; }
 
 .box {
-  width: 100%;
+  float: auto;
+  height: 400px;
+  width: 500px;
   background-color: #F0F0F0;
-  height: auto;
   border: 2px solid #D0D0D0;
   color: black;
   padding: 50px; }
@@ -6407,20 +6409,8 @@ th.hide-for-touch {
     .tableresponsive td:nth-of-type(13):before {
       content: "Kuvaus"; } }
 
-.icon-bar three-up {
-  primary-color: #ffffff;
-  icon-bar-bg: primary-color;
-  icon-bar-font-color: #FFFFFF;
-  icon-bar-font-color-hover: #FFFFFF;
-  icon-bar-font-size: 100rem;
-  icon-bar-hover-color: #008CBA;
-  icon-bar-icon-color: #FFFFFF;
-  icon-bar-icon-color-hover: #FFFFFF;
-  icon-bar-icon-size: 1.875rem;
-  icon-bar-image-width: 1.875rem;
-  icon-bar-image-height: 1.875rem;
-  icon-bar-active-color: #008CBA;
-  icon-bar-item-padding: 1.25rem;
-  icon-bar-disabled-opacity: 0.7; }
+.icon-bar {
+  padding-left: 100px;
+  padding-right: 100px; }
 
 /*# sourceMappingURL=foundation.css.map */
