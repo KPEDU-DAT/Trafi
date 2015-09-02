@@ -1,11 +1,3 @@
-<style>
-   .icon-bar{
-  
-
-
-}
-
-</style>
 <div class="icon-bar five-up">
   <a class="item">
     <img src="auto.png" >

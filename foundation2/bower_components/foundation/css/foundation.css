@@ -3072,7 +3072,7 @@ label.error {
     .icon-bar > a:hover i {
       color: #FFFFFF; }
   .icon-bar > a.active {
-    background: #008CBA; }
+    background: #ffffff; }
     .icon-bar > a.active label {
       color: #FFFFFF; }
     .icon-bar > a.active i {
@@ -6336,23 +6336,20 @@ th.hide-for-touch {
 .tasaus {
   text-align: center;
   margin: 0 auto;
-  padding: 50px;
-  padding-bottom: 50px; }
-
-.header {
-  text-align: center;
-  padding: 150px; }
-
-.box {
-  float: auto;
-  height: 400px;
-  width: 500px;
-  background-color: #F0F0F0;
-  border: 2px solid #D0D0D0;
-  color: black;
   padding: 50px; }
 
-@media only screen and (max-width: 1400px), (min-device-width: 768px) and (max-device-width: 2000px) {
+.header {
+  padding: 50px; }
+
+.box {
+  padding: 100px;
+  height: auto;
+  width: auto;
+  background-color: #F0F0F0;
+  border: 2px solid #D0D0D0;
+  color: black; }
+
+@media only screen and (max-width: 1500px), (min-device-width: 768px) and (max-device-width: 2000px) {
   .tableresponsive {
     /* Force table to not be like tables anymore */
     /* Hide table headers (but not display: none;, for accessibility) */
@@ -6366,7 +6363,7 @@ th.hide-for-touch {
       top: -9999px;
       left: -9999px; }
     .tableresponsive tr {
-      border: 1px solid #ccc; }
+      border: 1px solid #FFFFFF; }
     .tableresponsive td {
       /* Behave  like a "row" */
       border: none;
@@ -6378,9 +6375,9 @@ th.hide-for-touch {
       position: absolute;
       /* Top/left values mimic padding */
       top: 6px;
-      left: 6px;
+      left: 10px;
       width: 60%;
-      padding-right: 10px;
+      padding-right: 1px;
       white-space: nowrap; }
     .tableresponsive td:nth-of-type(1):before {
       content: "Merkki"; }
@@ -6395,13 +6392,13 @@ th.hide-for-touch {
     .tableresponsive td:nth-of-type(6):before {
       content: "Ovien lukumäärä"; }
     .tableresponsive td:nth-of-type(7):before {
-      content: "Istumapaikkojen määrä"; }
+      content: "Ist.paik. määrä"; }
     .tableresponsive td:nth-of-type(8):before {
       content: "Massa"; }
     .tableresponsive td:nth-of-type(9):before {
       content: "Iskutilavuus"; }
     .tableresponsive td:nth-of-type(10):before {
-      content: "Suurin nettoteho (kW)"; }
+      content: "S.nettoteho (kW)"; }
     .tableresponsive td:nth-of-type(11):before {
       content: "Kori"; }
     .tableresponsive td:nth-of-type(12):before {
@@ -6410,7 +6407,17 @@ th.hide-for-touch {
       content: "Kuvaus"; } }
 
 .icon-bar {
-  padding-left: 100px;
-  padding-right: 100px; }
+  background: #ffffff;
+  background-hover: #ffffff;
+  width: 100%; }
+
+.label {
+  color: #000000; }
+
+.a.item {
+  color: #000000; }
+
+a {
+  color: #000000; }
 
 /*# sourceMappingURL=foundation.css.map */
