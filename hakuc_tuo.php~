@@ -23,7 +23,8 @@ session_start();
 
       <div class="tasaus">
       <h1>Ajoneuvon kuvaus</h1>
-      
+      </div>
+      <div class="header">
       <div class="box">
       <p>
         <?php
@@ -118,8 +119,8 @@ session_start();
 
           ?> 
     </div>
-</div>
 
+</div>
 
 
   </body>

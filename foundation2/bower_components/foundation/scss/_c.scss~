@@ -2,7 +2,7 @@
 			text-align:center;
           	margin: 0 auto;
 			padding: 50px;
-			padding bottom:50px;
+			padding-bottom:50px;
         }
 
 

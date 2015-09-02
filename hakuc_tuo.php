@@ -18,14 +18,35 @@ session_start();
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
   </head>
 
+
+
+<style>
+
+#lol {
+
+			padding:150px;
+			
+           
+        height:400px;
+          width: auto;
+          background-color: #F0F0F0;
+          border: 2px solid #D0D0D0;
+          color:black;
+}
+#juupajuu{
+          
+padding:150px;
+
+}
+</style>
   
   <body>
 
       <div class="tasaus">
       <h1>Ajoneuvon kuvaus</h1>
       </div>
-      <div class="header">
-      <div class="box">
+      <div id="juupajuu">
+      <div id="lol">
       <p>
         <?php
           $id = $_GET['id'];
@@ -119,8 +140,8 @@ session_start();
 
           ?> 
     </div>
-
 </div>
+
 
 
   </body>
