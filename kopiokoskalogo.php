@@ -23,7 +23,7 @@
         
      
 	<p>
-            <form action="hakuc_2.php" method="POST">
+            <form action="kopiokoskalogo.php" method="POST">
                  <div class="row">
                   <div class="large-12 columns">
                   <div class="row collapse postfix-round">
@@ -47,7 +47,8 @@
               <li><a href="#">Yet another</a></li>
               </ul>
         
-		<table>
+        <div class="large-centered columns">
+		<table class="responsive">
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -118,9 +119,10 @@
 		</div>
 		</div>
         </div>
-		</div>
-		</div>
-        </div>
+		
+		
+        
+        
 		</p>
         
     <script>
