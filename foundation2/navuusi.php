@@ -1,4 +1,12 @@
-<div class="icon-bar three-up">
+<style>
+   .icon-bar{
+  
+
+
+}
+
+</style>
+<div class="icon-bar five-up">
   <a class="item">
     <img src="auto.png" >
     <label>Home</label>
@@ -10,5 +18,13 @@
   <a class="item">
     <img src="auto.png" >
     <label>Info</label>
+  </a>
+   <a class="item">
+    <img src="auto.png" >
+    <label>Mail</label>
+  </a>
+  <a class="item">
+    <img src="auto.png" >
+    <label>Like</label>
   </a>
 </div>
