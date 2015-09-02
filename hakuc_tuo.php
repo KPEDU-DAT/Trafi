@@ -38,17 +38,18 @@ session_start();
             die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
           }
           $yhteys->set_charset('utf8');
-
-          								$sql = "SELECT * FROM trafi_ajoneuvot
-												LEFT OUTER JOIN trafi_vari
-                                              	ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
-                                                LEFT OUTER JOIN trafi_korityyppi
-                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KO          
-                                                LEFT OUTER JOIN trafi_ajoneuvoluokka
-                                                ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
-                                                LEFT OUTER JOIN trafi_kunta
-                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss 
-												WHERE jarnro = $id ";       
+            $sql = ("SELECT * FROM trafi_ajoneuvot
+                    LEFT OUTER JOIN trafi_vari
+                    ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                    LEFT OUTER JOIN trafi_korityyppi
+                    ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KO          
+                    LEFT OUTER JOIN trafi_ajoneuvoluokka
+                    ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
+                    LEFT OUTER JOIN trafi_kunta
+                    ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
+                    WHERE jarnro = '$id'");
+		  
+		             
           
           // aja SQL lause
           $res = mysqli_query($yhteys,$sql) or die("<br>$sql<br>$id ");
@@ -119,6 +120,28 @@ session_start();
           
           mysqli_close($yhteys);
 
+          ?>
+          <?php
+            	$yhtey=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+
+          	if(mysqli_connect_errno()) {
+            	die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
+          	}   
+          		$yhtey->set_charset('utf8');
+				$id = $_GET['id'];
+				$asia = ("
+						  UPDATE trafi_ajoneuvot
+						  SET haku_maara = haku_maara + 1
+						  WHERE jarnro = '$id';");
+                
+                if($tulos=$yhtey->multi_query($asia)) {
+                  echo " ";}
+                else {
+                  echo "Neeke" . " " . $asia . " " . $yhtey->error;
+                       
+                mysqli_close($yhtey);}
+                
+              
           ?> 
     </div>
 </div>

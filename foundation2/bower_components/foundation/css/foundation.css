@@ -2997,14 +2997,15 @@ label.error {
 .icon-bar {
   display: inline-block;
   font-size: 0;
-  width: 100%;
-  background: #333333; }
+  width: 40%;
+  background: #FFFFFF; }
   .icon-bar > * {
+    margin: right;
     display: block;
     float: left;
     font-size: 1rem;
     margin: 0 auto;
-    padding: 1.25rem;
+    padding: 1rem;
     text-align: center;
     width: 25%; }
     .icon-bar > * i, .icon-bar > * img {
@@ -3013,11 +3014,11 @@ label.error {
       .icon-bar > * i + label, .icon-bar > * img + label {
         margin-top: .0625rem; }
     .icon-bar > * i {
-      font-size: 1.875rem;
+      font-size: 1rem;
       vertical-align: middle; }
     .icon-bar > * img {
-      height: 1.875rem;
-      width: 1.875rem; }
+      height: 1rem;
+      width: 1rem; }
   .icon-bar.label-right > * i, .icon-bar.label-right > * img {
     display: inline-block;
     margin: 0 .0625rem 0 0; }
@@ -3052,31 +3053,31 @@ label.error {
         width: auto; } }
   .icon-bar > * {
     font-size: 1rem;
-    padding: 1.25rem; }
+    padding: 1rem; }
     .icon-bar > * i + label, .icon-bar > * img + label {
       margin-top: .0625rem;
       font-size: 1rem; }
     .icon-bar > * i {
-      font-size: 1.875rem; }
+      font-size: 1rem; }
     .icon-bar > * img {
-      height: 1.875rem;
-      width: 1.875rem; }
+      height: 1rem;
+      width: 1rem; }
   .icon-bar > * label {
-    color: #FFFFFF; }
+    color: #000000; }
   .icon-bar > * i {
-    color: #FFFFFF; }
+    color: #000000; }
   .icon-bar > a:hover {
-    background: #008CBA; }
+    background: #FFFFFF; }
     .icon-bar > a:hover label {
-      color: #FFFFFF; }
+      color: black; }
     .icon-bar > a:hover i {
-      color: #FFFFFF; }
+      color: #000000; }
   .icon-bar > a.active {
-    background: #ffffff; }
+    background: #FFFFFF; }
     .icon-bar > a.active label {
-      color: #FFFFFF; }
+      color: black; }
     .icon-bar > a.active i {
-      color: #FFFFFF; }
+      color: #000000; }
   .icon-bar .item.disabled {
     cursor: not-allowed;
     opacity: 0.7;
@@ -6342,7 +6343,7 @@ th.hide-for-touch {
   padding: 50px; }
 
 .box {
-  padding: 100px;
+  padding: 50px;
   height: auto;
   width: auto;
   background-color: #F0F0F0;
@@ -6405,19 +6406,5 @@ th.hide-for-touch {
       content: "Kunta"; }
     .tableresponsive td:nth-of-type(13):before {
       content: "Kuvaus"; } }
-
-.icon-bar {
-  background: #ffffff;
-  background-hover: #ffffff;
-  width: 100%; }
-
-.label {
-  color: #333333; }
-
-.a.item {
-  color: #333333; }
-
-a {
-  color: #333333; }
 
 /*# sourceMappingURL=foundation.css.map */

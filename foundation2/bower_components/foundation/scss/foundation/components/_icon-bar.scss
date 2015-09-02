@@ -13,18 +13,18 @@ $include-html-icon-bar-classes: $include-html-classes !default;
 // @variables
 
 // We use these to style the icon-bar and items
-$icon-bar-bg: $oil !default;
-$icon-bar-font-color: $white !default;
-$icon-bar-font-color-hover: $icon-bar-font-color !default;
+$icon-bar-bg: $white !default;
+$icon-bar-font-color: $black;
+$icon-bar-font-color-hover: black;
 $icon-bar-font-size: 1rem !default;
-$icon-bar-hover-color: $primary-color !default;
-$icon-bar-icon-color: $white !default;
-$icon-bar-icon-color-hover: $icon-bar-icon-color !default;
-$icon-bar-icon-size: 1.875rem !default;
-$icon-bar-image-width: 1.875rem !default;
-$icon-bar-image-height: 1.875rem !default;
-$icon-bar-active-color: #ffffff;
-$icon-bar-item-padding: 1.25rem !default;
+$icon-bar-hover-color: $white;
+$icon-bar-icon-color: $black;
+$icon-bar-icon-color-hover: $black;
+$icon-bar-icon-size: 1rem !default;
+$icon-bar-image-width: 1rem !default;
+$icon-bar-image-height: 1rem !default;
+$icon-bar-active-color: $white;
+$icon-bar-item-padding: 1rem !default;
 
 // We use this to set default opacity and cursor for disabled icons.
 $icon-bar-disabled-opacity: .7 !default;
@@ -40,10 +40,10 @@ $icon-bar-disabled-cursor: $cursor-disabled-value !default;
 @mixin icon-bar-base() {
   display: inline-block;
   font-size: 0;
-  width: 100%;
-
+  width: 40%;
   > * {
-    display: block;
+    margin: right;
+	display: block;
     float: left;
     font-size: $icon-bar-font-size;
     margin: 0 auto;
@@ -172,8 +172,8 @@ $icon-bar-disabled-cursor: $cursor-disabled-value !default;
   @if $base-style {
 
     background: $bar-bg;
-
-    > * {
+   
+	> * {
       label { color: $bar-font-color; }
 
       i { color: $bar-icon-color; }
@@ -344,7 +344,7 @@ $icon-bar-disabled-cursor: $cursor-disabled-value !default;
 
 @include exports("icon-bar") {
   @if $include-html-icon-bar-classes {
-    .icon-bar {
+   .icon-bar {
       @include icon-bar;
     }
   }
