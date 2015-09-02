@@ -7,7 +7,7 @@
 
 
 @media 
-only screen and (max-width: 1400px),
+only screen and (max-width: 1500px),
 (min-device-width: 768px) and (max-device-width: 2000px)  {
 
 	/* Force table to not be like tables anymore */
@@ -22,7 +22,7 @@ only screen and (max-width: 1400px),
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #ccc; }
+	tr { border: 1px solid #FFFFFF; }
 	
 	td { 
 		/* Behave  like a "row" */
@@ -37,9 +37,9 @@ only screen and (max-width: 1400px),
 		position: absolute;
 		/* Top/left values mimic padding */
 		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
+		left: 10px;
+		width: 60%; 
+		padding-right: 1px; 
 		white-space: nowrap;
 	}
 	
