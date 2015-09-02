@@ -7,7 +7,7 @@ session_start();
 
   <head>
 
-  <title>Tyylit</title>
+  <title>Kuvaus</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
@@ -18,12 +18,15 @@ session_start();
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
   </head>
 
+
+
   
   <body>
 
-
-      <h2>Ajoneuvon kuvaus</h2>
-      
+      <div class="tasaus">
+      <h1>Ajoneuvon kuvaus</h1>
+      </div>
+      <div class="header">
       <div class="box">
       <p>
         <?php
@@ -118,7 +121,7 @@ session_start();
 
           ?> 
     </div>
-
+</div>
 
 
 

@@ -1,24 +1,22 @@
-<div class="navbar">
 <div class="icon-bar five-up">
   <a class="item">
-    <img src="../assets/img/images/fi-home.svg" >
+    <img src="jannenyman@cosmo:~/public_html/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/svgs/fi-music.svg" >
     <label>Home</label>
   </a>
   <a class="item">
-    <img src="../assets/img/images/fi-bookmark.svg" >
+    <i class="fi-burst-new"></i>
     <label>Bookmark</label>
   </a>
   <a class="item">
-    <img src="../assets/img/images/fi-info.svg" >
+    <i class="fi-music.svg"></i>
     <label>Info</label>
   </a>
-  <a class="item">
-    <img src="../assets/img/images/fi-mail.svg" >
+   <a class="item">
+    <img src="auto.png" >
     <label>Mail</label>
   </a>
   <a class="item">
-    <img src="../assets/img/images/fi-like.svg" >
+    <img src="auto.png" >
     <label>Like</label>
   </a>
-</div>
 </div>
