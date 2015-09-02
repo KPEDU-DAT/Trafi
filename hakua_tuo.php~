@@ -1,10 +1,10 @@
 <!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[f IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html>
 
   <head>
 
-  <title>Tyylit</title>
+  <title>anna se kunta</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
@@ -30,7 +30,7 @@
             }
             $yhteys->set_charset('utf8');
           session_start();
-          echo '<br /><a href="hakuc_2.php"> </a>';  
+          echo '<br /><a href="hakua_2.php"> </a>';  
           echo "Ajoneuvo on "; 
           echo $_SESSION['pitkaselite_fi'];
           echo " ";
@@ -87,7 +87,7 @@
           else ". ";
           if ($_SESSION['pitkaseliteu_fi'] != NULL){
           echo "Ajoneuvo sijaitsee paikassa ";
-          echo $_SESSION['pitkaseliteu_fi'];
+          echo $_SESSION['pitkaseliteu_fi_'];
           echo ".";}
           else echo " ";
 mysqli_close($yhteys);
