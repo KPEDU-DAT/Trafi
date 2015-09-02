@@ -1,15 +1,14 @@
-
 <div class="icon-bar five-up">
   <a class="item">
-    <img src="auto.png" >
+    <img src="jannenyman@cosmo:~/public_html/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/svgs/fi-music.svg" >
     <label>Home</label>
   </a>
   <a class="item">
-    <img src="auto.png" >
+    <i class="fi-burst-new"></i>
     <label>Bookmark</label>
   </a>
   <a class="item">
-    <img src="auto.png" >
+    <i class="fi-music.svg"></i>
     <label>Info</label>
   </a>
    <a class="item">
