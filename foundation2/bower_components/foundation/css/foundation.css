@@ -6407,4 +6407,51 @@ th.hide-for-touch {
     .tableresponsive td:nth-of-type(13):before {
       content: "Kuvaus"; } }
 
+@media only screen and (max-width: 1200px), (min-device-width: 768px) and (max-device-width: 2000px) {
+  .tableresponsive1 {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+    /*
+    Label the data
+    */ }
+    .tableresponsive1 table, .tableresponsive1 thead, .tableresponsive1 tbody, .tableresponsive1 th, .tableresponsive1 td, .tableresponsive1 tr {
+      display: block; }
+    .tableresponsive1 thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px; }
+    .tableresponsive1 tr {
+      border: 1px solid #FFFFFF; }
+    .tableresponsive1 td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%; }
+    .tableresponsive1 td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 10px;
+      width: 60%;
+      padding-right: 1px;
+      white-space: nowrap; }
+    .tableresponsive1 td:nth-of-type(1):before {
+      content: "Ajoneuvoluokka"; }
+    .tableresponsive1 td:nth-of-type(2):before {
+      content: "Merkki"; }
+    .tableresponsive1 td:nth-of-type(3):before {
+      content: "Malli"; }
+    .tableresponsive1 td:nth-of-type(4):before {
+      content: "Ensirekisteröinti"; }
+    .tableresponsive1 td:nth-of-type(5):before {
+      content: "Kunta"; }
+    .tableresponsive1 td:nth-of-type(6):before {
+      content: "Vaihteisto"; }
+    .tableresponsive1 td:nth-of-type(7):before {
+      content: "Iskutilavuus"; }
+    .tableresponsive1 td:nth-of-type(8):before {
+      content: "Väri"; } }
+
 /*# sourceMappingURL=foundation.css.map */
