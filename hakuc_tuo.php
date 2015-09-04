@@ -3,6 +3,12 @@ session_start();
 ?>
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<?php
+	function haetuimmat()  
+    { 
+		include("jarjesta.php");
+	}
+?>
 <html>
 
   <head>
@@ -119,14 +125,11 @@ session_start();
 
           
           mysqli_close($yhteys);
-
+			haetuimmat();
           ?>
-<? include("jarjesta.php"); ?>
+         
     </div>
-</div>
-
-
-
+</div> 
   </body>
 
 
