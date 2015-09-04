@@ -132,7 +132,7 @@
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
                   
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
+                  <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
                   
             </tr>";
             
@@ -149,8 +149,8 @@
         			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
         			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
         			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
-        		 '<br /><a href="taulukko8.php"> </a>'; 
-        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>';
+        		 '<br /><a href="hakua_tuo.php"> </a>'; 
+        		 '<br /><a href="hakua_tuo.php?' . SID . '"> </a>';
             
                 }         
                 }  

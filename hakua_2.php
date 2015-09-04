@@ -11,8 +11,8 @@
    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
    
-  <link rel="stylesheet" href="/~alexhassel/foundation/bower_components/foundation/css/foundation.css"/>
-  <script src="/~erkkasailynoja/foundation/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+  <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
    <head/>
 
   
@@ -87,6 +87,7 @@
   </div>
   </div>
 </form>
+<div class="tableresponsive">
 <table class="responsive table table-hover table.bordered">
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -111,7 +112,7 @@
                 
       
               while ($rivi = mysqli_fetch_array($tulos)) {
-        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th></tr>";
+        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th></tr>";
                  
                                                    
          echo "<tr> 
@@ -122,12 +123,12 @@
                  
                   
                   
-                  <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
+                 
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   
-                  <tr><th>Iskutilavuus</th><th>Väri</th></tr>
+                 
                   
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
@@ -165,7 +166,7 @@
         </div>
         </div>
         </div>
-          
+        </div>  
         </table>
 		</center>
 		</div>

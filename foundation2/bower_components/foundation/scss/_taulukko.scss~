@@ -52,10 +52,10 @@ only screen and (max-width: 1500px),
 	td:nth-of-type(4):before { content: "Väri"; }
 	td:nth-of-type(5):before { content: "Luokka"; }
 	td:nth-of-type(6):before { content: "Ovien lukumäärä"; }
-	td:nth-of-type(7):before { content: "Istumapaikkojen määrä"; }
+	td:nth-of-type(7):before { content: "Ist.paik. määrä"; }
 	td:nth-of-type(8):before { content: "Massa"; }
 	td:nth-of-type(9):before { content: "Iskutilavuus"; }
-	td:nth-of-type(10):before { content: "Suurin nettoteho (kW)"; }
+	td:nth-of-type(10):before { content: "S.nettoteho (kW)"; }
 	td:nth-of-type(11):before { content: "Kori"; }
 	td:nth-of-type(12):before { content: "Kunta"; }
 	td:nth-of-type(13):before { content: "Kuvaus"; }
