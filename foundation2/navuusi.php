@@ -1,4 +1,5 @@
 <div class="icon-bar five-up">
+  <div class="contain-to-grid sticky">
   <a class="item">
     <i class="fi-home"></i>
     <label>Home</label>
@@ -19,4 +20,5 @@
     <i class="fi-like"></i>
     <label>Like</label>
   </a>
+  </div>
 </div>
