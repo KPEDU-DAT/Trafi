@@ -1,22 +1,11 @@
-<div class="icon-bar five-up">
-  <a class="item">
-    <i class="fi-home"></i>
-    <label>Home</label>
-  </a>
-  <a class="item">
-    <i class="fi-bookmark"></i>
-    <label>Bookmark</label>
-  </a>
-  <a class="item">
-    <i class="fi-info"></i>
-    <label>Info</label>
-  </a>
-   <a class="item">
-    <i class="fi-mail"></i>
-    <label>Mail</label>
-  </a>
-  <a class="item">
-    <i class="fi-like"></i>
-    <label>Like</label>
-  </a>
+<div class="icon-bar three-up">
+ <a class="item">
+  <i class="fi-home"></i>
+ </a>
+ <a class="item">
+  <i class="fi-list"></i>
+ </a>
+ <a class="item">
+  <i class="fi-magnifying-glass"></i> 
+ </a>
 </div>

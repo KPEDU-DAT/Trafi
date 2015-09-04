@@ -36,7 +36,7 @@
   <input type="text" placeholder="Haku" name="rekisterinumero">
   </div>
   <div class="small-3 columns">                          
-  <button class="button postfix default" type="submit" name="laheta" value="true">Hae</button>
+  <p><button class="button postfix default" type="submit" name="laheta" value="true">Hae</button>
   </div>
   </div>
   </div>
@@ -71,7 +71,7 @@
                 
       
               
-        echo  "<thead><tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th></tr></thead>";
+        echo  "<thead><tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th><th>Kuvaus</tr></tr></thead>";
               while ($rivi = mysqli_fetch_array($tulos)) {   
                                                    
          echo "<tr>  

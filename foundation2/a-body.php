@@ -15,7 +15,7 @@
     <? include("tyyli.php"); ?>
   </head>
   <body>
-  <? include("nav.php"); ?>
+  <? include("navuusi.php"); ?>
   <? include("auto.php"); ?>
  
 <div class="small-6 medium-6 large-6 small-centered medium-centered large-centered columns">

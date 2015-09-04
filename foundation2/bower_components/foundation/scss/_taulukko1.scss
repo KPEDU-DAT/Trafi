@@ -7,7 +7,7 @@
 
 
 @media 
-only screen and (max-width: 1400px),
+only screen and (max-width: 768px),
 (min-device-width: 768px) and (max-device-width: 2000px)  {
 
 	/* Force table to not be like tables anymore */
@@ -38,7 +38,7 @@ only screen and (max-width: 1400px),
 		/* Top/left values mimic padding */
 		top: 6px;
 		left: 10px;
-		width: 60%; 
+		width: 40%; 
 		padding-right: 1px; 
 		white-space: nowrap;
 	}
@@ -54,7 +54,7 @@ only screen and (max-width: 1400px),
 	td:nth-of-type(6):before { content: "Vaihteisto"; }
 	td:nth-of-type(7):before { content: "Iskutilavuus"; }
 	td:nth-of-type(8):before { content: "Väri"; }
-	
+	td:nth-of-type(9):before { content: "Kuvaus"; }	
 	
 	
 	
