@@ -1,5 +1,5 @@
 <div class="icon-bar five-up">
-  <div class="contain-to-grid sticky">
+  
   <a class="item">
     <i class="fi-home"></i>
     <label>Home</label>
