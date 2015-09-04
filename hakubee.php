@@ -269,7 +269,6 @@ else
 {
 echo "Ei yhteyttä";
 }
-}
 else
 {
 echo "";
