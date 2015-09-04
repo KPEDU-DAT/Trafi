@@ -11,52 +11,26 @@
    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
    
-  <link rel="stylesheet" href="/~alexhassel/foundation/bower_components/foundation/css/foundation.css"/>
-  <script src="/~erkkasailynoja/foundation/bower_components/modernizr/modernizr.js"></script>
+  <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+  <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
    <head/>
 
   
   
-<style>
-
- img{padding-top: 150px;}
-
-
-#header {
-    background-color:#D0D0D0;
-    color:white;
-    text-align:center;
-    padding:5px;
-}
-
-
-
-#section {
-
-
-    padding:100px;
-}
-
-
- 
-</style>
-    
-
-
-
   
-  </head>  
+  </head>
+  <div class="tableresponsive1">  
  <body>
 
-        <div id="header">
-        <h1 style="color:white">Ajoneuvotiedot</h1>
-        </div>
- 
-<center>
+        <div class="tasaus">
+        <h1>Ajoneuvotiedot</h1>
+        
+
+
  <div class="large-12 medium-12 small-12 columns">
  <img src="http://www.comparateur-assurance-auto.biz/images/auto.png">
  </div>
-<div id="table"> 
+
  <form>
  <div class="row">
   <div class="large-12 columns">
@@ -87,7 +61,8 @@
   </div>
   </div>
 </form>
-<table class="responsive table table-hover table.bordered">
+<div class="header">
+<table>
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -110,28 +85,19 @@
                								
                 
       
-              while ($rivi = mysqli_fetch_array($tulos)) {
-        echo  "<tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th></tr>";
-                 
+              
+        echo  "<thead><tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th></tr></thead>";
+              while ($rivi = mysqli_fetch_array($tulos)) {   
                                                    
-         echo "<tr> 
-                  
+         echo "<tr>  
                   <td>".$rivi['ajoneuvoluokka']."</td>                       
                   <td>".$rivi['merkkiSelvakielinen']."</td> 
                   <td>".$rivi['mallimerkinta']."</td>      
-                 
-                  
-                  
-                  <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
-                  
-                  <tr><th>Iskutilavuus</th><th>Väri</th></tr>
-                  
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-                  
                   <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
                   
             </tr>";
@@ -161,17 +127,17 @@
 
 
         ?>
-         
+        </table> 
         </div>
         </div>
         </div>
-          
-        </table>
-		</center>
+        </div>  
+        
+		</div>
 		</div>
 		
         </p>                      
-        <script>                                     
+        
                                      
           
  
@@ -193,6 +159,11 @@
          $(document).foundation();
           var doc = document.documentElement;
            doc.setAttribute('data-useragent', navigator.userAgent);
-            </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
+            </script>
+            
+                <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
+                <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
+                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </script>
     </body>
 </html>
