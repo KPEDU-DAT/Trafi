@@ -38,7 +38,7 @@ only screen and (max-width: 768px),
 		/* Top/left values mimic padding */
 		top: 6px;
 		left: 10px;
-		width: 40%; 
+		width: 60%; 
 		padding-right: 1px; 
 		white-space: nowrap;
 	}
@@ -54,7 +54,7 @@ only screen and (max-width: 768px),
 	td:nth-of-type(6):before { content: "Vaihteisto"; }
 	td:nth-of-type(7):before { content: "Iskutilavuus"; }
 	td:nth-of-type(8):before { content: "Väri"; }
-	td:nth-of-type(9):before { content: "Kuvaus"; }	
+	
 	
 	
 	
