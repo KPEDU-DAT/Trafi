@@ -36,7 +36,7 @@
   </head>
 
   <body>
-  <? include("nav.php"); ?>
+  <? include("navuusi.php"); ?>
   <? include("auto.php"); ?>
   
          <div class="row"></div>

@@ -40,7 +40,7 @@ $icon-bar-disabled-cursor: $cursor-disabled-value !default;
 @mixin icon-bar-base() {
   display: inline-block;
   font-size: 0;
-  width: 30%;
+  width: 40%;
   > * {
     margin: right;
 	display: block;
