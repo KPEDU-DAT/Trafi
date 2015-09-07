@@ -1,23 +1,8 @@
-
-
-
-
-                                                                                             
-
-
-
- 
-
-         <div class="tableresponsive">
+<div class="tableresponsive">
   <body>
-
-
     <div class="tasaus">
         <h1>Ajoneuvotiedot</h1>
-
-
-
-    <p>
+          <p>
             <form action="a-body.php" method="POST"> 
                  <div class="row">
                   <div class="large-12 columns">
@@ -31,7 +16,7 @@
                   </div>
                   </div>
             </form>
-        </p>
+          </p>
         <table>
         <p>
 <?php  
@@ -103,32 +88,9 @@
         </div>
           
         </table>
-		</center>
 		</div>
 		
-        </p>                      
-        <script>                                     
+        </p>                                                           
                                      
           
  
- 
- <script>
-      document.write('<script src=js/vendor/' +
-      ('__proto__' in {} ? 'zepto' : 'jquery') +
-      '.js><\/script>')
-      </script>
-      
-        <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
-        <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
-        <script>
-        $(document).foundation();
-        </script>
-        <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
-        <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
-        <script>
-         $(document).foundation();
-          var doc = document.documentElement;
-           doc.setAttribute('data-useragent', navigator.userAgent);
-            </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
-    </body>
-</html>
