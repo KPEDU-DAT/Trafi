@@ -23,7 +23,7 @@
         
      
 	<p>
-            <form action="kopiokoskalogo.php" method="POST">
+            <form action="hakuc_2.php" method="POST">
                  <div class="row">
                   <div class="large-12 columns">
                   <div class="row collapse postfix-round">
@@ -40,15 +40,7 @@
         <div class="header">
         </div>
         
-        <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Dropdown Button</button><br>
-        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-          <li><a href="#">This is a link</a></li>
-            <li><a href="#">This is another</a></li>
-              <li><a href="#">Yet another</a></li>
-              </ul>
-        
-        <div class="large-centered columns">
-		<table class="responsive">
+		<table>
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -70,8 +62,8 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-												ORDER BY trafi_ajoneuvot.jarnro;");
-        
+												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
+        if($_POST['valmistenumero2'] != NULL){
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
         while($rivi = mysqli_fetch_array($tulos)) {
@@ -111,7 +103,8 @@
         		 '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>'; 
                 }
             }
-     
+            }
+			else echo " ";
             mysqli_close($yhteys);
         ?>
 		</table>
@@ -119,10 +112,9 @@
 		</div>
 		</div>
         </div>
-		
-		
-        
-        
+		</div>
+		</div>
+        </div>
 		</p>
         
     <script>
