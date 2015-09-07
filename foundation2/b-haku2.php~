@@ -10,8 +10,9 @@
 	<p>Valitse haluttu vuosimalli: </p>
 	<form method="POST" action="b-haku3.php">
 
-	<input type="hidden" name="merkki" value="<?$default?>">
- 
+	<?
+	echo "<input type='hidden' name='merkki' value='".$default."'>";
+	?>
       <select name="vuosi">
       <option value="1990">1990</option>
       <option value="1991">1991</option>
