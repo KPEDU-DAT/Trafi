@@ -53,6 +53,6 @@
       var doc = document.documentElement;
       doc.setAttribute('data-useragent', navigator.userAgent);
     </script>  
-  </body>
-<? include("footer.php"); ?>
+  <? include("footer.php"); ?>
+</body>
 </html>
