@@ -154,9 +154,9 @@ $vuosi = $_POST['vuosi'];
      }
 
      ?>
-      </form>
-      <button name="btn" value="TRUE">Seuraava</button>
       
+      <button name="btn" value="TRUE">Seuraava</button>
+      </form>
       <p> Tämänhetkiset tulokset <p>
       
       <?php

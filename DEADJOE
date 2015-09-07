@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Tue Aug 25 09:34:21 2015
 *** JOE was aborted because the terminal closed
 
@@ -479,3 +480,20 @@ kopiokoskalogo.php
 kopiokoskalogo.php
 kopiokoskalogo.php
 >>>>>>> 2a1f59b601bf1bb3f946a3487a78cd8803ee2fd9
+=======
+*** These modified files were found in JOE when it aborted on Fri Sep  4 11:01:52 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+auto.php
+tilastot.php
+navbar.php
+hakua.php
+hakua_2.php
+hakua_2.php
+hakuc_2.php
+_taulukko.scss
+_taulukko1.scss
+_taulukko1.scss
+hakuc_2.php
+>>>>>>> 0bbaf23e6f47c23a9b43c0101b7c88d4762a8ddc

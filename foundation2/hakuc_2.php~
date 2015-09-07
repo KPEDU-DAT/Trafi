@@ -62,8 +62,14 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+<<<<<<< HEAD:hakuc_2.php
+												ORDER BY trafi_ajoneuvot.jarnro;");
+		if($_POST['valmistenumero2'] != NULL){									
+        
+=======
 												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
 												
+>>>>>>> 815df00cbad64840157879621a8cbc2cc2278163:foundation2/hakuc_2.php~
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
         while($rivi = mysqli_fetch_array($tulos)) {
@@ -103,7 +109,12 @@
         		 '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>'; 
                 }
             }
+<<<<<<< HEAD:hakuc_2.php
+            }
+            else echo " ";
+=======
             
+>>>>>>> 815df00cbad64840157879621a8cbc2cc2278163:foundation2/hakuc_2.php~
             mysqli_close($yhteys);
         ?>
 		</table>
