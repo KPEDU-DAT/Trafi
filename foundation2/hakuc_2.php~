@@ -8,14 +8,14 @@
 
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
 	<script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
-
-  </head>
+	<link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">  
+	</head>
 
 
   <div class="tableresponsive">
   <body>
-	
-	
+    <? include("navuusi.php"); ?>	
+	<? include("auto.php"); ?>
 	    <div class="tasaus">
         <h1>Ajoneuvotiedot</h1> 
     
@@ -48,7 +48,7 @@
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
-            
+
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
 
@@ -62,14 +62,8 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-<<<<<<< HEAD:hakuc_2.php
 												ORDER BY trafi_ajoneuvot.jarnro;");
-		if($_POST['valmistenumero2'] != NULL){									
         
-=======
-												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
-												
->>>>>>> 815df00cbad64840157879621a8cbc2cc2278163:foundation2/hakuc_2.php~
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
         while($rivi = mysqli_fetch_array($tulos)) {
@@ -109,12 +103,7 @@
         		 '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>'; 
                 }
             }
-<<<<<<< HEAD:hakuc_2.php
-            }
-            else echo " ";
-=======
-            
->>>>>>> 815df00cbad64840157879621a8cbc2cc2278163:foundation2/hakuc_2.php~
+     
             mysqli_close($yhteys);
         ?>
 		</table>
@@ -151,6 +140,6 @@
     
     
     
-
+    <? include("footer.php"); ?>
   </body>
 </html>
