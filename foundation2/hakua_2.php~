@@ -10,7 +10,8 @@
    <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
    <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
    <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
-   
+  
+  <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css"> 
   <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
   <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
    <head/>
@@ -21,6 +22,8 @@
   </head>
   <div class="tableresponsivecopy">  
  <body>
+   <? include("navuusi.php"); ?>
+   <? include("auto.php"); ?>
 
         <div class="tasaus">
         <h1>Ajoneuvotiedot</h1>
@@ -148,6 +151,6 @@
                 <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
                 <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
                     
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </script>
+    <? include("footer.php"); ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
     </body>
 </html>
