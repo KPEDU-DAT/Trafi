@@ -22,12 +22,12 @@ only screen and (max-width: 1500px),
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #FFFFFF; }
+	tr { border: 1px solid #eee; }
 	
 	td { 
 		/* Behave  like a "row" */
 		border: none;
-		border-bottom: 1px solid #FFFFFF; 
+		border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 50%; 
 	}
