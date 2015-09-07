@@ -1,0 +1,23 @@
+	.tasaus {
+			text-align:center;
+          	margin: 0 auto;
+			padding: 50px;
+        }
+
+
+
+	.header {
+
+          padding:50px;
+
+		}
+
+
+	.box {
+		 	padding:100px;
+        	height:auto;
+          	width: auto;
+          	background-color: #F0F0F0;
+          	border: 2px solid #D0D0D0;
+          	color:black;
+		} 

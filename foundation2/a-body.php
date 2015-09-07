@@ -7,15 +7,13 @@
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, component components, grid and more.">
     <meta name="author" content="">
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">
         <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
-        
-    
-
     <title>A-haku</title>
     <? include("tyyli.php"); ?>
   </head>
   <body>
-  <? include("nav.php"); ?>
+  <? include("navuusi.php"); ?>
   <? include("auto.php"); ?>
  
 <div class="small-6 medium-6 large-6 small-centered medium-centered large-centered columns">
@@ -55,6 +53,6 @@
       var doc = document.documentElement;
       doc.setAttribute('data-useragent', navigator.userAgent);
     </script>  
-  </body>
-<? include("footer.php"); ?>
+  <? include("footer.php"); ?>
+</body>
 </html>

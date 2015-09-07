@@ -1,12 +1,30 @@
+         
+         <div class="tableresponsive">
+  <body>
+
+
+    <div class="tasaus">
+        <h1>Ajoneuvotiedot</h1>
 
 
 
-<form action="a-body.php" method="POST"> 
-                                                                                             
-<input type="text" placeholder="Haku" name="rekisterinumero">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
-</form>
-<table class="responsive table table-hover table.bordered">
+    <p>
+            <form action="a-body.php" method="POST"> 
+                 <div class="row">
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
+                  <input type="text" placeholder="Anna Rekisterinumero:" name="rekisterinumero">
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
+            </form>
+        </p>
+        <table>
+        <p>
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -20,6 +38,8 @@
                                                 CROSS JOIN trafi_rekisterinumerot 
                                                 LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_rekisterinumerot.koodi = trafi_ajoneuvot.jarnro
                                                 AND trafi_rekisterinumerot.rekisterinumero = '" . $rek . "';");
                                                 
@@ -38,19 +58,15 @@
                   
                   <tr><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th></tr>
                   <td>".$rivi['ensirekisterointipvm']."</td>
-                  <td>".$rivi['kunta']."</td>        
+                  <td>".$rivi['pitkaseliteu_fi']."</td>        
                   <td>".$rivi['vaihteisto']."</td>
                   
                   <tr><th>Iskutilavuus</th><th>Väri</th></tr>
                   
                   <td>".$rivi['iskutilavuus']."</td>
                   <td>".$rivi['pitkaselite_fi']."</td>
-<<<<<<< HEAD
-                  <td><a href=\"taulukko.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny'>Lisätietoja</a>"."</td>
-=======
                   
                   <td><a href=\"hakua_tuo.php?id=".$rivi['koodi'].$rivi['jarnro']."\"' class='button tiny round'>Lisätietoja</a>"."</td>
->>>>>>> 6cc9be2d752d75506ae3b552f31e8cae41197738
             </tr>";
             
             session_start();
@@ -77,12 +93,10 @@
         </div>
         </div>
           
-        </table>
-		</center>
+        </table>>
 		</div>
 		
-        </p>                      
-        <script>                                     
+        </p>                                                           
                                      
           
  
@@ -104,6 +118,4 @@
          $(document).foundation();
           var doc = document.documentElement;
            doc.setAttribute('data-useragent', navigator.userAgent);
-            </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
-    </body>
-</html>
+            </script>       

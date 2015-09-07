@@ -1,12 +1,24 @@
-
-
-
-<form action="a-body.php" method="POST"> 
-                                                                                             
-<input type="text" placeholder="Haku" name="rekisterinumero">                          
-  <button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
-</form>
-<table class="responsive table table-hover table.bordered">
+<div class="tableresponsive">
+  <body>
+    <div class="tasaus">
+        <h1>Ajoneuvotiedot</h1>
+          <p>
+            <form action="a-body.php" method="POST"> 
+                 <div class="row">
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
+                  <input type="text" placeholder="Anna Rekisterinumero:" name="rekisterinumero">
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
+            </form>
+          </p>
+        <table>
+        <p>
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -76,32 +88,9 @@
         </div>
           
         </table>
-		</center>
 		</div>
 		
-        </p>                      
-        <script>                                     
+        </p>                                                           
                                      
           
  
- 
- <script>
-      document.write('<script src=js/vendor/' +
-      ('__proto__' in {} ? 'zepto' : 'jquery') +
-      '.js><\/script>')
-      </script>
-      
-        <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
-        <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
-        <script>
-        $(document).foundation();
-        </script>
-        <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
-        <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
-        <script>
-         $(document).foundation();
-          var doc = document.documentElement;
-           doc.setAttribute('data-useragent', navigator.userAgent);
-            </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
-    </body>
-</html>

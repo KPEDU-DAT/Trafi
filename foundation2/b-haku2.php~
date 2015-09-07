@@ -1,6 +1,19 @@
-  <form method="POST" action="b-haku3.php">
-    <p>  Valitse haluttu vuosimalli: </p>
-	<select name="vuosi">
+    <?php
+	$default=$_POST['merkki']
+
+	?>  
+
+	<?php
+	echo "Valittu merkki: ".$default.".<br>";
+	?>
+
+	<p>Valitse haluttu vuosimalli: </p>
+	<form method="POST" action="b-haku3.php">
+
+	<?
+	echo "<input type='hidden' name='merkki' value='".$default."'>";
+	?>
+      <select name="vuosi">
       <option value="1990">1990</option>
       <option value="1991">1991</option>
       <option value="1992">1992</option>
@@ -25,6 +38,4 @@
       <option value="2011">2011</option>
       </select>
       <button name="nappi" value="True">Seuraava</button>
-    </form>  
-	
-	<? include(""); ?>
+    </form>

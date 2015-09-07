@@ -11,6 +11,7 @@
 
   </head>
 
+<<<<<<< HEAD
 <style>
 
 #testi {
@@ -19,15 +20,25 @@
 
 }
 </style>
+=======
+>>>>>>> 815df00cbad64840157879621a8cbc2cc2278163
 
   <div class="tableresponsive">
   <body>
 	
 	
+<<<<<<< HEAD
 	<div class="tasaus">	
         <h1>Ajoneuvotiedot</h1> 
         
         
+=======
+	    <div class="tasaus">
+        <h1>Ajoneuvotiedot</h1> 
+    
+    
+        
+>>>>>>> 815df00cbad64840157879621a8cbc2cc2278163
      
 	<p>
             <form action="hakuc_2.php" method="POST">
@@ -44,9 +55,16 @@
                   </div>
             </form>
         </p>
+<<<<<<< HEAD
         
         <div class="testi">
 		<table class="responsive">
+=======
+        <div class="header">
+        </div>
+        
+		<table>
+>>>>>>> 815df00cbad64840157879621a8cbc2cc2278163
         <p>
         <?php
 			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -68,7 +86,7 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-												ORDER BY trafi_ajoneuvot.jarnro;");
+												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
         
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
