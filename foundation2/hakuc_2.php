@@ -8,14 +8,14 @@
 
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
 	<script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
-
-  </head>
+	<link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">  
+	</head>
 
 
   <div class="tableresponsive">
   <body>
-	
-	
+    <? include("navuusi.php"); ?>	
+	<? include("auto.php"); ?>
 	    <div class="tasaus">
         <h1>Ajoneuvotiedot</h1> 
     
@@ -62,7 +62,7 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
+												ORDER BY trafi_ajoneuvot.jarnro;");
         
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
@@ -140,6 +140,6 @@
     
     
     
-
+    <? include("footer.php"); ?>
   </body>
 </html>

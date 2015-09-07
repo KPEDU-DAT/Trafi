@@ -12,7 +12,6 @@
   </head>
 
 
-
   <div class="tableresponsive">
   <body>
 	
@@ -24,7 +23,7 @@
         
      
 	<p>
-            <form action="c-haku.php" method="POST">
+            <form action="hakuc_2.php" method="POST">
                  <div class="row">
                   <div class="large-12 columns">
                   <div class="row collapse postfix-round">
@@ -49,8 +48,10 @@
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
+            
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
+
                 $tulos = mysqli_query($yhteys, "SELECT DISTINCT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
@@ -61,8 +62,8 @@
                                                 LEFT OUTER JOIN trafi_kunta
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
-												ORDER BY trafi_ajoneuvot.jarnro;");
-        
+												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
+												
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
         while($rivi = mysqli_fetch_array($tulos)) {
@@ -102,7 +103,7 @@
         		 '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>'; 
                 }
             }
-     
+            
             mysqli_close($yhteys);
         ?>
 		</table>

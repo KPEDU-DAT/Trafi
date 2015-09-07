@@ -1,26 +1,28 @@
 <!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[f IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html>
 
   <head>
 
-  <title>Tyylit</title>
+  <title>anna se kunta</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
     <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
     <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
 
+    <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation2/modernizr/modernizr.js"></script>
   </head>
 
   
   <body>
+  <? include("navuusi.php"); ?>
+  <? include("auto.php"); ?>
 
-      <? include("nav.php"); ?>
-      <? include("auto.php"); ?>
       <h2>Ajoneuvon kuvaus</h2>
+      
       <div class="box">
       <p>
         <?php
@@ -96,7 +98,7 @@ mysqli_close($yhteys);
 
 
 
-  <? include("footer.php"); ?>
+  <? include("footer.php") ?>
   </body>
 
 
