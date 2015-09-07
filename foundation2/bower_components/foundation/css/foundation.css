@@ -6331,7 +6331,7 @@ th.hide-for-touch {
   position: fixed;
   bottom: 0;
   height: 50px;
-  width: 90%;
+  width: 100%;
   overflow: hidden; }
 
 .tasaus {

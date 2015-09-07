@@ -1,22 +1,30 @@
+         
+         <div class="tableresponsive">
+  <body>
+
+
+    <div class="tasaus">
+        <h1>Ajoneuvotiedot</h1>
 
 
 
-
-                                                                                             
-
-
-title>Haku A</title>
-   <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
-           <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
-              <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
-                 
-                   <link rel="stylesheet" href="/~alexhassel/foundation/bower_components/foundation/css/foundation.css"/>
-                     <script src="/~erkkasailynoja/foundation/bower_components/modernizr/modernizr.js"></script>
-                        <head/>
-                        
-<table class="responsive table table-hover table.bordered">
+    <p>
+            <form action="a-body.php" method="POST"> 
+                 <div class="row">
+                  <div class="large-12 columns">
+                  <div class="row collapse postfix-round">
+                  <div class="small-9 columns">
+                  <input type="text" placeholder="Anna Rekisterinumero:" name="rekisterinumero">
+                  </div>
+                  <div class="small-3 columns">
+                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  </div>
+                  </div>
+                  </div>
+            </form>
+        </p>
+        <table>
+        <p>
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
             if(mysqli_connect_errno()) {
@@ -85,12 +93,10 @@ title>Haku A</title>
         </div>
         </div>
           
-        </table>
-		</center>
+        </table>>
 		</div>
 		
-        </p>                      
-        <script>                                     
+        </p>                                                           
                                      
           
  
@@ -112,6 +118,4 @@ title>Haku A</title>
          $(document).foundation();
           var doc = document.documentElement;
            doc.setAttribute('data-useragent', navigator.userAgent);
-            </script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </script>
-    </body>
-</html>
+            </script>       

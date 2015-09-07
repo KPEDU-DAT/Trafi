@@ -8,7 +8,7 @@ echo "Merkki: ".$merkki.", Malli: ".$malli.", Vuosimalli: ".$vuosi.".<br>";
 ?>
 
 <p> Etkö löytänyt hakemaasi? </p>
-
+<a href="b-haku.php">Palaa alkuun</a>
 <?php
 
       include "connect.php";
