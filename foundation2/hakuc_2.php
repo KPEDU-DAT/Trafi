@@ -8,15 +8,14 @@
 
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
 	<script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
-
-  </head>
-
+	<link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">  
+	</head>
 
 
   <div class="tableresponsive">
   <body>
-	
-	
+    <? include("navuusi.php"); ?>	
+	<? include("auto.php"); ?>
 	    <div class="tasaus">
         <h1>Ajoneuvotiedot</h1> 
     
@@ -24,7 +23,7 @@
         
      
 	<p>
-            <form action="c-haku.php" method="POST">
+            <form action="hakuc_2.php" method="POST">
                  <div class="row">
                   <div class="large-12 columns">
                   <div class="row collapse postfix-round">
@@ -49,8 +48,10 @@
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
+
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
+
                 $tulos = mysqli_query($yhteys, "SELECT DISTINCT * 
                                                 FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
                                                 ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
@@ -139,6 +140,6 @@
     
     
     
-
+    <? include("footer.php"); ?>
   </body>
 </html>
