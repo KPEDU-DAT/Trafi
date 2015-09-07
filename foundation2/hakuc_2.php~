@@ -48,7 +48,7 @@
                 die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
             }
             $yhteys->set_charset('utf8');
-
+            
             if ($_POST['valmistenumero2']) {
                 $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
 
@@ -63,7 +63,7 @@
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
 												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
-        
+												
         echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Rekisteröinti</th><th>Väri</th><th>Luokka</th><th>Ovien lukumäärä</th><th>Istumapaikkojen määrä</th><th>Massa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Kori</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
               
         while($rivi = mysqli_fetch_array($tulos)) {
@@ -103,7 +103,7 @@
         		 '<br /><a href="hakuc_tuo.php?' . SID . '"> </a>'; 
                 }
             }
-     
+            
             mysqli_close($yhteys);
         ?>
 		</table>
