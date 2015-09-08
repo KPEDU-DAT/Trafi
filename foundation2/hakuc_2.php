@@ -32,7 +32,7 @@
                   <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
                   </div>
                   <div class="small-3 columns">
-                  <p><button class="secondary button postfix info" type="submit" name="laheta" value="true">Hae</button>
+                  <p><button class="button postfix default" type="submit" name="laheta" value="true">Hae</button>
                   </div>
                   </div>
                   </div>

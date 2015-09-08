@@ -62,7 +62,6 @@ $sub-nav-item-divider-margin: rem-calc(12) !default;
   margin: $sub-nav-list-margin;
   overflow: hidden;
   padding-top: $sub-nav-list-padding-top;
-  padding-left: 50px;
   width: auto;
 
   dt {

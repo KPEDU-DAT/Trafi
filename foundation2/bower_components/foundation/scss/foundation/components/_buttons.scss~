@@ -153,10 +153,9 @@ $button-disabled-cursor: $cursor-default-value !default;
     $bg-lightness: lightness($bg);
     $bg-hover-lightness: lightness($bg-hover);
 
-    background-color: #008CBA;
-    border-color: #008CBA;
-    color: #ffffff;
-	&:hover,
+    background-color: $bg;
+    border-color: $border-color;
+    &:hover,
     &:focus { background-color: $bg-hover; }
 
     // We control the text color for you based on the background color.
