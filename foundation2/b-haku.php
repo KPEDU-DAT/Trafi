@@ -15,6 +15,7 @@
   </head>
   <body>
   <? include("navuusi.php"); ?>
+  <? include("navuusi2.php"); ?>
   <? include("auto.php"); ?>
     
 	<form method="POST" action="b-haku2.php">
