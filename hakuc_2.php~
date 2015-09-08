@@ -84,7 +84,11 @@
                                                 LEFT OUTER JOIN trafi_ajoneuvoluokka
                                                 ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
                                                 LEFT OUTER JOIN trafi_kunta
+<<<<<<< HEAD
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnus
+=======
                                                 ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnuss
+>>>>>>> 16372bd110e35463bc14c44a733da98b4b9b2dce
                                                 WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
 												ORDER BY  trafi_ajoneuvot.haku_maara DESC;");
         

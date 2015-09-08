@@ -6,9 +6,6 @@
         echo mysqli_error($yht);
         mysqli_set_charset($yht,"utf8");
    
-   $result = mysqli_query($yht, "SELECT COUNT(jarnro) FROM trafi_ajoneuvot;");
-   $row = mysqli_fetch_array($result,MYSQLI_NUM);
-   $all = $row["0"] / 100;
    if (isset($_GET["table"]))
       $num = $_GET["table"];
    else
@@ -33,23 +30,22 @@
         $total_query = mysqli_query($yht, "SELECT COUNT(jarnro) FROM trafi_ajoneuvot");
         $total_value = mysqli_fetch_array($total_query, MYSQLI_NUM)[0];
     ?>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">
-    <title>Tilastot</title>
+    <title>Foundation</title>
     <script src="js/vendor/modernizr.js"></script>
   </head>
 
-  <body>
-  <? include("navuusi.php"); ?>
-   
-   
-   
+  <body>                                                             
+    <? include("navuusi.php") ?>                           
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/dataTables.foundation.min.css" type="text/css"></link> 
+
+
             <? include("auto.php"); ?>
-
-
+      </div>
+    </div>
                 <div class="row" style="height: 100px;"></div>      
     <div class="row">
     <div class="small-3 medium-3 large-3 columns">
@@ -70,7 +66,6 @@
             echo "<tr>".$head[$num];
    echo "</thead>";
     echo "<tbody>";
-//            $sql = $data[$num];
             $result = mysqli_query($yht, $sql);
             echo mysqli_error($yht);
             while($row = mysqli_fetch_array($result,MYSQLI_NUM)){
@@ -90,8 +85,8 @@
   </body>
   <? include("footer.php"); ?>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
+    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation2/bower_components/foundation/js/vendor/jquery.js"></script>
+    <script src="http://cosmo.kpedu.fi/~mathiasthlin/projekti/Trafi/foundation/js/foundation.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/r/zf-5.5.2/dt-1.10.8/datatables.min.js"></script>        
     <script>
       $(document).foundation();

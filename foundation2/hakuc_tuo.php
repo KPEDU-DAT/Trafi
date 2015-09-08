@@ -1,8 +1,8 @@
 <?php
 session_start();
 ?>
-<?function aliohjelma(argumentit) {
-  include("jarjesta.php")
+<?function aliohjelma() {
+  include("jarjesta.php");
   }
 ?>
 <!doctype html>
@@ -125,7 +125,9 @@ session_start();
 
           
           mysqli_close($yhteys);
-function aliohjelma();
+          ?>
+          <?
+            aliohjelma();
           ?>
           
     </div>

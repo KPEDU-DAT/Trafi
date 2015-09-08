@@ -1,4 +1,486 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+*** These modified files were found in JOE when it aborted on Tue Aug 25 09:34:21 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+autoindent
+
+*** File '(Unnamed)'
+root
+
+*** File '(Unnamed)'
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+taulukko7.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+hakuc.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 25 11:31:39 2015
+*** JOE was aborted because the terminal closed
+
+*** File 'taulukko8.php'
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html>
+
+  <head>
+
+  <title>Tyylit</title>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
+   <meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
+   <meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
+
+  <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
+  <script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+   <head/>
+
+
+
+  <style>
+#header {
+    background-color:#D0D0D0;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+
+#table {
+    padding:200px;
+}
+#section {
+
+    
+    padding:100px;
+}
+ 
+
+
+</style>
+         
+
+
+
+
+
+
+<body>
+
+
+<div id="header">
+<h1 style="color:white">Ajoneuvon kuvaus</h1>
+</div>
+
+<div id="section">
+<div class="w3-row-padding">
+
+</div>
+</div>
+
+</body>
+
+
+ <script>
+      document.write('<script src=js/vendor/' +
+      ('__proto__' in {} ? 'zepto' : 'jquery') +
+      '.js><\/script>')
+      </script>
+
+        <script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
+        <script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
+        <script>
+        $(document).foundation();
+        </script>
+        <script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
+        <script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
+        <script>
+         $(document).foundation();
+          var doc = document.documentElement;
+           doc.setAttribute('data-useragent', navigator.userAgent);
+            </script>
+
+</html>
+*** File '(Unnamed)'
+hakuc_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+lataa.php
+lataa.php
+taulukko7.php
+taulukko8.php
+
+*** These modified files were found in JOE when it aborted on Tue Aug 25 11:31:39 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+=======
+*** These modified files were found in JOE when it aborted on Wed Sep  2 10:35:46 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+>>>>>>> a5deccae9827ad5cd13403c64c156b98a0d9f38b
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+<<<<<<< HEAD
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+
+<<<<<<< HEAD
+*** These modified files were found in JOE when it aborted on Wed Aug 26 13:18:02 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+testi.php
+testi.php
+tavoite4.php
+tavoite2_tun.php
+tavoite2_tun.php
+varaaos.php
+phpsql2.php
+testi.php
+hakuc_2
+hakuc_2.php
+=======
+*** These modified files were found in JOE when it aborted on Wed Aug 26 10:56:51 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+rivi.php
+rivi.php
+rivi.php
+rivi.php
+rivi.php
+rivi.php
+rivi.php
+hakua.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+
+*** These modified files were found in JOE when it aborted on Wed Aug 26 13:47:59 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+kopiokoskalogo.php
+
+*** These modified files were found in JOE when it aborted on Fri Aug 28 11:24:52 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_2.php
+hakuc_2.php
+hakuc_tuo.php
+hakuc_tuo.php
+=======
+>>>>>>> a5deccae9827ad5cd13403c64c156b98a0d9f38b
+hakuc_tuo.php
+hakuc_tuo.php
+hakuc_tuo.php
+hakuc_tuo.php
+<<<<<<< HEAD
+hakuc_tuo.php
+hakuc_tuo.php
+>>>>>>> 145eddc4738efb33c8cf327312cbd08b5cb927f1
+hakuc_2.php
+
+<<<<<<< HEAD
+*** These modified files were found in JOE when it aborted on Mon Aug 31 09:32:06 2015
+*** JOE was aborted because the terminal closed
+
+*** File '* Build Log *'
+
+*** File 'hakuc_2.php'
+<!DOCTYPE HTML>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haku C</title>
+
+    <link rel="stylesheet" href="/~patriksipi/Foundation/bower_components/foundation/css/foundation.css"/>
+	<script src="/~patriksipi/Foundation/bower_components/modernizr/modernizr.js"></script>
+
+  </head>
+
+  <style>
+      #header {
+         
+         
+    
+
+          text-align:center;
+          padding:50px;
+      }
+      #table {
+	
+			padding: 100px;
+        
+      }
+      
+
+
+
+  </style>
+
+
+
+  <body>
+		<div id="header">
+        <h1>Ajoneuvotiedot</h1> 
+        </div>
+        
+     <div id="table">  
+	<p>
+            <form action="hakuc_2.php" method="POST">
+                 <div class="row">
+      				<div class="large-8 columns">
+        			<div class="row collapse prefix-radius">
+          			<div class="large-16 columns">
+                <input type="text" placeholder="Anna VIN-koodi:" name="valmistenumero2">
+                <p><button class="secondary button" type="submit" name="laheta" value="true">Hae</button>
+            </form>
+        </p>
+		<table>
+        <p>
+        <?php
+			$yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
+            if(mysqli_connect_errno()) {
+                die("MySQL, virhe yhteyden luonnissa:" . mysqli_connect_error());
+            }
+            $yhteys->set_charset('utf8');
+
+            if ($_POST['valmistenumero2']) {
+                $VIN = mysqli_real_escape_string($yhteys, $_POST['valmistenumero2']);
+
+                $tulos = mysqli_query($yhteys, "SELECT * 
+                                                FROM trafi_ajoneuvot LEFT OUTER JOIN trafi_vari
+                                                ON trafi_ajoneuvot.vari = trafi_vari.koodintunnus
+                                                LEFT OUTER JOIN trafi_korityyppi
+                                                ON trafi_ajoneuvot.korityyppi = trafi_korityyppi.KOODINTUNNUS
+                                                LEFT OUTER JOIN trafi_ajoneuvoluokka
+                                                ON trafi_ajoneuvot.ajoneuvoluokka = trafi_ajoneuvoluokka.ajoneuvoluokka
+                                                LEFT OUTER JOIN trafi_kunta
+                                                ON trafi_ajoneuvot.kunta = trafi_kunta.koodintunnus
+                                                WHERE trafi_ajoneuvot.valmistenumero2 = '" . $VIN . "'
+                                                ORDER BY kayttoonottopvm DESC;");
+        
+        echo  "<thead><tr><th>Merkki</th><th>Malli</th><th>Ensirekisteröintipvm</th><th>Väri</th><th>Ajoneuvoluokka</th><th>Ovienlkm</th><th>Istumapaikkojenmäärä</th><th>Omamassa</th><th>Iskutilavuus</th><th>Suurin nettoteho (kW)</th><th>Korityyppi</th><th>Kunta</th><th>Kuvaus</th></tr></thead>";                                    
+
+        while($rivi = mysqli_fetch_array($tulos)) {
+        echo "<tr>
+                  <td>".$rivi['merkkiSelvakielinen']."</td> 
+                  <td>".$rivi['mallimerkinta']."</td>
+                  <td>".$rivi['ensirekisterointipvm']."</td>
+                  <td>".$rivi['pitkaselite_fi']."</td>
+                  <td>".$rivi['lyhytselite_fi']."</td>
+                  <td>".$rivi['ovienlukumaara']."</td> 
+                  <td>".$rivi['istumapaikkojenlkm']."</td> 
+                  <td>".$rivi['omamassa']."</td> 
+                  <td>".$rivi['iskutilavuus']."</td>
+                  <td>".$rivi['suurinNettoteho']."</td>
+                  <td>".$rivi['PITKASELITE_fii']."</td>
+                  <td>".$rivi['pitkaseliteu_fi']."</td> 
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+              </tr>";
+				
+				session_start();
+        			$_SESSION['merkkiSelvakielinen'] = $rivi['merkkiSelvakielinen'];
+        			$_SESSION['mallimerkinta'] = $rivi['mallimerkinta'];
+        			$_SESSION['ensirekisterointipvm'] = $rivi['ensirekisterointipvm'];
+        			$_SESSION['pitkaselite_fi'] = $rivi['pitkaselite_fi'];
+        			$_SESSION['lyhytselite_fi'] = $rivi['lyhytselite_fi'];
+        			$_SESSION['ovienlukumaara'] = $rivi['ovienlukumaara'];
+        			$_SESSION['istumapaikkojenlkm'] = $rivi['istumapaikkojenlkm'];
+        			$_SESSION['omamassa'] = $rivi['omamassa'];
+        			$_SESSION['suurinNettoteho'] = $rivi['suurinNettoteho'];
+        			$_SESSION['PITKASELITE_fii'] = $rivi['PITKASELITE_fii'];  
+        			$_SESSION['iskutilavuus'] = $rivi['iskutilavuus'];
+        			$_SESSION['pitkaseliteu_fi'] = $rivi['pitkaseliteu_fi'];
+        		 '<br /><a href="taulukko8.php"> </a>'; 
+        		 '<br /><a href="taulukko8.php?' . SID . '"> </a>'; 
+                }
+            }
+     
+            mysqli_close($yhteys);
+        ?>
+		</table>
+		</div>
+        </div>
+		</div>
+		</div>
+		</p>
+        
+    <script>
+        document.write('<script src=js/vendor/' +
+        ('__proto__' in {} ? 'zepto' : 'jquery') +
+        '.js><\/script>')
+    </script>
+	<script src="http://foundation.zurb.com/assets/js/jquery.js"></script>
+	<script src="http://foundation.zurb.com/templates/js/foundation.min.js"></script>
+	<script>
+    	$(document).foundation();
+  	</script>
+	<script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
+	<script src="http://foundation.zurb.com/assets/js/templates/foundation.js"></script>
+	<script>
+        $(document).foundation();
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+    
+    
+    <link type="css" media="screen" rel="stylesheet" href="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.css" />
+    <script type="javascript" src="~jonatanlogland/Foundation/zurb-responsive-tables-0d34bc6/responsive-tables.js"></script>
+    
+    
+    
+
+  </body>
+</html>
+*** File '(Unnamed)'
+hakuc_2.php
+hakuc_2.php
+hakuc_2.php
+taulukko8.php
+taulukko8.php
+taulukko8.php
+taulukko8.php
+taulukko8.php
+hakuc_tuo.php
+taulukko8.php
+hakuc_2.php
+* Build Log *
+=======
+*** These modified files were found in JOE when it aborted on Mon Aug 31 11:01:46 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_tuo.php
+hakuc_2.php
+hakuc_tuo.php
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+kopiokoskalogo.php
+
+*** These modified files were found in JOE when it aborted on Mon Aug 31 11:03:28 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_tuo.php
+hakuc_2.php
+hakuc_tuo.php
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+_c.scss
+kopiokoskalogo.php
+>>>>>>> bcaa7f5e9d8adef05424a4b95f9c9c6a7d00eb8f
+=======
+hakuc_2.php
+hakuc_tuo.php
+hakuc_tuo.php
+hakuc_tuo.php
+hakuc_tuo.php
+<<<<<<< HEAD
+>>>>>>> a5deccae9827ad5cd13403c64c156b98a0d9f38b
+=======
+
+*** These modified files were found in JOE when it aborted on Wed Sep  2 13:00:54 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+hakuc_tuo2.php
+hakuc_tuo2.php
+hakuc_tuo2.php
+projekti/
+_c.scss
+_c.scss
+tilastot.php
+auto.php
+tilastot.php
+navbar.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+kopiokoskalogo.php
+>>>>>>> 2a1f59b601bf1bb3f946a3487a78cd8803ee2fd9
+=======
 *** These modified files were found in JOE when it aborted on Fri Sep  4 11:01:52 2015
 *** JOE was aborted because the terminal closed
 
@@ -14,6 +496,9 @@ _taulukko.scss
 _taulukko1.scss
 _taulukko1.scss
 hakuc_2.php
+<<<<<<< HEAD
+>>>>>>> 0bbaf23e6f47c23a9b43c0101b7c88d4762a8ddc
+=======
 
 *** These modified files were found in JOE when it aborted on Mon Sep  7 11:28:26 2015
 *** JOE was aborted because the terminal closed
@@ -30,3 +515,4 @@ kopiokoskalogo.php
 kopiokoskalogo.php
 hakuc_2.php
 kopiokoskalogo.php
+>>>>>>> e70cd979ffb40de7448422ec0bbb6cfc9a285039
