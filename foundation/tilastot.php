@@ -7,10 +7,6 @@
         echo mysqli_error($yht);
         mysqli_set_charset($yht,"utf8");
    
-   $result = mysqli_query($yht, "SELECT COUNT(jarnro) FROM trafi_ajoneuvot;");
-   $row = mysqli_fetch_array($result,MYSQLI_NUM);
-   $all = $row["0"] / 100;
-
    if (isset($_GET["table"]))
       $num = $_GET["table"];
    else
@@ -70,7 +66,6 @@
             echo "<tr>".$head[$num];
    echo "</thead>";
     echo "<tbody>";
-//            $sql = $data[$num];
             $result = mysqli_query($yht, $sql);
             echo mysqli_error($yht);
             while($row = mysqli_fetch_array($result,MYSQLI_NUM)){
