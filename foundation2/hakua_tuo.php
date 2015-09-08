@@ -4,7 +4,7 @@
 
   <head>
 
-  <title>anna se kunta</title>
+  <title>Kuvaus</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
@@ -18,8 +18,10 @@
 
   
   <body>
-  <? include("navuusi.php"); ?>
+  <? include("navuusi.php"); ?><br>
+  <? include("navuusi2.php"); ?>
   <? include("auto.php"); ?>
+  
 
       <h2>Ajoneuvon kuvaus</h2>
       

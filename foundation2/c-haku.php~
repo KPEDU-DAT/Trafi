@@ -17,13 +17,14 @@
   <body>
 	
 	
-	<div class="tasaus">	
+	    <div class="tasaus">
         <h1>Ajoneuvotiedot</h1> 
-        
+    
+    
         
      
 	<p>
-            <form action="c-body.php" method="POST">
+            <form action="c-haku.php" method="POST">
                  <div class="row">
                   <div class="large-12 columns">
                   <div class="row collapse postfix-round">
@@ -37,6 +38,9 @@
                   </div>
             </form>
         </p>
+        <div class="header">
+        </div>
+        
 		<table>
         <p>
         <?php
@@ -76,8 +80,7 @@
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>
-                 
-                  <td><a href=\"taulukko.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä kuvaus</a><td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='button tiny round'>Lisätietoja</a></td>
               </tr>";
 				
 				session_start();
@@ -103,6 +106,7 @@
             mysqli_close($yhteys);
         ?>
 		</table>
+		</div>
 		</div>
 		</div>
         </div>
