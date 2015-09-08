@@ -61,7 +61,7 @@
       <option value="2010">2010</option>
       <option value="2011">2011</option>
       </select>
-      <button name="nappi" class="round-button" value="True">Seuraava</button>
+      <button name="nappi" class="round button" value="True">Seuraava</button>
     </form>
 </div>
 </div>

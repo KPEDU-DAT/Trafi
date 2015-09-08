@@ -17,7 +17,24 @@
   <? include("navuusi.php"); ?>
   <? include("navuusi2.php"); ?>
   <? include("auto.php"); ?>
-    
+ 
+
+<div class="row">
+  <div class="large-12 columns">
+  <div class="small-12 columns">
+  
+
+
+
+
+
+
+
+
+
+
+
+   
 	<form method="POST" action="b-haku2.php">
      <p>Valitse haluamasi merkki: </p>
       <select name="merkki">
@@ -35,7 +52,16 @@
         <option value="Volkswagen">Volkswagen</option>
         <option value="Volvo">Volvo</option>
       </select>
-		<button name="button" value="true">Seuraava</button>
+		<button name="button" class="round button" value="true">Seuraava</button>
+	
+</div>
+</div>
+</div>
+
+
+
+
+
 	</form>
  	
 <script>
