@@ -170,6 +170,7 @@ tilastot.php
 tilastot.php
 tilastot.php
 
+<<<<<<< HEAD
 *** These modified files were found in JOE when it aborted on Mon Sep  7 11:28:26 2015
 *** JOE was aborted by UNIX signal 1
 
@@ -361,3 +362,58 @@ kopiokoskalogo.php
 hakuc_2.php
 hakuc_tuo.php
 hakuc_tuo.php
+=======
+*** These modified files were found in JOE when it aborted on Mon Sep  7 11:28:24 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+autoindent
+
+*** File '(Unnamed)'
+root
+
+*** File '(Unnamed)'
+jussi
+footer
+top-bar
+
+*** File '(Unnamed)'
+tilastot.php
+nav2.php
+nav2.php
+nav2.php
+nav2.php
+nav2.php
+nav2.php
+navuusi.php
+navuusi2.php
+navuusi2.php
+navuusi.php
+navuusi2.php
+navuusi2.php
+navuusi2.php
+
+*** These modified files were found in JOE when it aborted on Mon Sep  7 11:28:24 2015
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+jussi
+footer
+top-bar
+
+*** File '(Unnamed)'
+tilastot.php
+tilastot.php
+tilastot.php
+a-body.php
+a-body.php
+a-body.php
+a-body.php
+a-body.php
+a-body.php
+a-body.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+hakua_2.php
+>>>>>>> 6445e51e1216eef190809ba9f0c5478427ad311d

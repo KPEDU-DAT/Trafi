@@ -22,9 +22,10 @@
   </head>
   <div class="tableresponsivecopy">  
  <body>
-   <? include("navuusi.php"); ?>
+   <? include("navuusi.php"); ?><br>
+   <? include("navuusi2.php"); ?>   
    <? include("auto.php"); ?>
-
+   
         <div class="tasaus">
         <h1>Ajoneuvotiedot</h1>
         
@@ -49,7 +50,7 @@
 </p>
 <div class="header">
 </div>
-<table>
+
 
 <?php  
             $yhteys=mysqli_connect("localhost","data14","mv2Mqbm888DvqbjT","data14");
@@ -74,7 +75,7 @@
                 
       
               
-        echo  "<thead><tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th><th>Kuvaus</tr></tr></thead>";
+        echo  "<table><thead><tr><th>Ajoneuvoluokka</th><th>Merkki</th><th>Malli</th><th>Ensirekisteröinti</th><th>Kunta</th><th>Vaihteisto</th><th>Iskutilavuus</th><th>Väri</th><th>Kuvaus</tr></tr></thead>";
               while ($rivi = mysqli_fetch_array($tulos)) {   
                                                    
          echo "<tr>  
