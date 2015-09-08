@@ -18,6 +18,9 @@
   <? include("navuusi2.php"); ?>
   <? include("auto.php"); ?>
 
+	<div class="row">
+  	<div class="large-12 columns">
+  	<div class="small-12 columns">
 
     <?php
 	$default=$_POST['merkki']
@@ -58,9 +61,11 @@
       <option value="2010">2010</option>
       <option value="2011">2011</option>
       </select>
-      <button name="nappi" value="True">Seuraava</button>
+      <button name="nappi" class="round button" value="True">Seuraava</button>
     </form>
-
+</div>
+</div>
+</div>
 <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +

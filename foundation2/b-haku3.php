@@ -17,7 +17,9 @@
   <? include("navuusi.php"); ?>
   <? include("navuusi2.php"); ?>
   <? include("auto.php"); ?>
-
+    <div class="row">
+  	<div class="large-12 columns">
+  	<div class="small-12 columns">
 	<?php
 $merkki = $_POST['merkki'];
 $vuosi = $_POST['vuosi'];
@@ -175,7 +177,7 @@ $vuosi = $_POST['vuosi'];
 
      ?>
       
-      <button name="btn" value="TRUE">Seuraava</button>
+      <button name="btn" class="round button" value="TRUE">Seuraava</button>
       </form>
       <p> Tämänhetkiset tulokset <p>
       
@@ -208,7 +210,9 @@ while($rivi=mysqli_fetch_array($tulos)) {
 mysqli_close($yhteys);
 
 ?>
-
+</div>
+</div>
+</div>
 <script>
   document.write('<script src=js/vendor/' +
   ('__proto__' in {} ? 'zepto' : 'jquery') +
