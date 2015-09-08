@@ -13,6 +13,7 @@
     <? include("tyyli.php"); ?>
   </head>
   <body>
+  
   <? include("navuusi.php"); ?>
   <? include("auto.php"); ?>
  

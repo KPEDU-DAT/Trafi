@@ -5,7 +5,7 @@
  <a class="item" href="tilastot.php">
   <i class="fi-list"></i>
  </a>
- <a class="item" href="a-body.php">
+ <a class="item" href="hakua_2.php">
   <i class="fi-magnifying-glass"></i> 
  </a>
 </div>
