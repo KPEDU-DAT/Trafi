@@ -6353,11 +6353,20 @@ th.hide-for-touch {
   padding-top: 100px; }
 
 .footer {
+  background: #ffffff;
   position: fixed;
   bottom: 0;
   height: 50px;
   width: 100%;
   overflow: hidden; }
+
+#clearfooter {
+  /*needed to make room for footer*/
+  clear: both;
+  height: 55px; }
+
+#footer form {
+  margin: 0; }
 
 .tasaus {
   text-align: center;
