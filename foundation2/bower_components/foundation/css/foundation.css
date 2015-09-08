@@ -6364,7 +6364,7 @@ th.hide-for-touch {
       top: -9999px;
       left: -9999px; }
     .tableresponsive tr {
-      border: 1px solid #FFFFFF; }
+      border: 1px solid #eee; }
     .tableresponsive td {
       /* Behave  like a "row" */
       border: none;

@@ -15,10 +15,8 @@
   </head>
   <body>
   <? include("navuusi.php"); ?>
-
-
-
-    <? include("auto.php"); ?>
+  <? include("navuusi2.php"); ?>
+  <? include("auto.php"); ?>
 
 	<?php
 $merkki = $_POST['merkki'];

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
 
-    <title>Etusivu</title>
+    <title>b-haku</title>
     <? include("tyyli.php"); ?>
   </head>
   <body>
