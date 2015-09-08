@@ -18,8 +18,10 @@
 
   
   <body>
-  <? include("navuusi.php"); ?>
+  <? include("navuusi.php"); ?><br>
+  <? include("navuusi2.php"); ?>
   <? include("auto.php"); ?>
+  
 
       <h2>Ajoneuvon kuvaus</h2>
       
