@@ -14,7 +14,8 @@
     <? include("tyyli.php"); ?>
   </head>
   <body>
-  <? include("navuusi.php"); ?>
+    <? include("navuusi.php"); ?>
+    <? include("navuusi2.php"); ?>
     <? include("auto.php"); ?>
 
 <?php

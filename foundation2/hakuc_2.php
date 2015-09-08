@@ -15,6 +15,7 @@
   <div class="tableresponsive">
   <body>
     <? include("navuusi.php"); ?>	
+	<? include("navuusi2.php"); ?>
 	<? include("auto.php"); ?>
 	    <div class="tasaus">
         <h1>Ajoneuvotiedot</h1> 

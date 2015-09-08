@@ -1,11 +1,13 @@
 .img{
 	padding-top: 100px;}
 .footer {
-    position: fixed;
+    background: #333;
+	color: #ffffff;
+	position: fixed;
     bottom: 0;
     height: 50px;
-    width: 90%;
-    overflow:hidden;
+    width: 100%;
+   	overflow: hidden;
 }
 
 
