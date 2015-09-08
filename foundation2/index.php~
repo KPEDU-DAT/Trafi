@@ -15,7 +15,7 @@
   </head>
   <body>
   <? include("navuusi.php"); ?>
-<h1>🚭</h1>    
+
  
   
     <? include("auto.php"); ?>

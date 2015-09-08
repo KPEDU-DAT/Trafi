@@ -14,12 +14,12 @@
     <? include("tyyli.php"); ?>
   </head>
   <body>
-  <? include("navuusi.php"); ?>
+
 
  
-  
-    <? include("auto.php"); ?>
 
+
+<?include("hakua_2.php"); ?>
 
 
 <script>
