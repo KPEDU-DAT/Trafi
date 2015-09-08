@@ -27,7 +27,8 @@ session_start();
 
   
   <body>
-      <? include("navuusi.php"); ?>
+      <? include("navuusi.php"); ?><br>
+      <? include("navuusi2.php"); ?>
       <?include("auto.php"); ?>
       <div class="tasaus">
       <h1>Ajoneuvon kuvaus</h1>

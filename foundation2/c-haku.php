@@ -80,7 +80,7 @@
                   <td>".$rivi['suurinNettoteho']."</td>
                   <td>".$rivi['PITKASELITE_fii']."</td>
                   <td>".$rivi['pitkaseliteu_fi']."</td>
-                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='small secondary button'>Näytä</a></td>
+                  <td><a href=\"hakuc_tuo.php?id=".$rivi['jarnro']."\" class='button tiny round'>Lisätietoja</a></td>
               </tr>";
 				
 				session_start();
