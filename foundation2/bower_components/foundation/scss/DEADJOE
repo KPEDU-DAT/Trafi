@@ -99,3 +99,37 @@ _icon-bar.scss
 _icon-bar.scss
 foundation.scss
 foundation.scss
+
+*** These modified files were found in JOE when it aborted on Tue Sep  8 11:27:19 2015
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+root
+
+*** File '(Unnamed)'
+left
+center
+A
+center
+Center
+center
+padding
+padding-top
+background-color
+button
+
+*** File '(Unnamed)'
+b-haku2.php
+b-haku2.php
+b-haku3.php
+b-haku3.php
+b-fin.php
+b-fin.php
+footer.php
+footer.php
+footer.php
+footer.php
+_app.scss
+_app.scss
+_app.scss
+_app.scss

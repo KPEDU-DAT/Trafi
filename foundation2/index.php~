@@ -11,15 +11,16 @@
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
 
     <title>Etusivu</title>
+    <link rel="shortcut icon" href="autouusi.jpg">
     <? include("tyyli.php"); ?>
   </head>
   <body>
-  <? include("navuusi.php"); ?>
+
 
  
-  
-    <? include("auto.php"); ?>
 
+
+<?include("hakua_2.php"); ?>
 
 
 <script>

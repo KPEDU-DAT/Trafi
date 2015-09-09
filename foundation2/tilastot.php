@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/foundation/css/foundation.css"/>
     <link rel="stylesheet" href="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/icons/foundation-icons/foundation-icons.css">
     <title>Tilastot</title>
+    <link rel="shortcut icon" href="autouusi.png">
     <script src="js/vendor/modernizr.js"></script>
   </head>
 

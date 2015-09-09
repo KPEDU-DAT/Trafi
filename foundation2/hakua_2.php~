@@ -22,9 +22,10 @@
   </head>
   <div class="tableresponsivecopy">  
  <body>
-   <? include("navuusi.php"); ?>
+   <? include("navuusi.php"); ?><br>
+   <? include("navuusi2.php"); ?>   
    <? include("auto.php"); ?>
-
+   
         <div class="tasaus">
         <h1>Ajoneuvotiedot</h1>
         

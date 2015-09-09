@@ -11,6 +11,7 @@
     <script src="http://cosmo.kpedu.fi/~jannenyman/projekti/Trafi/foundation2/bower_components/modernizr/modernizr.js"></script>
 
     <title>Etusivu</title>
+    <link rel="shortcut icon" href="autouusi.png">
     <? include("tyyli.php"); ?>
   </head>
   <body>
